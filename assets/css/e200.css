@@ -1,0 +1,24 @@
+@font-face {
+    font-family: "Source Sans Pro";
+    src: url("../fonts/Source_Sans_Pro/SourceSansPro-Regular.ttf");
+}
+
+body {
+    font-family: "Source Sans Pro";
+}
+
+.menu-btn {
+    position: absolute;
+    padding: 39px 35px;
+    left: 0;
+    display: block;
+}
+
+.menu-btn .line {
+    background-color: #ccc;
+    height: 2px;
+    width: 30px;
+    display: block;
+    margin: 4px 0;
+    border-radius: 5px;
+}
