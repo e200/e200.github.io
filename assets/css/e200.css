@@ -3,22 +3,96 @@
     src: url("../fonts/Source_Sans_Pro/SourceSansPro-Regular.ttf");
 }
 
-body {
-    font-family: "Source Sans Pro";
+html, body {
+    height: 100%;
 }
 
-.menu-btn {
-    position: absolute;
-    padding: 39px 35px;
-    left: 0;
-    display: block;
+body {
+    font-family: "Source Sans Pro";
+    font-size: 16px;
+    background-color: #f2f2f2;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    background: #fff;
+}
+
+.part-top {
+    height: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+}
+
+.header-element {
+    display: flex;
+    align-items: center;
+    align-self: stretch;
+}
+
+.side-element {
+    padding: 0 2.1875em;
 }
 
 .menu-btn .line {
-    background-color: #ccc;
+    background-color: #8d8d8d;
     height: 2px;
     width: 30px;
     display: block;
-    margin: 4px 0;
+    margin: 0.5em 0; /* 8/16 */
     border-radius: 5px;
+}
+
+.menu-btn {
+    justify-self: start;
+}
+
+.menu-btn:hover .line {
+    background-color: #490;
+}
+
+.title {
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: .75em; /* 12/16 */
+    font-weight: 700;
+    letter-spacing: 0.26em;
+    color: #490;
+}
+
+.github-icon {
+    justify-self: end;
+    color: #8d8d8d;
+}
+
+.github-icon:hover i {
+    color: #490;
+}
+
+.part-bottom {
+    background-color: #f8f8f8;
+    border-top: 1px solid #dedede;
+    border-bottom: 1px solid #e6e6e6;
+    text-align: center;
+}
+
+}
+
+.nav {
+
+}
+
+.nav a {
+    text-transform: uppercase;
+    padding: 10px;
+    display: inline-block;
+    color: #aaa;
+}
+
+.nav a:hover {
+    color: #729e4f;
 }
