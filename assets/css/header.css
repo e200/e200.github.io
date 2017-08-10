@@ -24,7 +24,7 @@ header {
 .part-top {
     height: 100px;
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
 }
 
@@ -63,14 +63,16 @@ header {
     position: relative; /* For animation purposes */
     text-align: center; /* Fixes the center positioning bug in small screens */
     justify-content: center;
+    align-self: center;
     text-transform: uppercase;
     font-size: .75em; /* 12/16 */
     font-weight: 700;
+    padding-bottom: 4px;
     letter-spacing: 0.26em;
     color: #333;
 }
 
-.title:hover {
+.title:before {
   content: "";
   position: absolute;
   width: 100%;
