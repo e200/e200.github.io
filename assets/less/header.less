@@ -1,0 +1,110 @@
+@menu-hover-color: #333;
+@side-element-hover-color: #C9C9C9;
+
+header {
+  background: #fff;
+}
+
+.part-top {
+  position: relative;
+  height: 90px;
+}
+
+.part-bottom {
+  background-color: #f8f8f8;
+  border-top: 1px solid #dedede;
+  border-bottom: 1px solid #e6e6e6;
+  text-align: center;
+}
+
+.side-element {
+  position: absolute;
+  display: inline-block;
+}
+
+.center-element {
+  text-align: center;
+}
+
+.menu-btn {
+  top: 26px;
+  left: 26px;
+  padding: 8px; /* 32/16 */
+
+  .line {
+    background-color: @side-element-hover-color;
+    height: 2px;
+    width: 25px;
+    display: block;
+    margin: 4px 0; /* 8/16 */
+    border-radius: 5px;
+  }
+}
+
+.menu-btn:hover {
+  .line {
+    background-color: @menu-hover-color;
+  }
+}
+
+.title {
+  position: relative;
+  color: @menu-hover-color;
+  padding-top: 36px;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: .75em; /* 12/16 */
+  font-weight: 700;
+  padding-bottom: .25em;
+  letter-spacing: .125em;
+}
+
+.title:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.title:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.github-icon {
+  top: 29px;
+  right: 38px;
+  padding: 1px;
+  color: @side-element-hover-color;
+}
+
+.github-icon:hover {
+  i {
+    color: @menu-hover-color;
+  }
+}
+
+.nav {
+  a {
+    display: inline-block;
+    padding: 6px;
+    margin: 4px 10px;
+    color: #aaa;
+    font-size: 13px;
+    border-radius: 2px;
+  }
+
+  a:hover {
+    color: @menu-hover-color;
+    background-color: #FFF;
+  }
+}
