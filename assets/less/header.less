@@ -39,11 +39,11 @@ header {
     margin: 4px 0; /* 8/16 */
     border-radius: 5px;
   }
-}
 
-.menu-btn:hover {
-  .line {
-    background-color: @menu-hover-color;
+  &:hover {
+    .line {
+      background-color: @menu-hover-color;
+    }
   }
 }
 
@@ -57,27 +57,27 @@ header {
   font-weight: 700;
   padding-bottom: .25em;
   letter-spacing: .125em;
-}
 
-.title:before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #000;
-  visibility: hidden;
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
-  -webkit-transition: all 0.3s ease-in-out 0s;
-  transition: all 0.3s ease-in-out 0s;
-}
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+  }
 
-.title:hover:before {
-  visibility: visible;
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
+  &:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
 }
 
 .github-icon {
@@ -85,11 +85,11 @@ header {
   right: 38px;
   padding: 1px;
   color: @side-element-hover-color;
-}
 
-.github-icon:hover {
-  i {
-    color: @menu-hover-color;
+  &:hover {
+    i {
+      color: @menu-hover-color;
+    }
   }
 }
 
@@ -101,10 +101,10 @@ header {
     color: #aaa;
     font-size: 13px;
     border-radius: 2px;
-  }
 
-  a:hover {
-    color: @menu-hover-color;
-    background-color: #FFF;
+    &:hover {
+      color: @menu-hover-color;
+      background-color: #FFF;
+    }
   }
 }
