@@ -22,28 +22,19 @@ header {
 }
 
 .part-top {
-    height: 100px;
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    align-items: center;
-}
-
-.header-element {
-    display: flex;
-    align-items: center;
-    align-self: stretch;
+    position: relative;
+    height: 90px;
 }
 
 .side-element {
-    padding: 0 2.1875em;
-}
-
-.side-element:hover {
-    /**transform: scale(1.1);**/
+    display: inline-block;
 }
 
 .menu-btn {
-    justify-self: start;
+    position: absolute;
+    top: 26px;
+    left: 26px;
+    padding: 8px; /* 32/16 */
 }
 
 .menu-btn:hover .line {
@@ -51,25 +42,28 @@ header {
 }
 
 .menu-btn .line {
-    background-color: #8d8d8d;
+    background-color: #c9c9c9;
     height: 2px;
-    width: 30px;
+    width: 25px;
     display: block;
-    margin: 0.5em 0; /* 8/16 */
+    margin: 4px 0; /* 8/16 */
     border-radius: 5px;
 }
 
+.center-element {
+    text-align: center;
+}
+
 .title {
-    position: relative; /* For animation purposes */
-    text-align: center; /* Fixes the center positioning bug in small screens */
-    justify-content: center;
-    align-self: center;
+    position: relative;
+    color: #333;
+    padding-top: 36px;
+    display: inline-block;
     text-transform: uppercase;
     font-size: .75em; /* 12/16 */
     font-weight: 700;
     padding-bottom: .25em;
     letter-spacing: .125em;
-    color: #333;
 }
 
 .title:before {
@@ -93,11 +87,12 @@ header {
   transform: scaleX(1);
 }
 
-
-
 .github-icon {
-    justify-self: end;
-    color: #8d8d8d;
+    position: absolute;
+    top: 29px;
+    right: 38px;
+    padding: 1px;
+    color: #c9c9c9;
 }
 
 .github-icon:hover i {
@@ -111,18 +106,21 @@ header {
     text-align: center;
 }
 
-}
-
 .nav {
 
 }
 
 .nav a {
-    padding: 10px;
+    display: inline-block;
+    padding: 6px;
+    margin: 4px 10px;
     display: inline-block;
     color: #aaa;
+    font-size: 13px;
+    border-radius: 2px;
 }
 
 .nav a:hover {
     color: #333;
+    background-color: #FFF;
 }
