@@ -39,11 +39,15 @@ header {
     display: block;
     margin: 4px 0; /* 8/16 */
     border-radius: 5px;
+    transition: 0.2s;
   }
 
   &:hover {
     .line {
       background-color: @menu-hover-color;
+    }
+    .line-1, .line-3 {
+        width: 80%;
     }
   }
 }
@@ -86,6 +90,10 @@ header {
   right: 38px;
   padding: 1px;
   color: @side-element-hover-color;
+
+  i {
+      transition: .2s;
+  }
 
   &:hover {
     i {
