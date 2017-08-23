@@ -1,4 +1,10 @@
-@bg-color: #f6f6f6;
+@em: 16px*1em;
+@prefixes: o, ms, moz, webkit;
+
+@import "boost";
+@import "header";
+
+@page-bg-color: #f6f6f6;
 
 html, body {
   height: 100%;
@@ -6,14 +12,11 @@ html, body {
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 16px;
-  background-color: @bg-color;
+  font-size: @em;
+  background-color: @page-bg-color;
 }
 
 a {
   text-decoration: none;
+  outline: none;
 }
-
-@import "grid";
-@import "header";
-@import "content";
