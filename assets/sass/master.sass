@@ -1,0 +1,28 @@
+// compileCompressed: ../css/master.css
+
+@import "../../node_modules/sass-autoprefixer/scss/prefixes.scss"
+@import "colors"
+@import "vars"
+@import "functions"
+@import "hagil"
+@import "fonts"
+@import "header"
+@import "barner"
+
+html, body
+  height: 100%
+
+body
+    font-family: 'Source Sans Pro', sans-serif
+    font-size: toEm(16)
+    background: $body-bg
+
+// Remove a porcaria dos pontos
+// que ficam em volta as áncoras
+// ao clicar nelas
+a
+    outline: none
+    text-decoration: none
+
+.main
+    height: calc(100% - 90px)

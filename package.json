@@ -1,0 +1,22 @@
+{
+  "name": "e200.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/e200/e200.github.io.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/e200/e200.github.io/issues"
+  },
+  "homepage": "https://e200.github.io",
+  "devDependecies": {
+      "sass-autoprefixer": "~1.0.1"
+  }
+}
