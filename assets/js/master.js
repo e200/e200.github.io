@@ -4,6 +4,8 @@ window.onload = function()
 
     $menuBtn.onclick = function(b)
     {
+        b.preventDefault();
+        
         $class="umburg-active";
 
         if(!$menuBtn.classList.contains($class)) {
