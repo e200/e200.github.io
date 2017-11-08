@@ -15,25 +15,36 @@
 
 .presentation-text
     position: relative // For .hi-svg absolute position
-    margin: 0
-    text-align: left
+    margin: 0 // Reset for h1 margins
+    text-align: left // Overrides .presentation text-align
     font-family: 'Lobster Two', cursive
-    font-size: toRem(50)
-    color: #666
+    color: $presentation-text-color
     line-height: 1.5
 
-.presentation-text > span
-    display: none
+    @media (min-width: 360px)
+        font-size: toRem(40)
+    @media (min-width: 768px)
+        font-size: toRem(50)
 
-.my-name, .hi-balloon, .presentation-text .active
-    display: inline-block !important
+// Resets for this ul
+.things_i_love
+    display: inline-block
+    list-style: none
+    padding: 0
+    margin: 0
+
+.things_i_love > li
+    display: none // Hides all li for animation purposes
+
+.things_i_love .active
+    display: inline-block !important // Shows only the active
 
 .hi-balloon
     position: absolute
     top: -70px
     left: -10px
     width: 80px
-    background: #7a62da
+    background: $hi-balloon-bg
     font-size: toRem(38)
     text-align: center
     color: white
@@ -49,4 +60,4 @@
     border: 15px solid transparent
     border-bottom: 0
     border-left: 0
-    border-top-color: #6a56ba
+    border-top-color: $hi-balloon-arrow-bg
