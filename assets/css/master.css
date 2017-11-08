@@ -412,14 +412,6 @@ template {
 [hidden] {
   display: none; }
 
-@font-face {
-  font-family: 'Source Sans Pro';
-  src: url("../fonts/SourceSansPro-Regular.ttf"); }
-
-@font-face {
-  font-family: 'LobsterTwo';
-  src: url("../fonts/LobsterTwo-Regular.ttf"); }
-
 .e200-header {
   background: white; }
 
@@ -474,7 +466,7 @@ template {
   position: relative;
   margin: 0;
   text-align: left;
-  font-family: 'LobsterTwo', sans-serif;
+  font-family: 'LobsterTwo', cursive;
   font-size: 3.125rem;
   color: #666;
   line-height: 1.5; }
