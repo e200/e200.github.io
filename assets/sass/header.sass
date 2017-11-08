@@ -6,7 +6,7 @@
     position: absolute
     display: inline-block
     top: 26px
-    left: 26px
+    right: 26px
     padding: toEm(8)
 
     .line
@@ -20,7 +20,7 @@
     &:hover
         .line
             background-color: $header-item-hover-color
-            @include vp-transition(.2s)
+            transition: .2s
 
 
 .umburg-active
@@ -31,10 +31,10 @@
         background-color: $header-item-hover-color
 
     .line-1
-        @include vp-transform($line-1-transform)
+        transform: $line-1-transform
 
     .line-3
-        @include vp-transform($line-2-transform)
+        transform: $line-2-transform
 
     .line-2
         opacity: 0
