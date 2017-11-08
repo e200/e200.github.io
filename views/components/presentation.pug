@@ -1,0 +1,21 @@
+- var myName = 'e200'
+
+- var thingsILove = ['thinking', 'tea', 'music', 'space', 'colors', 'linux']
+
+section.presentation
+    .presentation-barner
+        h1.presentation-text
+            .hi-balloon Hi,
+
+            |I'm 
+            span.my-name #{myName},
+            br
+            |a Web Designer &amp; dreamer
+            br
+            | who loves 
+
+            each thing, i in thingsILove
+                if (i == 0)
+                    span.active #{thing}
+                else
+                    span #{thing}
