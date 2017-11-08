@@ -1,25 +1,10 @@
 .e200-header
     background: $header-bg
 
-.e200-header .top
-    position: relative
-    height: 90px
-
-.e200-header .bottom
-    background-color: $bottom-bg
-    border-top: 1px solid $bottom-top-border-color
-    border-bottom: 1px solid $bottom-bottom-border-color
-    text-align: center
-
-.side-item
-    position: absolute
-    display: inline-block
-
-.center-item
-    text-align: center
-
 // .umburg
 .umburg
+    position: absolute
+    display: inline-block
     top: 26px
     left: 26px
     padding: toEm(8)
@@ -53,58 +38,3 @@
 
     .line-2
         opacity: 0
-
-// .title
-.title
-    position: relative
-    color: $header-item-hover-color
-    padding-top: 36px
-    display: inline-block
-    text-transform: uppercase
-    font-size: toEm(12)
-    font-weight: 700
-    padding-bottom: 4px
-    letter-spacing: toEm(2)
-
-    &:before
-        content: ""
-        position: absolute
-        width: 100%
-        height: 2px
-        bottom: 0
-        left: 0
-        background-color: #000
-        visibility: hidden
-        @include vp-transform(scaleX(0))
-        @include vp-transition(all $transition-time ease-in-out 0s)
-
-    &:hover:before
-        visibility: visible
-        @include vp-transform(scaleX(1))
-
-// .github-icon
-.github-icon
-    top: 29px
-    right: 38px
-    padding: toEm(1)
-    color: $side-item-hover-color
-
-    i
-        @include vp-transition($transition-time)
-
-    &:hover
-        i
-            color: $header-item-hover-color
-
-.nav
-    a
-        display: inline-block
-        padding: toEm(6)
-        margin: toEm(4) toEm(10)
-        color: #aaa
-        font-size: toEm(13)
-        border-radius: 2px
-
-        &:hover
-            color: $header-item-hover-color
-            background-color: #FFF
