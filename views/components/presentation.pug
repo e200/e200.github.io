@@ -14,8 +14,9 @@ section.presentation
             br
             | who loves 
 
-            each thing, i in thingsILove
-                if (i == 0)
-                    span.active #{thing}
-                else
-                    span #{thing}
+            ul.things_i_love
+                each thing, i in thingsILove
+                    if (i == 0)
+                        li.active #{thing}
+                    else
+                        li #{thing}
