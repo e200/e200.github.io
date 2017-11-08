@@ -1,5 +1,8 @@
 .presentation
     display: table
+    margin: 0 auto
+    padding-left: toEm(35)
+    padding-right: toEm(55)
     text-align: center
 
 .presentation-barner
@@ -11,7 +14,39 @@
     height: inherit
 
 .presentation-text
+    position: relative // For .hi-svg absolute position
     margin: 0
     text-align: left
     font-family: 'LobsterTwo', sans-serif
-    font-size: toEm(100)
+    font-size: toRem(50)
+    color: #666
+    line-height: 1.5
+
+.presentation-text > span
+    display: none
+
+.my-name, .hi-balloon, .presentation-text .active
+    display: inline-block !important
+
+.hi-balloon
+    position: absolute
+    top: -70px
+    left: -10px
+    width: 80px
+    background: #7a62da
+    font-size: toRem(38)
+    text-align: center
+    color: white
+    padding-left: toRem(10)
+    padding-right: toRem(10)
+    border-radius: 300px
+
+.hi-balloon::after
+    content: ''
+    position: absolute
+    bottom: -15px
+    left: 27px
+    border: 15px solid transparent
+    border-bottom: 0
+    border-left: 0
+    border-top-color: #6a56ba
