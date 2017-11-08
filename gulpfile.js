@@ -20,6 +20,8 @@ gulp.task('serve', function(){
 
     gulp.watch('./assets/sass/*.sass', ['sass'])
         .on('change', browserSync.reload);
+    gulp.watch('./index.html')
+        .on('change', browserSync.reload);
 })
 
 gulp.task('sass', function() {
