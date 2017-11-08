@@ -1,7 +1,6 @@
 {
   "name": "e200.github.io",
   "version": "1.0.0",
-  "description": "",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,13 +9,26 @@
     "type": "git",
     "url": "git+https://github.com/e200/e200.github.io.git"
   },
-  "author": "",
+  "author": "Eleandro Duzentos <eleandro@inbox.ru>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/e200/e200.github.io/issues"
   },
   "homepage": "https://e200.github.io",
   "devDependecies": {
-      "sass-autoprefixer": "~1.0.1"
-  }
+    "sass-autoprefixer": "~1.0.1"
+  },
+  "dependencies": {
+    "g": "^2.0.1"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-imagemin": "^3.4.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1"
+  },
+  "description": ""
 }
