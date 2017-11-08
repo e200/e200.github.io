@@ -23,7 +23,10 @@ const
     pug = require('gulp-pug'),
     
     // Requires gulp-html-beautify
-    htmlBeautify = require('gulp-html-beautify');
+    htmlBeautify = require('gulp-html-beautify'),
+    
+    // Requires gulp-insert
+    insert = require('gulp-insert');
 
 gulp.task('default', ['serve']);
 
@@ -38,7 +41,7 @@ gulp.task('serve', function(){
     gulp.watch('./assets/sass/*.sass', ['css'])
         .on('change', browserSync.reload);
     gulp.watch('./views/**', ['pug']);
-    gulp.watch('./index.html', ['beautifyHTML'])
+    gulp.watch('./index.html', ['beautifyHTML+header'])
         .on('change', browserSync.reload);
 })
 
@@ -62,16 +65,24 @@ gulp.task('css', function() {
  * Pug task, compile PUG to HTML.
  */
 gulp.task('pug', function(){
+    var header = '<!--\n' +
+    '   ___|___\\ / _ \\ / _ \\\n' + 
+    ' / _ \\ __) | | | | | | |\n' +
+    '|  __// __/| |_| | |_| |\n' +
+    ' \\___|_____|\\___/ \\___/\n' + 
+    '-->';
+    
     return gulp.src('./views/index.pug')
     .pipe(pumbler()) // Errors handler
     .pipe(pug()) // Compiles pug to HTML
+    .pipe(insert.prepend(header)) // Prepends my header to the HTML output
     .pipe(gulp.dest('./'));
 });
 
 /**
  * Beautify HTML task, beautifies the index.html.
  */
-gulp.task('beautifyHTML', function(){
+gulp.task('beautifyHTML+header', function(){
     return gulp.src('./index.html')
     .pipe(pumbler()) // Errors handler
     .pipe(htmlBeautify()) // Beautifies the html output
