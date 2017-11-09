@@ -1,0 +1,12 @@
+.things_i_love
+    position: relative // For childrens
+    display: inline-block // Divs have display: block by default, i want it inline
+    vertical-align: top // Aligns each thing i like to top, but they must be absolute positioned
+
+.things_i_love > span
+    position: absolute // It makes all spans overlap each other
+    opacity: 0 // Transitons purposes
+    transition: opacity $transition-time // Transitons purposes
+
+.things_i_love .active
+    opacity: 1 // Transitons purposes
