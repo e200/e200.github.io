@@ -43,6 +43,8 @@ gulp.task('serve', function(){
     gulp.watch('./views/**', ['pug']);
     gulp.watch('./index.html', ['beautifyHTML+header'])
         .on('change', browserSync.reload);
+    gulp.watch('./assets/js/**')
+        .on('change', browserSync.reload);
 })
 
 /**
