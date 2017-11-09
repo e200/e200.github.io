@@ -1,6 +1,6 @@
 - var myName = 'e200'
 
-- var thingsILove = ['thinking', 'tea', 'music', 'space', 'colors', 'linux']
+- var thingsILove = ['thinking', 'tea', 'music', 'space', 'colors', 'Linux']
 
 section.presentation
     .presentation-barner
@@ -14,9 +14,9 @@ section.presentation
             br
             | who loves 
 
-            ul.things_i_love
+            span.things_i_love
                 each thing, i in thingsILove
                     if (i == 0)
-                        li.active #{thing}
+                        span.active #{thing}
                     else
-                        li #{thing}
+                        span #{thing}
