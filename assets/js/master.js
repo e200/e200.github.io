@@ -2,9 +2,9 @@ e200(function(){
     e200('.umburg').on('click', function(e){
         e.preventDefault()
     })
-    //e200('.line').onClick(function(){
-      //  alert()
-    //})
+    e200('.line').on('click', function(){
+        alert()
+    })
 })
 
 // window.onload = function()

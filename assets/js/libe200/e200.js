@@ -1,39 +1,38 @@
 window.e200 = (function(window){
     
-    var elements = null
+    var el = null
 
     var self = function e200(selector) {
         
         if (typeof selector == 'function')
             window.onload = selector
         else if (typeof selector == 'string') {
-            elements = window.document.querySelectorAll(selector)
+            el = window.document.querySelectorAll(selector)
 
-            return initElements(elements)
+            initElement()
+
+            return el
         }
     }
 
-    function initElements(elements) {
-        var l = elements.length;
+    function initElement() {
+        var l = el.length;
         
         if (l == 1) {
-            elements = elements.item(0)
+            el = el.item(0)
 
-            elements.on = listener
+            el.on = listener
         } else if (l > 1) {
-            elements.forEach(function(element) {
-                //element.onClick = onClick
-                console.log(element)
+            el.forEach(function(elms) {
+                elms.on = listener
             });
         }
-        
-        return elements
     }
 
     function listener(event_name, callback)
     {
-        console.log(elements)
-        elements.addEventListener(event_name, callback)
+        console.log(el)
+        el.addEventListener(event_name, callback)
     }
 
     //self.alert = function(){
