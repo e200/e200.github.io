@@ -28,10 +28,11 @@
     "gulp-imagemin": "^3.4.0",
     "gulp-insert": "^0.5.0",
     "gulp-plumber": "^1.1.0",
+    "gulp-pug": "^3.3.0",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.1",
     "gulp-uglify": "^3.0.0",
     "gulp-util": "^3.0.8"
   },
-  "description": "e200 web page"
+  "description": "e200 portfolio"
 }
