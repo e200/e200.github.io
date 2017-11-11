@@ -1,21 +1,22 @@
 .hi-balloon
     position: absolute
-    top: -70px
-    left: -10px
-    width: 80px
+    top: -75px
+    left: -7px
     background: $hi-balloon-bg
-    font-size: toRem(38)
     text-align: center
     color: white
     padding-left: toRem(10)
     padding-right: toRem(10)
     border-radius: 300px
 
+    @media (min-width: 360px)
+        font-size: toRem(39)
+
 .hi-balloon::after
     content: ''
     position: absolute
     bottom: -15px
-    left: 27px
+    left: 23px
     border: 15px solid transparent
     border-bottom: 0
     border-left: 0
