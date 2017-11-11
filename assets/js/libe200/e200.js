@@ -19,7 +19,6 @@ window.e200 = (function(window) {
         }
     
         function recursiveResolve(node) {
-            console.log(node)
             if (typeof node != 'undefined') {
                 node.on = listener
                 node.toggleClass = toggleClass
