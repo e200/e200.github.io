@@ -10,6 +10,9 @@ const
     // Requires gulp-clean-css
     cleanCSS = require('gulp-clean-css'),
 
+    // Requires gulp-concat
+    concat = require('gulp-concat'),
+
     // Requires gulp-autoprefixer
     autoprefixer = require('gulp-autoprefixer'),
     
@@ -28,7 +31,7 @@ const
     // Requires gulp-insert
     insert = require('gulp-insert');
 
-gulp.task('default', ['serve']);
+gulp.task('default', ['pug', 'css', 'js', 'serve']);
 
 /**
  * Serve task, starts watchers and browser.
@@ -43,7 +46,7 @@ gulp.task('serve', function(){
     gulp.watch('./views/**', ['pug']);
     gulp.watch('./index.html', ['beautifyHTML+header'])
         .on('change', browserSync.reload);
-    gulp.watch('./assets/js/**')
+    gulp.watch('./assets/js/**', ['js'])
         .on('change', browserSync.reload);
 })
 
@@ -51,7 +54,7 @@ gulp.task('serve', function(){
  * CSS task,compile SASS to CSS.
  */
 gulp.task('css', function() {
-    return gulp.src('./assets/sass/master.sass')
+    return gulp.src('./assets/sass/e200.sass')
         .pipe(sass().on('error', sass.logError)) // Converts SASS to CSS eith gulp-sass
         .pipe(autoprefixer({
 			browsers: ['last 2 versions'],
@@ -61,6 +64,23 @@ gulp.task('css', function() {
         .pipe(cleanCSS({compatibility: 'ie8'})) // Minify the CSS
         .pipe(sourceMaps.write()) // Write the minified CSS source map
         .pipe(gulp.dest('./assets/css'));
+});
+
+/**
+ * JS task,concats all JS file to a single file.
+ */
+gulp.task('js', function() {
+    return gulp.src([
+            './assets/js/libe200/element_functions.js',
+            './assets/js/libe200/set_functions_recursively.js',
+            './assets/js/libe200/bootstrapper.js',
+            './assets/js/libe200/e200.js',
+            './assets/js/e200.github.io.js'
+        ])
+        .pipe(sourceMaps.init()) // Maps the concatenated JS
+        .pipe(concat('e200.js')) // Concats all JS files
+        .pipe(sourceMaps.write()) // Write the concatenated JS source map
+        .pipe(gulp.dest('./assets/js'));
 });
 
 /**
