@@ -1,40 +1,4 @@
+@import 'header/umburg'
+
 .e200-header
     background: $header-bg
-
-// .umburg
-.umburg
-    position: absolute
-    display: inline-block
-    top: 26px
-    right: 26px
-    padding: toEm(8)
-
-    .line
-        background-color: $side-item-hover-color
-        height: 2px
-        width: 25px
-        display: block
-        margin: toEm(4) 0
-        border-radius: 5px
-
-    &:hover
-        .line
-            background-color: $header-item-hover-color
-            transition: .2s
-
-
-.umburg-active
-    $line-1-transform: translateY(6px) rotateZ(135deg)
-    $line-2-transform: translateY(-6px) rotateZ(-135deg)
-
-    .line
-        background-color: $header-item-hover-color
-
-    .line-1
-        transform: $line-1-transform
-
-    .line-3
-        transform: $line-2-transform
-
-    .line-2
-        opacity: 0
