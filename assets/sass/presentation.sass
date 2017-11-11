@@ -5,8 +5,7 @@
     display: table
     margin: 0 auto
     padding-left: toEm(35)
-    padding-right: toEm(55)
-    text-align: center
+    padding-right: toEm(35)
 
 .presentation-barner
     position: relative
@@ -17,6 +16,7 @@
     height: inherit
 
 .presentation-text
+    display: inline
     position: relative // For .hi-svg absolute position
     margin: 0 // Reset for h1 margins
     text-align: left // Overrides .presentation text-align
@@ -28,3 +28,11 @@
         font-size: toRem(44.8)
     @media (min-width: 768px)
         font-size: toRem(50)
+    @media (min-width: 980px)
+        font-size: toRem(60)
+    @media (min-width: 1280px)
+        font-size: toRem(70)
+    @media (min-width: 1360px)
+        font-size: toRem(80)
+    @media (min-width: 1400px)
+        font-size: toRem(90)
