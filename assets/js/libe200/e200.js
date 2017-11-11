@@ -1,6 +1,13 @@
 window.e200 = (function(window) {
 
-    function init() {
+    var self = function e200(selector) {
+        // Current el
+        var el
+
+        function init() {            
+            recursiveResolve(document.body)
+        }
+
         /**
          * Adds a listener to the current el.
          * 
@@ -8,7 +15,7 @@ window.e200 = (function(window) {
          * @param function callback 
          */
         function listener(event_name, callback) {
-            el.addEventListener(event_name, callback, false)
+            this.addEventListener(event_name, callback, false)
         }
 
         function toggleClass(class_name) {
@@ -19,39 +26,29 @@ window.e200 = (function(window) {
         }
     
         function recursiveResolve(node) {
-            if (typeof node != 'undefined') {
-                node.on = listener
-                node.toggleClass = toggleClass
-    
-                var l = node.childElementCount
+            node.on = listener
+            node.toggleClass = toggleClass
 
-                if (l) {
-                    childrens = node.children
-    
-                    for (var i = 0; i < l; i++) {
-                        recursiveResolve(childrens[i])
-                    }
+            var l = node.childElementCount
+
+            if (l) {
+                var childrens = node.children
+
+                for (var i = 0; i < l; i++) {
+                    recursiveResolve(childrens[i])
                 }
             }
         }
-        
-        recursiveResolve(document.body)
-
-        //console.log(document.querySelectorAll('.line'))
-    }
-
-    window.onload = init    
-
-    var self = function e200(selector) {
-        // Current el
-        var el
 
         /**
          * Sets the main function that will
          * be loaded on window.onload
          */
         if (typeof selector == 'function') {
-            //document.onload = selector
+            window.onload = function () {
+                init()
+                selector()
+            }
 
             return
         }
@@ -66,6 +63,18 @@ window.e200 = (function(window) {
          */
         else if (typeof selector == 'string') {
             el = document.querySelectorAll(selector)
+        }
+
+        if (el.length === 1) {
+            el = el[0]
+        } else if(el.length > 1) {
+            el.on = function (event_name, callback) {
+                for (var i = 0; i < el.length; i++){
+                    el[i].on = listener.bind(el[i], event_name, callback)
+
+                    el[i].on()
+                }
+            }
         }
 
         return el

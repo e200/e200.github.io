@@ -1,7 +1,9 @@
 e200(function(){
-    //e200('span').on('click', function(e){
-    //    e.preventDefault()
-    //})
+    e200('span').on('click', function(e){
+        e.preventDefault()
+
+        alert('')
+    })
 
     // // Sets a delay for start the transition.
     // setTimeout(function(){
