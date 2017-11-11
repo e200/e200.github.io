@@ -1,0 +1,26 @@
+$base-size: 16
+
+@import "colors"
+@import "vars"
+@import "functions"
+@import "hagil"
+@import "header"
+@import "presentation"
+
+html, body
+  height: 100%
+
+body
+    font-family: 'Source Sans Pro', sans-serif
+    font-size: toEm(16)
+    background: $body-bg
+
+// Remove a porcaria dos pontos
+// que ficam em volta às áncoras
+// ao clicar nelas
+a
+    outline: none
+    text-decoration: none
+
+.main
+    height: 100%
