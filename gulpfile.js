@@ -93,7 +93,7 @@ gulp.task('sass', function (){
  * Also prepends my header to the output
  */
 gulp.task('pug', function(){
-    const header = '<!--\n\n' +
+    const header = '<!--\n' +
     '       ___   ___   ___\n' +
     '   ___|___\\ / _ \\ / _ \\\n' + 
     ' / _ \\ __) | | | | | | |\n' +
