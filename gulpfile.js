@@ -13,6 +13,9 @@ const
     // Requires gulp-concat
     concat = require('gulp-concat'),
 
+    // Requires gulp-concat
+    concat = require('gulp-concat'),
+
     // Requires gulp-autoprefixer
     autoprefixer = require('gulp-autoprefixer'),
     
