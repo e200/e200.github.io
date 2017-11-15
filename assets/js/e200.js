@@ -3,6 +3,7 @@ $(function(){
        e.preventDefault();
        
        $(this).toggleClass('active');
+       $('.header-nav').toggleClass('active');
     })
 
     // Sets a delay for start the transition.
