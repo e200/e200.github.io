@@ -1,1 +1,27 @@
-function e(e,n){this.addEventListener(e,n,!1)}function n(e){this.classList.contains(e)?this.classList.remove(e):this.classList.add(e)}function t(l){return el=this.querySelectorAll(l),1===el.length?el=el[0]:el.length>1&&(el.on=function(n,t){for(var l=0;l<el.length;l++)el[l].on=e.bind(el[l],n,t),el[l].on()},el.toggleClass=function(e){for(var t=0;t<el.length;t++)(n=n.bind(el[t],e))()},el.find=function(e){for(var n=0;n<el.length;n++)el[n].find=t.bind(el[n],e),el[n].find()}),el}function l(i){i.on=e,i.toggleClass=n,i.find=t;var o=i.childElementCount;if(o)for(var r=i.children,s=0;s<o;s++)l(r[s])}window.e200=function(e){return function(n){if("function"!=typeof n)return"object"==typeof n?el=n:"string"==typeof n&&(el=document.body.find(n)),el;e.onload=function(){l(document.body),n()}}}(window),e200(function(){e200(".umburg").on("click",function(e){e.preventDefault(),this.toggleClass("umburg-active")}),setTimeout(function(){var e=e200(".words");setInterval(function(){currentWord=e.find(".active"),nextWord=currentWord.nextSibling,null===nextWord?(e.firstChild.toggleClass("active"),e.lastChild.toggleClass("active")):(currentWord.toggleClass("active"),nextWord.toggleClass("active"))},6e3)},4e3)});
+$(function(){
+    $('.humburguer').on('click', function(e){
+       e.preventDefault();
+       
+       $(this).toggleClass('active');
+    })
+
+    // Sets a delay for start the transition.
+    setTimeout(function(){
+        var class_name = 'active',
+            words = $('.words'),
+            firstChild = words.firstChild();
+
+        // Transition cycle.
+        setInterval(function(){            
+            // Getting the current word.
+            currentWord = words.find('.active');
+
+            // Getting the next word to be displayed.
+            nextWord = currentWord.next();
+
+            currentWord.toggleClass(class_name);
+            
+            nextWord ? nextWord.toggleClass(class_name) : firstChild.toggleClass(class_name);
+        }, 4000);
+    }, 6000);
+})
