@@ -1,4 +1,14 @@
-@import 'header/umburg'
+@import 'header/nav'
+@import 'header/humburguer'
 
-.e200-header
-    background: $header-bg
+.header
+    position: fixed
+    top: 0
+    bottom: 0
+    width: 100%
+    background: $header-sm-bg
+    // Fallback for browser that doens't
+    // support transparense, e.g.: Opera-mini.
+    //background: $header-bg
+    //background: transparent
+    z-index: 99
