@@ -1,44 +1,46 @@
 const
-    gulp = require('gulp'),
+    gulp = require('gulp')
     
     // Requires gulp-pumbler
-    pumbler = require('gulp-plumber'),
+    pumbler = require('gulp-plumber')
+
+    // Requires gulp-rename
+    rename = require('gulp-rename')
 
     // Requires gulp-uglify
-    uglify = require('gulp-uglify'),
+    uglify = require('gulp-uglify')
 
     // Requires gulp-sass
-    sass = require('gulp-sass'),
+    sass = require('gulp-sass')
 
     // Requires gulp-concat
-    concat = require('gulp-concat'),
-
-    // Requires gulp-concat
-    concat = require('gulp-concat'),
+    concat = require('gulp-concat')
 
     // Requires gulp-autoprefixer
-    autoprefixer = require('gulp-autoprefixer'),
+    autoprefixer = require('gulp-autoprefixer')
     
     // Requires browser-sync
-    browserSync = require('browser-sync'),
+    browserSync = require('browser-sync')
 
     // Requires gulp-sourcemaps
-    sourceMaps = require('gulp-sourcemaps'),
+    sourceMaps = require('gulp-sourcemaps')
     
     // Requires gulp-pug
-    pug = require('gulp-pug'),
+    pug = require('gulp-pug')
     
     // Requires gulp-insert
     insert = require('gulp-insert')
 
 const
-    projectFolder = './',
-    viewsFolder = projectFolder +'views/',
-    assetsFolder = projectFolder + 'assets/',
-    
-    jsFolder = assetsFolder + 'js/',
-    cssFolder = assetsFolder + 'css/',
-    sassFolder = assetsFolder + 'sass/'
+    root = './'
+    views = root +'views/'
+    assets = root + 'assets/'
+
+let paths = {
+    js: assets + 'js/',
+    css: assets + 'css/',
+    sass: assets + 'sass/'
+}
 
 gulp.task('default', ['all'])
 
@@ -58,17 +60,12 @@ gulp.task('js', function() {
         }
     }
 
-    return gulp.src([
-            jsFolder + 'libe200/element_functions.js',
-            jsFolder + 'libe200/set_functions_recursively.js',
-            jsFolder + 'libe200/bootstrapper.js',
-            jsFolder + 'libe200/e200.js',
-            jsFolder + 'e200.github.io.js'
-        ])
+    return gulp.src(paths.js + 'e200.js')
         .pipe(pumbler())
         .pipe(concat(outputFile)) // Concats all JS files
         .pipe(uglify(uglifyOptions)) // Minifies the output
-        .pipe(gulp.dest(jsFolder))
+        .pipe(rename('master.js')) //Renames the output to master.js
+        .pipe(gulp.dest(paths.js))
 })
 
 /**
@@ -83,11 +80,11 @@ gulp.task('sass', function (){
         cascade: false
     }
 
-    return gulp.src(sassFolder + 'e200.sass')
+    return gulp.src(paths.sass + 'master.sass')
         .pipe(sass(sassOptions)
             .on('error', sass.logError))
         .pipe(autoprefixer(autoprefixerOptions))
-        .pipe(gulp.dest(cssFolder))
+        .pipe(gulp.dest(paths.css))
 })
 
 /**
@@ -104,11 +101,11 @@ gulp.task('pug', function(){
     ' \\___|_____|\\___/ \\___/\n\n' + 
     '-->\n\n'
 
-    return gulp.src(viewsFolder + '**.pug')
+    return gulp.src(views + '**.pug')
         .pipe(pumbler())
-        .pipe(pug({pretty: true}))
+        .pipe(pug({/*pretty: true*/}))
         .pipe(insert.prepend(header))
-        .pipe(gulp.dest(projectFolder))
+        .pipe(gulp.dest(root))
 })
 
 gulp.task('all', ['js', 'sass', 'pug'])
@@ -121,9 +118,9 @@ gulp.task('all', ['js', 'sass', 'pug'])
  */
 gulp.task('sass:watch', function(){
     browserSync.init({
-        server: projectFolder
+        server: root
     })
 
-    gulp.watch(sassFolder + '**', ['sass'])
+    gulp.watch(sass + '**', ['sass'])
         .on('change', browserSync.reload)
 })
