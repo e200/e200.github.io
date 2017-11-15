@@ -1,0 +1,36 @@
+.humburguer
+    .line
+        background-color: $humburguer-hover-bg
+        height: 2px
+        width: 25px
+        display: block
+        margin: toEm(4) 0
+        transition: $transition-time
+
+    &:hover
+        .line-2
+            width: 20px
+            // Prevents that the line-2
+            // width animation on hover
+            // move from right to left
+            // instead of backwards
+            transform: translateX(5px)
+
+// These styles will be applied
+// when the humburguer is `.active`
+.humburguer.active
+    // When `.humburguer` is `active`
+    // we provide a background to each `.line`
+    &:hover .line
+        background: $humburguer-active-bg
+
+    // `.line-[1,2] rotate animation
+    .line-1
+        transform: translateY(6px) rotateZ(135deg)
+    .line-3
+        transform: translateY(-6px) rotateZ(-135deg)
+
+    // `.line-2` hide animation
+    .line-2
+        opacity: 0
+        width: 0
