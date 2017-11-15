@@ -1,5 +1,13 @@
-header.e200-header
-    a.umburg.side-item(href="#")
+header.header
+    .v-align
+        div
+            nav.header-nav
+                ul.unstyled-list
+                    each menu_item, index in {home: 'Home', about: 'About', projects: 'Projects', contact: 'Contact'}
+                        li
+                            a(href="#" + index)= menu_item
+
+    a.humburguer.active(href="#")
         div
             - for (var i = 1; i < 4; i++)
                 span.line(class="line-" + i)
