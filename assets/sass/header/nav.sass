@@ -1,19 +1,13 @@
 .header-nav
     position: fixed
-    display: none // JS
     width: 100%
     height: 100%
-    background: $header-sm-bg
     text-align: center
     text-transform: uppercase
     // Fallback for browser that doens't
     // support transparense, e.g.: Opera-mini.
     //background: $header-bg
     //background: transparent
-    z-index: 99
-
-.header-nav.active
-    display: block
 
 .header-nav a
     position: relative
@@ -46,9 +40,7 @@
     -webkit-transform: scale(1)
     transform: scale(1)
 
-.header-nav .nav-list
-    position: relative
-    -webkit-transform: translateY(-50%)
-    -ms-transform: translateY(-50%)
-    transform: translateY(-50%)
-    top: 50%
+.nav-list
+    position: relative;
+    transform: translateY(-50%);
+    top: 50%;

@@ -3,7 +3,10 @@ $(function(){
        e.preventDefault();
        
        $(this).toggleClass('active');
-       $('.header-nav').toggleClass('active');
+       
+        for (var i = 0; i < 5; i++) {
+            $('.nav-anim-el-' + i).toggleClass('active');
+        }       
     })
 
     // Sets a delay for start the transition.

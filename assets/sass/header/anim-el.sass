@@ -1,0 +1,63 @@
+.nav-anim-el-0,
+.nav-anim-el-1,
+.nav-anim-el-2,
+.nav-anim-el-3,
+.nav-anim-el-4
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    transform: translateX(100%)
+    transition: transform $transition-time ease-in
+
+.nav-anim-el-0
+    background: #5bc0eb
+    z-index: 96
+
+.nav-anim-el-1
+    background: #fde74c
+    z-index: 97
+
+.nav-anim-el-2
+    background: #9bc53d
+    z-index: 98
+
+.nav-anim-el-3
+    background: #c3423f
+    z-index: 98
+
+.nav-anim-el-4
+    background: #211a1e
+    z-index: 99
+
+.nav-anim-el-0.active,
+.nav-anim-el-1.active,
+.nav-anim-el-2.active,
+.nav-anim-el-3.active,
+.nav-anim-el-4.active
+    transform: translateX(0)
+
+.nav-anim-el-1.active
+    transition-delay: .15s
+
+.nav-anim-el-2.active
+    transition-delay: .30s
+
+.nav-anim-el-3.active
+    transition-delay: .45s
+
+.nav-anim-el-4.active
+    transition-delay: .60s
+
+.nav-anim-el-3:not(.active)
+    transition-delay: .15s
+
+.nav-anim-el-2:not(.active)
+    transition-delay: .30s
+
+.nav-anim-el-1:not(.active)
+    transition-delay: .45s
+
+.nav-anim-el-0:not(.active)
+    transition-delay: .60s
