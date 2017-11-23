@@ -1,22 +1,5 @@
-- var myName = 'e200'
-- var words = ['code', 'tea', 'music', 'space', 'purple', 'Linux']
-
 section.presentation.v-align
-    .presentation-barner
-        h1.presentation-text
-            .hi-balloon Hi,
-
-            |I'm 
-            span.my-name #{myName},
-            br
-            |a Web Designer &amp; dreamer
-            br
-            | who loves 
-
-            span.words
-                each word, i in words
-                    if (i == 0)
-                        span.active #{word}
-                    else
-                        span #{word}
+    .v-wrapper
+        include presentation/text
+        
 section(style="height: 100%; background-color: #6a56ba")
