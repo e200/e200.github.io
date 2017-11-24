@@ -1,8 +1,8 @@
-.nav-anim-el-0,
-.nav-anim-el-1,
-.nav-anim-el-2,
-.nav-anim-el-3,
-.nav-anim-el-4
+.slide-0,
+.slide-1,
+.slide-2,
+.slide-3,
+.slide-4
     position: fixed
     top: 0
     bottom: 0
@@ -11,54 +11,54 @@
     transform: translateX(100%)
     transition: transform .15s cubic-bezier(0.250, 0.100, 0.250, 1.000)
 
-.nav-anim-el-0
+.slide-0
     background: #5bc0eb
     z-index: 96
 
-.nav-anim-el-1
+.slide-1
     background: #fde74c
     z-index: 97
 
-.nav-anim-el-2
+.slide-2
     background: #9bc53d
     z-index: 98
 
-.nav-anim-el-3
+.slide-3
     background: #c3423f
     z-index: 98
 
-.nav-anim-el-4
+.slide-4
     background: #211a1e
     z-index: 99
     transition-duration: .3s
 
-.nav-anim-el-0.active,
-.nav-anim-el-1.active,
-.nav-anim-el-2.active,
-.nav-anim-el-3.active,
-.nav-anim-el-4.active
+.header.active .slide-0,
+.header.active .slide-1,
+.header.active .slide-2,
+.header.active .slide-3,
+.header.active .slide-4
     transform: translateX(0)
 
-.nav-anim-el-1.active
+.header.active .slide-1
     transition-delay: .15s
 
-.nav-anim-el-2.active
+.header.active .slide-2
     transition-delay: .30s
 
-.nav-anim-el-3.active
+.header.active .slide-3
     transition-delay: .45s
 
-.nav-anim-el-4.active
+.header.active .slide-4
     transition-delay: .60s
 
-.nav-anim-el-3:not(.active)
+.header:not(.active) .slide-3
     transition-delay: .15s
 
-.nav-anim-el-2:not(.active)
+.header:not(.active) .slide-2
     transition-delay: .30s
 
-.nav-anim-el-1:not(.active)
+.header:not(.active) .slide-1
     transition-delay: .45s
 
-.nav-anim-el-0:not(.active)
+.header:not(.active) .slide-0
     transition-delay: .60s
