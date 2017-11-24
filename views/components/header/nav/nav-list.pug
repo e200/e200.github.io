@@ -1,0 +1,4 @@
+ul.nav-list.unstyled-list
+    each menu_item, index in {home: 'Home', about: 'About', projects: 'Projects', contact: 'Contact'}
+        li
+            a(href="#" + index)= menu_item
