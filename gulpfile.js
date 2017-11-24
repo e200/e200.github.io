@@ -121,6 +121,6 @@ gulp.task('sass:watch', function(){
         server: root
     })
 
-    gulp.watch(sass + '**', ['sass'])
+    gulp.watch(paths.sass + '**', ['sass'])
         .on('change', browserSync.reload)
 })
