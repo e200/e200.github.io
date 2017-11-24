@@ -9,7 +9,7 @@
     left: 0
     right: 0
     transform: translateX(100%)
-    transition: transform $transition-time ease-in
+    transition: transform .15s cubic-bezier(0.250, 0.100, 0.250, 1.000)
 
 .nav-anim-el-0
     background: #5bc0eb
@@ -30,6 +30,7 @@
 .nav-anim-el-4
     background: #211a1e
     z-index: 99
+    transition-duration: .3s
 
 .nav-anim-el-0.active,
 .nav-anim-el-1.active,
