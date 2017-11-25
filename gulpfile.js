@@ -101,7 +101,7 @@ gulp.task('pug', function(){
     ' \\___|_____|\\___/ \\___/\n\n' + 
     '-->\n\n'
 
-    return gulp.src(views + '**.pug')
+    return gulp.src(views + 'index.pug')
         .pipe(pumbler())
         .pipe(pug({/*pretty: true*/}))
         .pipe(insert.prepend(header))
