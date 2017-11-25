@@ -3,10 +3,11 @@
     display: inline-block
     font-size: toEm(32)
     padding: toRem(10)
-    color: $header-sm-nav-color
+    color: $header_item_static
+    transition: $transition_time
 
 .nav-list a:hover
-    color: $header-sm-nav-hover-color
+    color: $header_item_hover
 
 .nav-list a:after
     content: ''
@@ -17,9 +18,9 @@
     left: 0
     visibility: hidden
     transform: scale(0)
-    transition: all $transition-time ease-in-out 0s
+    transition: all $transition_time ease-in-out 0s
 
 .nav-list a:hover:after
     visibility: visible
-    background: $header-sm-nav-hover-color
+    background: $header_item_hover
     transform: scale(1)

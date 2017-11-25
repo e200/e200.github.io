@@ -1,11 +1,11 @@
 .humburguer
     .line
-        background-color: $humburguer-hover-bg
+        background-color: $humburguer_static
         height: 2px
         width: 25px
         display: block
         margin: toEm(4) 0
-        transition: $transition-time
+        transition: $transition_time
 
     &:hover
         .line-2
@@ -22,7 +22,7 @@
     // When `.header` is `active`
     // we provide a background to each `.line`
     &:hover .line
-        background: $humburguer-active-bg
+        background: $humburguer_hover
 
     // `.line-[1,2] rotate animation
     .line-1
