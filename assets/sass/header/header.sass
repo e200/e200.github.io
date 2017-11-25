@@ -12,21 +12,13 @@
 .header .full-name
     position: relative
     color: $header-item-static
-    font-size: toEm(18)
     display: inline-block
-    padding-top: toEm(30)
-    padding-bottom: toEm(30)
-    z-index: 2
-
-.header .full-name:before,
-.header .full-name:after
-    position: absolute
-    content: ' '
-    top: 51%
-    height: 2px
-    width: 20%
-    background: $header-item-static
     z-index: 1
 
-.header .full-name:before,
-    margin-left: -20%
+.header .full-name::before
+    content: ''
+    position: absolute
+    top: 50%
+    height: 2px
+    background: $header-item-static
+    z-index: -1
