@@ -1,6 +1,8 @@
 - for (var i = 0; i < 5; i++)
     if (i == 4)
         div(class="slide-" + i)
-            include nav/nav
+            .wrapper
+                span.full-name #{full_name}
+                include nav/nav
     else
         div(class="slide-" + i)
