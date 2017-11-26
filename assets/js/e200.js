@@ -1,8 +1,9 @@
 $(function(){
     $('.humburguer').on('click', function(e){
        e.preventDefault();
-              
-        $('.header').toggleClass('active');    
+        
+       $('body').toggleClass('no-overflow');
+       $('.header').toggleClass('active');
     })
 
     // Sets a delay for start the transition.
