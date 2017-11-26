@@ -1,0 +1,26 @@
+.header .social
+    opacity: 0
+    margin-top: toRem(30)
+
+.header.active .social
+    animation: nav-in $transition-time $easeOutBack forwards
+    animation-delay: 1200ms
+
+.header .social li
+    display: inline-block
+
+.header .social a
+    display: inline-block
+    color: $header_item_static
+    border: 2px solid $header_item_static
+    border-radius: 300px
+    width: 44px
+    height: 44px
+    margin: 5px
+    line-height: 40px
+    transition: $transition-time
+
+.header .social a:hover
+    color: $header_item_hover
+    border-color: $header_item_hover
+    transform: translateY(-10%)
