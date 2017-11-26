@@ -12,7 +12,6 @@ body
     font-family: 'Source Sans Pro', sans-serif
     font-size: toEm(16)
     background: $body-bg
-    overflow-x: hidden
 
 // Remove a porcaria dos pontos
 // que ficam em volta às áncoras
@@ -21,9 +20,12 @@ a
     outline: none
     text-decoration: none
 
+.no-overflow
+    overflow: hidden
+
 .main
     height: 100%
 
-
+@import 'animations/header'
 @import 'header/header'
 @import 'presentation/presentation'
