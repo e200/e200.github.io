@@ -1,0 +1,32 @@
+.header .full-name
+    position: relative
+    opacity: 0
+    animation: nav-in .5s ease forwards
+    z-index: 1
+
+.header.active .full-name
+    animation-delay: 650ms
+
+.header .full-name span
+    display: inline-block
+    padding: toEm(10)
+    color: $header-item-static
+    background: $slide_4_static
+    text-transform: uppercase
+
+.header .full-name::before
+    border-top: 2px solid $header_item_static
+    content: ''
+    margin: 0 auto
+    position: absolute
+    top: 50%
+    left: 0
+    right: 0
+    bottom: 0
+    z-index: -1
+    width: 0
+    transition: .5s ease-out
+    transition-delay: 700ms
+
+.header.active .full-name::before
+    width: 60%

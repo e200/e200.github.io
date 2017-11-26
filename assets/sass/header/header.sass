@@ -1,24 +1,9 @@
+.header .v-align
+    width: 100%
+
+.header .v-wrapper
+    text-align: center
+
 @import 'slides-animation'
 @import 'slide-4'
 @import 'humburguer/humburguer'
-
-.header .wrapper
-    text-align: center
-    // Vertical center
-    position: relative
-    transform: translateY(-50%)
-    top: 50%
-
-.header .full-name
-    position: relative
-    color: $header-item-static
-    display: inline-block
-    z-index: 1
-
-.header .full-name::before
-    content: ''
-    position: absolute
-    top: 50%
-    height: 2px
-    background: $header-item-static
-    z-index: -1

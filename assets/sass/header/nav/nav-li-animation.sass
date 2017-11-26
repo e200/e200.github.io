@@ -1,24 +1,14 @@
 .header.active li:nth-child(1)
-    animation-delay: 650ms
-
-.header.active li:nth-child(2)
     animation-delay: 700ms
 
-.header.active li:nth-child(3)
-    animation-delay: 850ms
+.header.active li:nth-child(2)
+    animation-delay: 750ms
 
-.header.active li:nth-child(4)
+.header.active li:nth-child(3)
     animation-delay: 900ms
 
-@keyframes nav-li-anim
-    0%
-        opacity: 0
-        transform: translate(30%, 30%) scale(.5)
-    70%
-        transform: translate(-1%, -2%)
-    100%
-        opacity: 1
-        transform: translate(0) scale(1)
+.header.active li:nth-child(4)
+    animation-delay: 950ms
 
 .header.active li
-    animation: nav-li-anim .5s ease forwards
+    animation: nav-in .5s ease forwards
