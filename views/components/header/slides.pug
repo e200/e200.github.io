@@ -2,8 +2,19 @@
     if (i == 4)
         div.v-align(class="slide-" + i)
             .v-wrapper
-                h2.full-name
+                h4.full-name
                     span #{full_name}
                 include nav/nav
+                ul.social.unstyled-list
+                    //each address, index in {}
+                    li
+                        a(href="#")
+                            i.fa.fa-lg.fa-facebook
+                    li
+                        a(href="#")
+                            i.fa.fa-lg.fa-github-alt
+                    li
+                        a(href="#")
+                            i.fa.fa-lg.fa-linkedin
     else
         div(class="slide-" + i)
