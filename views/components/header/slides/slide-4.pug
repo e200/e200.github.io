@@ -1,0 +1,12 @@
+div.v-align(class="slide-" + i)
+    .v-wrapper
+        h4.full-name
+            span #{full_name}
+
+        include ../nav/nav
+
+        ul.social.list-unstyled
+            each social, index in socials
+                li
+                    a(href=social.address title=index)
+                        i.fa.fa-lg(class="fa-" + social.icon)
