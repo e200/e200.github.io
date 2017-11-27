@@ -1,20 +1,5 @@
 - for (var i = 0; i < 5; i++)
     if (i == 4)
-        div.v-align(class="slide-" + i)
-            .v-wrapper
-                h4.full-name
-                    span #{full_name}
-                include nav/nav
-                ul.social.unstyled-list
-                    //each address, index in {}
-                    li
-                        a(href="#" title="facebook")
-                            i.fa.fa-lg.fa-facebook
-                    li
-                        a(href="#" title="github")
-                            i.fa.fa-lg.fa-github-alt
-                    li
-                        a(href="#" title="linkedin")
-                            i.fa.fa-lg.fa-linkedin
+        include slides/slide-4
     else
         div(class="slide-" + i)
