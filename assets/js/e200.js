@@ -23,6 +23,6 @@ $(function(){
             currentWord.toggleClass(class_name);
             
             nextWord ? nextWord.toggleClass(class_name) : firstChild.toggleClass(class_name);
-        }, 4000);
-    }, 6000);
+        }, 6000);
+    }, 5000);
 })

@@ -1,13 +1,14 @@
 doctype html
 
 html(lang="en")
-    include vars
+    include data
     include components/head.pug
     
     body
         main.main
-            include components/header/header
+            include components/header
             include components/presentation
+            include components/intro
 
         script(src="https://e200.github.io/anotherJS/dist/another.js")
-        script(src="assets/js/e200.js")
+        script(src="assets/js/master.js")
