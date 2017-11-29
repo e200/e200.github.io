@@ -9,9 +9,22 @@ html, body
     height: 100%
 
 body
-    font-family: 'Barlow Condensed', sans-serif
+    font-family: 'Source Sans Pro', sans-serif
     font-size: toEm(16)
     background: $body-bg
+
+// iPhone 5
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (device-pixel-ratio: 2) and (device-aspect-ratio: 40/71) and (orientation:landscape)
+    body
+        font-size: toRem(18)
+
+@media screen and (device-aspect-ratio: 375/667)
+    body
+        font-size: toRem(20)
+
+@media screen and (device-aspect-ratio: 375/667) and (orientation : landscape)
+    body
+        //font-size: toRem(20)
 
 // Remove a porcaria dos pontos
 // que ficam em volta às áncoras
