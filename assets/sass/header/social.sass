@@ -2,6 +2,9 @@
     opacity: 0
     margin-top: toRem(30)
 
+    @media screen and (min-device-aspect-ratio: 2/3) and (orientation : landscape)
+        margin-top: toRem(10)
+
 .header.active .social
     animation: nav-in $transition-time $easeOutBack forwards
     animation-delay: 1200ms
