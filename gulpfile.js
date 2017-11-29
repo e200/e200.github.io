@@ -31,6 +31,9 @@ const
     // Requires gulp-insert
     insert = require('gulp-insert')
 
+    // Requires gulp-imagemin
+    imagemin = require('gulp-imagemin')
+
 const
     root = './'
     views = root +'views/'
@@ -39,7 +42,9 @@ const
 let paths = {
     js: assets + 'js/',
     css: assets + 'css/',
-    sass: assets + 'sass/'
+    sass: assets + 'sass/',
+    img: assets + 'img/',
+    imgSrc: assets + 'img/src/'
 }
 
 gulp.task('default', ['all'])
@@ -86,6 +91,15 @@ gulp.task('sass', function (){
         .pipe(autoprefixer(autoprefixerOptions))
         .pipe(gulp.dest(paths.css))
 })
+
+/**
+ * Minifies images on `img` directory.
+ */
+ gulp.task('img', function(){
+     return gulp.src(paths.imgSrc + '/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest(paths.img))
+ })
 
 /**
  * Compiles my PUG files to HTML

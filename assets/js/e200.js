@@ -25,4 +25,14 @@ $(function(){
             nextWord ? nextWord.toggleClass(class_name) : firstChild.toggleClass(class_name);
         }, 6000);
     }, 5000);
+
+    /**
+     * Prevents the header sliders from being
+     * animated when the page loads.
+     * 
+     * @see https://stackoverflow.com/questions/27938900/how-to-prevent-css-keyframe-animation-to-run-on-page-load
+     */
+    setTimeout(function(){
+        $('.preload').removeClass('preload');
+    }, 500)
 })
