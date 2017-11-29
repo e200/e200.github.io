@@ -4,3 +4,42 @@
     background: $intro_static
     text-align: center
     color: #ededed
+
+.intro-pic
+    width: 135px
+    height: 135px
+    background-image: url('../img/e200.jpg')
+    border-radius: 300px
+    box-shadow: 0 0 20px #0e0e0e
+    z-index: 9999
+
+.intro-title
+    font-size: toEm(25)
+    font-weight: normal
+    text-rendering: optimizeLegibility
+
+.intro-name
+    color: $intro_highlight
+
+.intro-areas
+    font-size: toEm(24)
+
+.intro-description
+    font-size: toEm(16)
+
+@media screen and (device-aspect-ratio: 2/3) {}
+
+// iPhone 5:
+@media screen and (device-aspect-ratio: 40/71) {}
+
+// iPhone 6:
+@media screen and (device-aspect-ratio: 375/667) {}
+
+// iPhone 6 Plus:
+@media screen and (device-aspect-ratio: 16/9) {}
+
+// iPad:
+@media screen and (device-aspect-ratio: 3/4) {}
+
+// -moz-osx-font-smoothing: grayscale;
+// -webkit-font-smoothing: antialiased;
