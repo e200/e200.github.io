@@ -6,6 +6,10 @@
     color: $header_item_static
     transition: $transition_time
 
+    @media screen and (min-device-aspect-ratio: 2/3) and (orientation : landscape)
+        padding: toRem(5)
+
+
 .nav-list a:hover
     color: $header_item_hover
 

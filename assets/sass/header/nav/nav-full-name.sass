@@ -2,6 +2,9 @@
     position: relative
     margin: 0
     margin-bottom: toRem(30)
+    
+    @media screen and (min-device-aspect-ratio: 2/3) and (orientation : landscape)
+        margin-bottom: toRem(10)
 
 .header .full-name span
     display: inline-block
