@@ -13,18 +13,19 @@ body
     font-size: toEm(16)
     background: $body-bg
 
-// iPhone 5
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (device-pixel-ratio: 2) and (device-aspect-ratio: 40/71) and (orientation:landscape)
+// iPhone 6
+@media only screen  and (min-device-width : 375px) and (max-device-width : 667px) and (device-aspect-ratio: 375/667) 
     body
-        font-size: toRem(18)
+        font-size: toEm(20)
 
-@media screen and (device-aspect-ratio: 375/667)
+// iPhone 6+
+@media only screen and (min-device-width : 414px) and (max-device-width : 736px) and (device-aspect-ratio: 16/9)
     body
-        font-size: toRem(20)
+        font-size: toEm(22)
 
-@media screen and (device-aspect-ratio: 375/667) and (orientation : landscape)
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px)
     body
-        //font-size: toRem(20)
+        font-size: toEm(22)
 
 // Remove a porcaria dos pontos
 // que ficam em volta às áncoras
