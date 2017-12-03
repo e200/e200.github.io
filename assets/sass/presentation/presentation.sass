@@ -3,8 +3,8 @@
 
 .presentation
     margin: 0 auto
-    padding-left: toEm(35)
-    padding-right: toEm(35)
+    padding-left: em(35)
+    padding-right: em(35)
 
 .presentation-text
     display: inline
@@ -15,13 +15,18 @@
     color: $presentation-text-color
     line-height: 1.5
 
+    @media only screen and (min-width: 375px)
+        font-size: em(38)
+    @media only screen and (min-width: 425px)
+        font-size: em(52)
+
 //@media (min-width: 360px)
-//    font-size: toRem(44.8)
+//    font-size: rem(44.8)
 //@media (min-width: 768px)
-//    font-size: toRem(50)
+//    font-size: rem(50)
 //@media (min-width: 980px)
-//    font-size: toRem(60)
+//    font-size: rem(60)
 //@media (min-width: 1280px)
-//    font-size: toRem(70)
+//    font-size: rem(70)
 //@media (min-width: 1360px)
-//    font-size: toRem(80)
+//    font-size: rem(80)

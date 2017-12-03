@@ -2,12 +2,16 @@
     position: absolute
     top: -50px
     left: -6px
-    padding: 0 toRem(6)
+    padding: 0 rem(6)
     background: $hi-balloon-bg
-    font-size: .8em
+    font-size: .6em
     text-align: center
     color: white
     border-radius: 300px
+
+    @media only screen and (min-width: 425px)
+        top: -55px;
+        left: 4px;
 
 .hi-balloon::after
     content: ''
