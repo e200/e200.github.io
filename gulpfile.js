@@ -81,8 +81,17 @@ gulp.task('sass', function (){
         outputStyle: 'compressed'
     }
     var autoprefixerOptions = {
-        browsers: ['last 2 versions'],
-        cascade: false
+        browsers: [
+            "Android 2.3",
+            "Android >= 4",
+            "Chrome >= 20",
+            "Firefox >= 24",
+            "Explorer >= 7",
+            "iOS >= 6",
+            "Opera >= 12",
+            "Safari >= 6"
+          ],
+        cascade: false,
     }
 
     return gulp.src(paths.sass + 'master.sass')
