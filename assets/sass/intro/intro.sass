@@ -1,45 +1,57 @@
 .intro
-    padding-top: toEm(40)
-    height: 100%
     background: $intro_static
-    text-align: center
     color: #ededed
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
 
-.intro-pic
-    width: 135px
-    height: 135px
-    background-image: url('../img/e200.jpg')
+.intro .pic
+    max-width: 160px
+    width: 100%
+    height: auto
     border-radius: 300px
-    box-shadow: 0 0 20px #0e0e0e
+    box-shadow: 0 0 20px $intro_pic_shadow
     z-index: 9999
 
-.intro-title
-    font-size: toEm(25)
-    font-weight: normal
-    text-rendering: optimizeLegibility
+    @media only screen and (min-width: 1024px)
+        max-width: 200px
 
-.intro-name
+.intro .title
+    font-size: em(34)
+    text-rendering: optimizeLegibility
+    // Overrides the .section .title
+    // margin: 0 with default value
+    margin-top: .67em
+
+.intro .name
     color: $intro_highlight
 
-.intro-areas
-    font-size: toEm(24)
+.intro .description
+    font-size: em(14)
 
-.intro-description
-    font-size: toEm(16)
+    @media only screen and (min-width: 1024px)
+        font-size: em(18)
 
-@media screen and (device-aspect-ratio: 2/3) {}
+.intro .mam
+    display: inline-block
+    padding: em(10)
+    color: $intro_static
+    background: $intro_highlight
+    border-radius: 5px
+    margin-top: em(20)
 
-// iPhone 5:
-@media screen and (device-aspect-ratio: 40/71) {}
+    &:hover
+        background: lighten($intro_highlight, 10%)
 
-// iPhone 6:
-@media screen and (device-aspect-ratio: 375/667) {}
+// @media screen and (device-aspect-ratio: 2/3) {}
 
-// iPhone 6 Plus:
-@media screen and (device-aspect-ratio: 16/9) {}
+// // iPhone 5:
+// @media screen and (device-aspect-ratio: 40/71) {}
 
-// iPad:
-@media screen and (device-aspect-ratio: 3/4) {}
+// // iPhone 6:
+// @media screen and (device-aspect-ratio: 375/667) {}
 
-// -moz-osx-font-smoothing: grayscale;
-// -webkit-font-smoothing: antialiased;
+// // iPhone 6 Plus:
+// @media screen and (device-aspect-ratio: 16/9) {}
+
+// // iPad:
+// @media screen and (device-aspect-ratio: 3/4) {}
