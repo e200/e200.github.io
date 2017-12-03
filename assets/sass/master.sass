@@ -1,31 +1,25 @@
 $base-size: 16
 
-@import 'hagil'
+@import 'agil'
 @import 'colors/colors'
 @import 'vars/vars'
 @import 'functions/functions'
+
+@font-face
+    font-family: 'Source Sans Pro'
+    src: url('../../externals/SourceSansPro-Regular.ttf')
+
+@font-face
+    font-family: 'Lobster Two'
+    src: url('../../externals/LobsterTwo-Regular.ttf')
 
 html, body
     height: 100%
 
 body
     font-family: 'Source Sans Pro', sans-serif
-    font-size: toEm(16)
-    background: $body-bg
-
-// iPhone 6
-@media only screen  and (min-device-width : 375px) and (max-device-width : 667px) and (device-aspect-ratio: 375/667) 
-    body
-        font-size: toEm(20)
-
-// iPhone 6+
-@media only screen and (min-device-width : 414px) and (max-device-width : 736px) and (device-aspect-ratio: 16/9)
-    body
-        font-size: toEm(22)
-
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px)
-    body
-        font-size: toEm(22)
+    font-size: em(16)
+    background: $body_bg
 
 // Remove a porcaria dos pontos
 // que ficam em volta às áncoras
@@ -40,7 +34,10 @@ a
 .main
     height: 100%
 
+@import 'section'
 @import 'animations/header'
 @import 'header/header'
 @import 'presentation/presentation'
 @import 'intro/intro'
+@import 'projects'
+@import 'techs'
