@@ -1,0 +1,8 @@
+section.projects.section.v-align.centered
+    .v-wrapper.text-center
+        .container
+            h1.title Projects
+            each project in projects
+                .project.sm-6.md-4
+                    a(href=project.address).name #{project.name}
+                    p.description #{project.description}
