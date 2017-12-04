@@ -12,9 +12,6 @@
     box-shadow: 0 0 20px $intro_pic_shadow
     z-index: 9999
 
-    @media only screen and (min-width: 1024px)
-        max-width: 200px
-
 .intro .title
     font-size: em(34)
     text-rendering: optimizeLegibility
@@ -28,9 +25,6 @@
 .intro .description
     font-size: em(14)
 
-    @media only screen and (min-width: 1024px)
-        font-size: em(18)
-
 .intro .mam
     display: inline-block
     padding: em(10)
@@ -41,6 +35,17 @@
 
     &:hover
         background: lighten($intro_highlight, 10%)
+
+@media only screen and (min-width: 768px)
+    .intro .pic
+        max-width: 200px
+
+    .intro .title
+        font-size: em(48)
+
+    .intro .description,
+    .intro .mam
+        font-size: rem(24)
 
 // @media screen and (device-aspect-ratio: 2/3) {}
 
