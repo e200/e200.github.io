@@ -6,8 +6,12 @@
     color: $header_item_static
     transition: $transition_time
 
-    @media screen and (orientation : landscape)
+    @media screen and (max-width: 767px) and (orientation : landscape)
         padding: rem(5)
+
+    @media screen and (min-width: 768px)
+        font-size: em(32)
+        padding: rem(15)
 
 
 .nav-list a:hover
