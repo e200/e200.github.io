@@ -3,7 +3,11 @@
     margin: 0
     margin-bottom: rem(30)
     
-    @media screen and (min-device-aspect-ratio: 2/3) and (orientation : landscape)
+    @media only screen and (min-width: 768px)
+        font-size: em(32)
+        font-weight: normal
+
+    @media only screen and (orientation: landscape)
         margin-bottom: rem(10)
 
 .header .full-name span
