@@ -1,7 +1,8 @@
-section.techs.section.v-align.centered
+section#techs.techs.section.v-align.centered
     .v-wrapper
         .container.text-center
             h1.title Techs
-            each icon in technology_icons
+            each tech in techs
                 .sm-4.md-2
-                    i.icon(class="devicon-" + icon + "-plain")
+                    i.icon(class="devicon-" + tech.icon + "-plain" title=tech.text)
+                    span.name #{tech.text}
