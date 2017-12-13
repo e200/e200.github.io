@@ -1,7 +1,7 @@
 .nav-list a
     position: relative
     display: inline-block
-    font-size: em(24)
+    font-size: em(22)
     padding: rem(10)
     color: $header_item_static
     transition: $transition_time
@@ -10,7 +10,6 @@
         padding: rem(5)
 
     @media screen and (min-width: 768px)
-        font-size: em(32)
         padding: rem(15)
 
 
@@ -26,7 +25,7 @@
     left: 0
     visibility: hidden
     transform: scale(0)
-    transition: all $transition_time ease-in-out 0s
+    transition: all $transition_time
 
 .nav-list a:hover:after
     visibility: visible
