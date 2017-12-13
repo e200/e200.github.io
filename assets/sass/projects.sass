@@ -1,16 +1,19 @@
 .projects
+    background: $projects_bg
     color: $projects_static
 
 .projects .title
-    color: $project_color
+    color: $projects_static
 
 .project
-    min-height: 210px
     padding: em(25) em(25) 0 em(25)
+
+    @media only screen and (min-width: 768px)
+        min-height: 210px
     
 .project .name
     font-size: em(32)
-    color: $project_color
+    color: $projects_static
     
     &:hover
-        color: darken($project_color, 20%)
+        color: darken($projects_static, 20%)
