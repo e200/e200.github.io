@@ -6,8 +6,8 @@
         margin-top: rem(10)
 
 .header.active .social
-    animation: nav-in $transition-time $easeOutBack forwards
-    animation-delay: 1200ms
+    animation: nav-in $transition-time cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards
+    animation-delay: 1550ms
 
 .header .social li
     display: inline-block
@@ -17,22 +17,16 @@
     color: $header_item_static
     border: 2px solid $header_item_static
     border-radius: 300px
-    width: 44px
-    height: 44px
+    width: 54px
+    height: 54px
     margin: 5px
-    line-height: 40px
+    line-height: 54px
     transition: $transition-time
+
+    i
+        font-size: rem(24)
 
 .header .social a:hover
     color: $header_item_hover
     border-color: $header_item_hover
     transform: translateY(-10%)
-
-@media screen and (min-width: 768px)
-    .header .social a
-        width: 64px
-        height: 64px
-        line-height: 60px
-
-        i
-            font-size: em(32)
