@@ -2,7 +2,6 @@ $(function(){
     $('.humburguer').on('click', function(e){
        e.preventDefault();
         
-       $('body').toggleClass('no-overflow');
        $('.header').toggleClass('active');
     })
 
@@ -23,8 +22,8 @@ $(function(){
             currentWord.toggleClass(class_name);
             
             nextWord ? nextWord.toggleClass(class_name) : firstChild.toggleClass(class_name);
-        }, 6000);
-    }, 5000);
+        }, 5000);
+    }, 4000);
 
     /**
      * Prevents the header sliders from being
@@ -35,4 +34,10 @@ $(function(){
     setTimeout(function(){
         $('.preload').removeClass('preload');
     }, 500)
+
+    /*window.addEventListener('scroll', function(e){
+        var offset_intro = document.getElementById('intro').offsetTop;
+
+        TweenLite.to(window, 1.5, {scrollTo:offset_intro});
+    });*/
 })
