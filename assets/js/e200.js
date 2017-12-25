@@ -24,8 +24,8 @@ $(function(){
             currentWord.toggleClass(class_name);
             
             nextWord ? nextWord.toggleClass(class_name) : firstChild.toggleClass(class_name);
-        }, 5000);
-    }, 4000);
+        }, 4000);
+    }, 3000);
 
     /**
      * Prevents the header sliders from being
