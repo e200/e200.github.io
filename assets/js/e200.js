@@ -1,3 +1,5 @@
+window.sr = ScrollReveal({viewFactor: 0.3});
+
 $(function(){
     $('.humburguer').on('click', function(e){
        e.preventDefault();
@@ -40,4 +42,9 @@ $(function(){
 
         TweenLite.to(window, 1.5, {scrollTo:offset_intro});
     });*/
+
+    sr.reveal('.section .title');
+    sr.reveal('#intro .pic');
+    sr.reveal('#projects .project');
+    sr.reveal('#techs .tech');
 })
