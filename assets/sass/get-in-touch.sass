@@ -1,10 +1,38 @@
 #get-in-touch
     background: $get_in_touch_bg
-
-.get-in-touch input, .get-in-touch textarea, .get-in-touch button
-    background: transparent
-    border: 2px solid $get_in_touch_static
     color: $get_in_touch_static
-    font-size: 18px
+
+.get-in-touch form
+    display: inline-block
+
+.get-in-touch .form-item
+    display: block
+    border: 0
+    border-radius: 3px
     padding: 15px
-    margin: 5px
+    margin: 15px 0
+    width: 100%
+
+.get-in-touch .form-input
+    color: #a8a8a8
+    background: #151515
+    transition: $transition-time
+
+    &:focus
+        box-shadow: 0 0 2px $red
+
+#btn-ttm
+    text-transform: uppercase
+    background: $red
+    color: #e0e0e0
+    font-weight: bold
+
+    &:hover
+        background: lighten($red, 10%)
+
+#btn-ttm-icon
+    margin-left: 10px
+
+@media only screen and (min-width: 768px)
+    .get-in-touch textarea
+        min-height: 200px
