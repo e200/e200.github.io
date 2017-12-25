@@ -6,6 +6,24 @@
     padding-left: em(35)
     padding-right: em(35)
 
+.presentation .arrow
+    position: absolute
+    bottom: 35px
+    left: 50%
+    transform: translateX(-50%)
+    color: $presentation-text-color
+    font-size: em(32)
+    animation: 3s infinite arrow-animation ease-in-out
+
+@keyframes arrow-animation
+    0%
+        transform: translateY(0)
+    50%
+        transform: translateY(-15px)
+    100%
+        transform: translateY(0)
+
+
 .presentation-text
     display: inline
     position: relative // For .hi-svg absolute position
