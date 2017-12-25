@@ -1,8 +1,8 @@
 const
     gulp = require('gulp')
     
-    // Requires gulp-pumbler
-    pumbler = require('gulp-plumber')
+    // Requires gulp-plumber
+    plumber = require('gulp-plumber')
 
     // Requires gulp-rename
     rename = require('gulp-rename')
@@ -33,6 +33,9 @@ const
 
     // Requires gulp-imagemin
     imagemin = require('gulp-imagemin')
+
+    // Requires gulp-purifycss
+    purify = require('gulp-purifycss')
 
 const
     root = './'
@@ -66,7 +69,7 @@ gulp.task('js', function() {
     }
 
     return gulp.src(paths.js + 'e200.js')
-        .pipe(pumbler())
+        .pipe(plumber())
         .pipe(concat(outputFile)) // Concats all JS files
         .pipe(uglify(uglifyOptions)) // Minifies the output
         .pipe(rename('master.js')) //Renames the output to master.js
@@ -78,7 +81,7 @@ gulp.task('js', function() {
  */
 gulp.task('sass', function (){
     var sassOptions = {
-        outputStyle: 'compressed'
+        //outputStyle: 'compressed'
     }
     var autoprefixerOptions = {
         browsers: [
@@ -91,12 +94,19 @@ gulp.task('sass', function (){
             "Opera >= 12",
             "Safari >= 6"
           ],
-        cascade: false,
+        cascade: false
     }
 
     return gulp.src(paths.sass + 'master.sass')
         .pipe(sass(sassOptions)
             .on('error', sass.logError))
+        /*.pipe(purify([
+            paths.js + '*.js',
+            root + 'index.html'
+        ], {
+            minify: true,
+            rejected: true
+        }))*/
         .pipe(autoprefixer(autoprefixerOptions))
         .pipe(gulp.dest(paths.css))
 })
@@ -125,7 +135,7 @@ gulp.task('pug', function(){
     '-->\n\n'
 
     return gulp.src(views + 'index.pug')
-        .pipe(pumbler())
+        .pipe(plumber())
         .pipe(pug({/*pretty: true*/}))
         .pipe(insert.prepend(header))
         .pipe(gulp.dest(root))
