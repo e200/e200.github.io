@@ -455,6 +455,11 @@ a {
 .main {
   height: 100%; }
 
+.slick-slider {
+  display: table;
+  table-layout: fixed;
+  width: 100%; }
+
 .section {
   padding-top: 2.1875em;
   padding-bottom: 2.1875em;

@@ -9,15 +9,17 @@ $(function(){
 
     $('#scroll-to-intro').on('click', function(e){
         e.preventDefault();
-        
-        force.jump('#intro');
+
+        $('html, body').animate({
+            scrollTop: $("#intro").offset().top
+        }, 600);
     });
 
     // Sets a delay for start the transition.
     setTimeout(function(){
         var class_name = 'active',
             words = $('.words'),
-            firstChild = words.firstChild();
+            firstChild = words.first();
 
         // Transition cycle.
         setInterval(function(){            
@@ -43,14 +45,42 @@ $(function(){
         $('.preload').removeClass('preload');
     }, 500)
 
-    /*window.addEventListener('scroll', function(e){
-        var offset_intro = document.getElementById('intro').offsetTop;
+    var slickOptions = {
+        autoplay: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 7,
+        slidesToScroll: 1,
+        arrows: false,
+        responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 7,
+                slidesToScroll: 1,
+                infinite: true
+              }
+            },
+            {
+              breakpoint: 992,
+              settings: {
+                slidesToShow: 5,
+                slidesToScroll: 1
+              }
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1
+              }
+            }
+          ]
+      }
 
-        TweenLite.to(window, 1.5, {scrollTo:offset_intro});
-    });*/
+    $('.techs-slider').slick(slickOptions);
 
     sr.reveal('.section .title');
     sr.reveal('#intro .pic');
     sr.reveal('#projects .project');
-    sr.reveal('#techs .tech');
 })
