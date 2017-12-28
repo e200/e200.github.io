@@ -7,6 +7,12 @@ $(function(){
        $('.header').toggleClass('active');
     })
 
+    $('#scroll-to-intro').on('click', function(e){
+        e.preventDefault();
+        
+        force.jump('#intro');
+    });
+
     // Sets a delay for start the transition.
     setTimeout(function(){
         var class_name = 'active',
