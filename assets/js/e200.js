@@ -11,14 +11,14 @@ $(function(){
         e.preventDefault();
 
         $('html, body').animate({
-            scrollTop: $("#intro").offset().top
+            scrollTop: $(".intro").offset().top
         }, 600);
     });
 
     // Sets a delay for start the transition.
     setTimeout(function(){
         var class_name = 'active',
-            words = $('.words'),
+            words = $('#words'),
             firstChild = words.first();
 
         // Transition cycle.
@@ -45,13 +45,17 @@ $(function(){
         $('.preload').removeClass('preload');
     }, 500)
 
-    var slickOptions = {
+    $('.techs-slider').slick({
         autoplay: true,
         infinite: true,
         speed: 300,
         slidesToShow: 7,
         slidesToScroll: 1,
-        arrows: false,
+        swipeToSlide: true,
+        // https://github.com/kenwheeler/slick/issues/2002#issuecomment-325806939
+        touchThreshold: 100,
+        prevArrow: $('.slick-arrow-prev'),
+        nextArrow: $('.slick-arrow-next'),
         responsive: [
             {
               breakpoint: 1024,
@@ -76,9 +80,11 @@ $(function(){
               }
             }
           ]
-      }
+      });
 
-    $('.techs-slider').slick(slickOptions);
+    $(window).on('scroll', function(e){
+        e.preventDefault();
+    })
 
     sr.reveal('section .title');
     sr.reveal('.intro .pic');

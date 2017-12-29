@@ -477,7 +477,8 @@ a {
 section {
   padding-top: 2.1875em;
   padding-bottom: 2.1875em;
-  width: 100%; }
+  width: 100%;
+  height: 100%; }
   section .title {
     font-size: 2.75em;
     font-weight: normal;
@@ -488,10 +489,8 @@ section {
     padding-left: 1.25em;
     padding-right: 1.25em; }
   @media only screen and (min-width: 768px) {
-    section {
-      height: 100%; }
-      section .title {
-        margin-bottom: 1.25rem; } }
+    section .title {
+      margin-bottom: 1.25rem; } }
 
 .header .v-align {
   width: 100%; }
@@ -815,22 +814,22 @@ section {
   -o-transition: 0.3s;
   transition: 0.3s; }
 
-.navbar.active .humburguer:hover .line {
+.header.active .humburguer:hover .line {
   background: #b3b3b3; }
 
-.navbar.active .humburguer .line-0 {
+.header.active .humburguer .line-0 {
   -webkit-transform: translateY(6px) rotateZ(135deg);
   -ms-transform: translateY(6px) rotate(135deg);
   -o-transform: translateY(6px) rotateZ(135deg);
   transform: translateY(6px) rotateZ(135deg); }
 
-.navbar.active .humburguer .line-2 {
+.header.active .humburguer .line-2 {
   -webkit-transform: translateY(-6px) rotateZ(-135deg);
   -ms-transform: translateY(-6px) rotate(-135deg);
   -o-transform: translateY(-6px) rotateZ(-135deg);
   transform: translateY(-6px) rotateZ(-135deg); }
 
-.navbar.active .humburguer .line-1 {
+.header.active .humburguer .line-1 {
   opacity: 0;
   width: 0; }
 
@@ -971,6 +970,7 @@ section {
 .intro .mam {
   display: inline-block;
   padding: 0.625em;
+  font-family: 'Lobster Two', cursive;
   color: #2d2d2d;
   background: #f9f772;
   border-radius: 5px;
@@ -992,7 +992,7 @@ section {
   color: #ddd; }
   .projects .title {
     color: #ddd; }
-  @media only screen and (max-width: 998px) {
+  @media only screen and (max-width: 767px) {
     .projects {
       height: auto; } }
 
@@ -1009,6 +1009,7 @@ section {
       min-height: 210px; } }
 
 .techs {
+  position: relative;
   background: #2d2d2d;
   color: #ddd; }
 
@@ -1021,6 +1022,25 @@ section {
 
 .techs .name {
   font-family: 'Lobster Two', cursive; }
+
+.tech {
+  outline: none; }
+
+.techs .slick-arrow {
+  position: absolute;
+  top: 60%;
+  color: #545454;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; }
+  .techs .slick-arrow:hover {
+    color: #ddd; }
+
+.techs .slick-arrow-prev {
+  left: 35px; }
+
+.techs .slick-arrow-next {
+  right: 35px; }
 
 .get-in-touch {
   background: #202020;
