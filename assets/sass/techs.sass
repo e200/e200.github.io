@@ -1,4 +1,5 @@
 .techs
+    position: relative
     background: $techs_bg
     color: $techs_static
 
@@ -11,3 +12,21 @@
 
 .techs .name
     font-family: 'Lobster Two', cursive
+
+.tech
+    outline: none
+
+.techs .slick-arrow
+    position: absolute
+    top: 60%
+    color: $techs-arrow-color
+    transition: $global-transition-time
+
+    &:hover
+        color: $techs-arrow-color-hover
+
+.techs .slick-arrow-prev
+    left: 35px
+
+.techs .slick-arrow-next
+    right: 35px
