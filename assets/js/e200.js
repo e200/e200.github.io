@@ -80,7 +80,7 @@ $(function(){
 
     $('.techs-slider').slick(slickOptions);
 
-    sr.reveal('.section .title');
-    sr.reveal('#intro .pic');
-    sr.reveal('#projects .project');
+    sr.reveal('section .title');
+    sr.reveal('.intro .pic');
+    sr.reveal('.projects .project');
 })
