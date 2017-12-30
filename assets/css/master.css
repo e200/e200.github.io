@@ -1028,20 +1028,24 @@ section {
 .tech {
   outline: none; }
 
-.techs .slick-arrow {
+.techs .arrow {
   position: absolute;
   top: 60%;
+  display: none !important;
   color: #545454;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s; }
-  .techs .slick-arrow:hover {
+  .techs .arrow:hover {
     color: #ddd; }
+  @media only screen and (min-width: 768px) {
+    .techs .arrow {
+      display: inline !important; } }
 
-.techs .slick-arrow-prev {
+.techs .arrow.prev {
   left: 35px; }
 
-.techs .slick-arrow-next {
+.techs .arrow.next {
   right: 35px; }
 
 .get-in-touch {

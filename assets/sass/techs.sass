@@ -15,18 +15,24 @@
 
 .tech
     outline: none
+    
 
-.techs .slick-arrow
-    position: absolute
-    top: 60%
-    color: $techs-arrow-color
-    transition: $global-transition-time
+.techs
+    .arrow
+        position: absolute
+        top: 60%
+        display: none !important
+        color: $techs-arrow-color
+        transition: $global-transition-time
 
-    &:hover
-        color: $techs-arrow-color-hover
+        &:hover
+            color: $techs-arrow-color-hover
 
-.techs .slick-arrow-prev
-    left: 35px
+        @media only screen and (min-width: 768px)
+            display: inline !important
 
-.techs .slick-arrow-next
-    right: 35px
+    .arrow.prev
+        left: 35px
+
+    .arrow.next
+        right: 35px
