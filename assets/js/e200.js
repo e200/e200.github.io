@@ -18,7 +18,7 @@ $(function(){
     // Sets a delay for start the transition.
     setTimeout(function(){
         var class_name = 'active',
-            words = $('#words'),
+            words = $('.words'),
             firstChild = words.first();
 
         // Transition cycle.
@@ -86,45 +86,7 @@ $(function(){
         e.preventDefault();
     })
 
-<<<<<<< HEAD
-    $('#btn-ttm').on('click', function(){
-        var btn_ttm = $(this).elements[0],
-            form = $("#get-in-touch-form").elements[0],
-            data = new FormData($("#get-in-touch-form").elements[0]);
-        
-        btn_ttm.innerHTML = "<div class=\"spinner\">\
-                                            <div class=\"bounce1\"></div>\
-                                            <div class=\"bounce2\"></div>\
-                                            <div class=\"bounce3\"></div>\
-                                        </div>";
-        
-        var req = new XMLHttpRequest();
-
-        req.open('post', 'https://ancient-escarpment-86494.herokuapp.com/', true);
-
-        req.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                if(this.responseText === '1') {
-                    for (var i = 0; i < form.elements.length; i++) {
-                        form.elements[i].readOnly = true;
-                    }
-                    btn_ttm.innerText = "Successful";
-                } else {
-                    btn_ttm.innerText = "Error! Retry?";
-                }
-           }
-        };
-
-        req.send(data);
-    });
-
-    sr.reveal('.section .title');
-    sr.reveal('#intro .pic');
-    sr.reveal('#projects .project');
-    sr.reveal('#techs .tech');
-=======
     sr.reveal('section .title');
     sr.reveal('.intro .pic');
     sr.reveal('.projects .project');
->>>>>>> 517ebf8ca3239617c25728e65ce62ab99e0e4231
 })
