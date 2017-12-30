@@ -1,5 +1,5 @@
-div.v-align(class="slide-" + i)
-    .v-wrapper.text-center
+.menu(class="slide-" + i)
+    .wrapper
         h4.full-name
             span #{full_name}
 
@@ -8,5 +8,5 @@ div.v-align(class="slide-" + i)
         ul.social.list-unstyled
             each social, index in socials
                 li
-                    a(href=social.address title=index)
+                    a(href=social.address title=index target="_blank")
                         i.fa(class="fa-" + social.icon)

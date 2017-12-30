@@ -1,5 +1,6 @@
 $base-size: 16
 
+@import 'variables'
 @import 'agil'
 @import 'colors/colors'
 @import 'vars/vars'
@@ -34,6 +35,13 @@ a
 .main
     height: 100%
 
+// https://github.com/kenwheeler/slick/issues/1461#issuecomment-157666138
+.slick-slider
+    display: table
+    table-layout: fixed
+    width: 100%
+
+@import 'shared'
 @import 'section'
 @import 'animations/header'
 @import 'header/header'
@@ -42,4 +50,8 @@ a
 @import 'projects'
 @import 'techs'
 @import 'get-in-touch'
+<<<<<<< HEAD
 @import 'spinner'
+=======
+@import 'footer'
+>>>>>>> 517ebf8ca3239617c25728e65ce62ab99e0e4231

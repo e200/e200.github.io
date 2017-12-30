@@ -1,0 +1,6 @@
+footer.footer
+    ul.social.list-unstyled
+        each social, index in socials
+            li
+                a(href=social.address title=index target="_blank")
+                    i.fa(class="fa-" + social.icon)

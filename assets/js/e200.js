@@ -7,11 +7,19 @@ $(function(){
        $('.header').toggleClass('active');
     })
 
+    $('#scroll-to-intro').on('click', function(e){
+        e.preventDefault();
+
+        $('html, body').animate({
+            scrollTop: $(".intro").offset().top
+        }, 600);
+    });
+
     // Sets a delay for start the transition.
     setTimeout(function(){
         var class_name = 'active',
-            words = $('.words'),
-            firstChild = words.firstChild();
+            words = $('#words'),
+            firstChild = words.first();
 
         // Transition cycle.
         setInterval(function(){            
@@ -37,12 +45,48 @@ $(function(){
         $('.preload').removeClass('preload');
     }, 500)
 
-    /*window.addEventListener('scroll', function(e){
-        var offset_intro = document.getElementById('intro').offsetTop;
+    $('.techs-slider').slick({
+        autoplay: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 7,
+        slidesToScroll: 1,
+        swipeToSlide: true,
+        // https://github.com/kenwheeler/slick/issues/2002#issuecomment-325806939
+        touchThreshold: 100,
+        prevArrow: $('.slick-arrow-prev'),
+        nextArrow: $('.slick-arrow-next'),
+        responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 7,
+                slidesToScroll: 1,
+                infinite: true
+              }
+            },
+            {
+              breakpoint: 992,
+              settings: {
+                slidesToShow: 5,
+                slidesToScroll: 1
+              }
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1
+              }
+            }
+          ]
+      });
 
-        TweenLite.to(window, 1.5, {scrollTo:offset_intro});
-    });*/
+    $(window).on('scroll', function(e){
+        e.preventDefault();
+    })
 
+<<<<<<< HEAD
     $('#btn-ttm').on('click', function(){
         var btn_ttm = $(this).elements[0],
             form = $("#get-in-touch-form").elements[0],
@@ -78,4 +122,9 @@ $(function(){
     sr.reveal('#intro .pic');
     sr.reveal('#projects .project');
     sr.reveal('#techs .tech');
+=======
+    sr.reveal('section .title');
+    sr.reveal('.intro .pic');
+    sr.reveal('.projects .project');
+>>>>>>> 517ebf8ca3239617c25728e65ce62ab99e0e4231
 })

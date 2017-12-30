@@ -1,12 +1,10 @@
-section#get-in-touch.get-in-touch.section.v-align.centered
-    .v-wrapper
-        .container.text-center
-            h1.title Get in touch!
-            h1.tile
-                span.fa.fa-smile-o
-            
-            form#get-in-touch-form
-                input.form-item.form-input(name="visitor_name" placeholder="What's your name?" required="required")
-                input.form-item.form-input(name="visitor_email" placeholder="Your E-mail address" required="required" type="email")
-                textarea.form-item.form-input(name="visitor_message" placeholder="Leave a message..." require="required")
-                button#btn-ttm.form-item(type="button") Talk to me
+section.get-in-touch   
+    form.form.get-in-touch-form
+        h1.title Get in touch!
+        h1.tile
+            span.fa.fa-smile-o
+
+        input.form-item.form-input(placeholder="What's your name?" required="required")
+        input.form-item.form-input(placeholder="Your E-mail address" required="required" type="email")
+        textarea.form-item.form-input(placeholder="Leave a message...")
+        button#btn-ttm.form-item(type="submit" form="#get-in-touch-form") Talk to me

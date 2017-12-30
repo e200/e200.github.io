@@ -1,8 +1,14 @@
-section#techs.techs.section.v-align.centered
-    .v-wrapper
-        .container.text-center
-            h1.title Techs
+section.techs(style="height: auto")
+    .container.text-center
+        h1.title Techs
+        
+        .techs-slider
             each tech in techs
-                .tech.sm-4.md-2
+                .tech.xs-6.md-2
                     i.icon(class="devicon-" + tech.icon + "-plain" title=tech.text)
                     span.name #{tech.text}
+        
+        a(href="#").slick-arrow-prev
+            span.fa.fa-chevron-left
+        a(href="#").slick-arrow-next
+            span.fa.fa-chevron-right
