@@ -81,7 +81,7 @@ gulp.task('js', function() {
  */
 gulp.task('sass', function (){
     var sassOptions = {
-        //outputStyle: 'compressed'
+        outputStyle: 'compressed'
     }
     var autoprefixerOptions = {
         browsers: [

@@ -5,13 +5,13 @@ $(function(){
        e.preventDefault();
         
        $('.header').toggleClass('active');
-    })
+    });
 
     $('#scroll-to-intro').on('click', function(e){
         e.preventDefault();
 
         $('html, body').animate({
-            scrollTop: $(".intro").offset().top
+            scrollTop: $('.intro').offset().top
         }, 600);
     });
 
@@ -33,7 +33,7 @@ $(function(){
             
             nextWord ? nextWord.toggleClass(class_name) : firstChild.toggleClass(class_name);
         }, 4000);
-    }, 3000);
+    }, 2500);
 
     /**
      * Prevents the header sliders from being
@@ -43,12 +43,12 @@ $(function(){
      */
     setTimeout(function(){
         $('.preload').removeClass('preload');
-    }, 500)
+    }, 500);
 
     $('.techs-slider').slick({
         autoplay: true,
         infinite: true,
-        speed: 300,
+        speed: 150,
         slidesToShow: 7,
         slidesToScroll: 1,
         swipeToSlide: true,
@@ -81,10 +81,6 @@ $(function(){
             }
           ]
       });
-
-    $(window).on('scroll', function(e){
-        e.preventDefault();
-    })
 
     sr.reveal('section .title');
     sr.reveal('.intro .pic');
