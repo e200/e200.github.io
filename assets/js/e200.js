@@ -31,7 +31,7 @@ $(function(){
 
             currentWord.toggleClass(class_name);
             
-            nextWord ? nextWord.toggleClass(class_name) : firstChild.toggleClass(class_name);
+            nextWord.length ? nextWord.toggleClass(class_name) : firstChild.toggleClass(class_name);
         }, 4000);
     }, 2500);
 
