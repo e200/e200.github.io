@@ -1,5 +1,9 @@
 window.sr = ScrollReveal({viewFactor: 0.3});
 
+var
+    btt = $('.btt'),
+    presentation = $('.presentation');
+
 $(function(){
     $('.humburguer').on('click', function(e){
        e.preventDefault();
@@ -7,13 +11,73 @@ $(function(){
        $('.header').toggleClass('active');
     });
 
+    $('.btt').on('click', function(e){
+        e.preventDefault();
+
+        scrollTo(0);
+    });
+
     $('#scroll-to-intro').on('click', function(e){
         e.preventDefault();
 
-        $('html, body').animate({
-            scrollTop: $('.intro').offset().top
-        }, 600);
+        scrollTo('.intro');
     });
+
+    $('#btn-ttm').on('click', function(){
+        var me = $(this);
+
+        me.html('<div class="spinner">\
+                            <div class="bounce1"></div>\
+                            <div class="bounce2"></div>\
+                            <div class="bounce3"></div>\
+                      </div>');
+
+        setTimeout(function(){
+            me.html('Successfully!');
+
+            //$('.git .form-item').css({opacity: .3});
+        }, 5000);
+
+        //$.post('https://ancient-escarpment-86494.herokuapp.com/', )
+    });
+
+    var
+        oldScrollPos = 0,
+        newScrollPos,
+        interval;
+
+    $(window).on('scroll', function(){
+        oldScrollPos = newScrollPos;
+        newScrollPos = $(this).scrollTop();
+
+        if (newScrollPos < oldScrollPos && presentation.height() < newScrollPos) {
+            btt.fadeIn(300);
+
+            if (interval) {
+                clearInterval(interval);
+            }
+
+            interval = setTimeout(function(){
+                btt.fadeOut(300);
+            }, 3000);
+        } else {
+                btt.fadeOut(300);
+        }
+    });
+
+    function scrollTo(pos, duration){
+        if (!duration) {
+            duration = 600;
+        }
+
+        if (typeof(pos) === 'string') {
+            pos = $(pos).offset().top
+        }
+        
+        $('html, body').animate({
+            scrollTop: pos
+        }, duration);
+    }
 
     // Sets a delay for start the transition.
     setTimeout(function(){
