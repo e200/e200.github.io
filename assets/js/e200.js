@@ -146,7 +146,7 @@ $(function(){
           ]
       });
 
-    sr.reveal('section .title');
+    sr.reveal('section:not(.git) .title');
     sr.reveal('.intro .pic');
     sr.reveal('.projects .project');
 })
