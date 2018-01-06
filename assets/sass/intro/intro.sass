@@ -29,16 +29,19 @@
     font-family: 'Lobster Two', cursive
     border-radius: 5px
     margin-top: em(20)
-
+    border: 1px solid $intro_highlight
+    transition: $transition-time
+    
     &:hover
-        background: darken($intro_highlight, 5%)
+        transform: translateY(-4px)
 
 .mam.l
     background: $intro_highlight
     color: $intro_static
+    margin-right: 3px
 .mam.r
-    color: #f9f772
-    border: 1px solid #f9f772
+    color: $intro_highlight
+    margin-left: 3px
 
 @media only screen and (min-width: 768px)
     .intro .pic
@@ -50,11 +53,6 @@
     .intro .description,
     .intro .mam
         font-size: rem(24)
-
-    .mam.l
-        margin-right: 3px
-    .mam.r
-        margin-left: 3px
 
 // @media screen and (device-aspect-ratio: 2/3) {}
 
