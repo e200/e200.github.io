@@ -46,24 +46,44 @@ $(function(){
         newScrollPos,
         interval;
 
+    function canShowBtt(){
+        return (newScrollPos < oldScrollPos) && (presentation.height() < newScrollPos);
+    }
+
+    function bttRestartInterval(){
+        if (interval) {
+            clearInterval(interval);
+        }
+
+        interval = setTimeout(function(){
+            btt.fadeOut(300);
+        }, 3000);
+    }
+
+    function bttStopInterval(){
+        clearInterval(interval);
+    }
+
     $(window).on('scroll', function(){
         oldScrollPos = newScrollPos;
         newScrollPos = $(this).scrollTop();
 
-        if (newScrollPos < oldScrollPos && presentation.height() < newScrollPos) {
+        if (canShowBtt()) {
             btt.fadeIn(300);
 
-            if (interval) {
-                clearInterval(interval);
-            }
-
-            interval = setTimeout(function(){
-                btt.fadeOut(300);
-            }, 3000);
+            bttRestartInterval();
         } else {
-                btt.fadeOut(300);
+            btt.fadeOut(300);
         }
     });
+
+    btt
+        .on('mouseover', function(){
+            bttStopInterval();
+        })
+        .on('mouseleave', function(){
+            bttRestartInterval();
+        });
 
     function scrollTo(pos, duration){
         if (!duration) {
