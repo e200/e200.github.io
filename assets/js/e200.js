@@ -26,6 +26,10 @@ $(function(){
     $('#btn-ttm').on('click', function(){
         var me = $(this);
 
+        $('.git .smile')
+            .removeClass('fa-smile-o')
+            .addClass('fa-meh-o');
+
         me.html('<div class="spinner">\
                     <div class="bounce1"></div>\
                     <div class="bounce2"></div>\
@@ -33,7 +37,13 @@ $(function(){
                 </div>');
 
         setTimeout(function(){
+            $('.git .smile')
+                .addClass('fa-smile-o')
+                .removeClass('fa-meh-o');
             me.html('Successfully!');
+
+            //.fa-frown-o
+
 
             //$('.git .form-item').css({opacity: .3});
         }, 5000);
