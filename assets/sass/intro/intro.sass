@@ -27,13 +27,18 @@
     display: inline-block
     padding: em(10)
     font-family: 'Lobster Two', cursive
-    color: $intro_static
-    background: $intro_highlight
     border-radius: 5px
     margin-top: em(20)
 
     &:hover
         background: darken($intro_highlight, 5%)
+
+.mam.l
+    background: $intro_highlight
+    color: $intro_static
+.mam.r
+    color: #f9f772
+    border: 1px solid #f9f772
 
 @media only screen and (min-width: 768px)
     .intro .pic
@@ -45,6 +50,11 @@
     .intro .description,
     .intro .mam
         font-size: rem(24)
+
+    .mam.l
+        margin-right: 4px
+    .mam.r
+        margin-left: 4px
 
 // @media screen and (device-aspect-ratio: 2/3) {}
 
