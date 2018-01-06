@@ -1,10 +1,10 @@
 window.sr = ScrollReveal({viewFactor: 0.3});
 
-var
-    btt = $('.btt'),
-    presentation = $('.presentation');
-
 $(function(){
+    var
+        btt = $('.btt'),
+        presentation = $('.presentation');
+
     $('.humburguer').on('click', function(e){
        e.preventDefault();
         
@@ -149,4 +149,4 @@ $(function(){
     sr.reveal('section:not(.git) .title');
     sr.reveal('.intro .pic');
     sr.reveal('.projects .project');
-})
+});
