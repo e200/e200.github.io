@@ -113,7 +113,7 @@ $(function(){
     setTimeout(function(){
         var class_name = 'active',
             words = $('.words'),
-            firstChild = words.first();
+            firstChild = words.find('span').first();
 
         // Transition cycle.
         setInterval(function(){            
