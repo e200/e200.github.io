@@ -1,10 +1,10 @@
-section.git   
+section#git.git   
     form#git-form.git-form
         h1.title Get in touch!
         h1
             span.smile.fa.fa-smile-o
 
-        input.form-item.form-input(placeholder="What's your name?" required="required")
-        input.form-item.form-input(placeholder="Your e-mail address" required="required" type="email")
-        textarea.form-item.form-input(placeholder="Leave a message...")
+        input.form-item.form-input(name="name" required="required" placeholder="What's your name?" minlength="2")
+        input.form-item.form-input(name="email" required="required" placeholder="Your e-mail address" type="email")
+        textarea.form-item.form-input(name="message" required="required" placeholder="Leave a message..." minlength="3")
         button#btn-ttm.form-item(type="submit" form="git-form") Talk to me
