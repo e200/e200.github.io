@@ -1,6 +1,14 @@
 {
-    "brand-name": "e200",
-    "full-name":  "Eleandro Duzentos",
+    "brand_name": "e200",
+    "full_name":  "Eleandro Duzentos",
+    "page":    {
+        "title":       "Eleandro Duzentos",
+        "description": "Eleandro Duzentos | Web Designer",
+        "keywords":    "eleandro duzentos, e200, web designer, frontend, github, luanda, angola, ui/ux, php, c#",
+        "lang":        "en",
+        "lang_alt":    "pt_PT",
+        "url":         "https://e200.github.io/"
+    },
     "words":      ["code", "tea", "cats", "music", "space", "purple"],
     "socials":    {
         "facebook": {
