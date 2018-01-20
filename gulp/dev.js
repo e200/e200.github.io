@@ -4,17 +4,23 @@ const
     rename       = require('gulp-rename')
     sass         = require('gulp-sass')
     pug          = require('gulp-pug')
-    path         = require('./_path')
+    data         = require('gulp-data')
+    fs           = require('fs')
+    path         = require('path')
+    path_        = require('./path_')
 
 gulp.task('pug', function(){
-    return gulp.src(path.src.views + 'index.pug')
+    return gulp.src(path_.src.views + 'index.pug')
         .pipe(plumber())
-        .pipe(pug({}))
+        .pipe(data(function(file){
+            return JSON.parse(fs.readFileSync(path_.src.views + 'data/' + path.basename(file.path).slice(0, -4) + '.json'));
+        }))
+        .pipe(pug({pretty: true}))
         .pipe(gulp.dest('./'))
 })
 
 gulp.task('sass', function (){
-    return gulp.src(path.src.sass + 'master.sass')
+    return gulp.src(path_.src.sass + 'master.sass')
         .pipe(sass())
-        .pipe(gulp.dest(path.dist.css))
+        .pipe(gulp.dest(path_.dist.css))
 })

@@ -1,16 +1,7 @@
 const
     gulp         = require('gulp')
     browserSync  = require('browser-sync')
-
-let dist = {
-    css: './assets/dist/css/',
-    js:  './assets/dist/js/',
-},
-    src = {
-    sass:  './assets/src/sass/',
-    js:    './assets/src/js/',
-    views: './assets/src/views/'
-}
+    path_        = require('./path_')
 
 /**
  * SASS watcher, watchs any
@@ -23,6 +14,6 @@ gulp.task('sass:watch', function(){
         server: './'
     })
 
-    gulp.watch(src.sass + '**', ['sass'])
+    gulp.watch(path_src.sass + '**', ['sass'])
         .on('change', browserSync.reload)
 })

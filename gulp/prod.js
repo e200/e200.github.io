@@ -8,10 +8,10 @@ const
     pug          = require('gulp-pug')
     insert       = require('gulp-insert')
     purify       = require('gulp-purifycss')
-    path         = require('./_path')
+    path_        = require('./path_')
 
 gulp.task('js:prod', function() {
-    return gulp.src(path.src.js + 'e200.js')
+    return gulp.src(path_.src.js + 'e200.js')
         .pipe(plumber())
         .pipe(uglify({
             compress: {
@@ -23,7 +23,7 @@ gulp.task('js:prod', function() {
             }
         })) // Minifies the output
         .pipe(rename('master.js')) //Renames the output to master.js
-        .pipe(gulp.dest(path.dist.js))
+        .pipe(gulp.dest(path_.dist.js))
 })
 
 gulp.task('pug:prod', function(){
@@ -35,7 +35,7 @@ gulp.task('pug:prod', function(){
     ' \\___|_____|\\___/ \\___/\n\n' + 
     '-->\n\n'
 
-    return gulp.src(path.src.views + 'index.pug')
+    return gulp.src(path_.src.views + 'index.pug')
         .pipe(plumber())
         .pipe(pug())
         .pipe(insert.prepend(header))
@@ -60,7 +60,7 @@ gulp.task('sass:prod', function (){
         cascade: false
     }
 
-    return gulp.src(path.src.sass + 'master.sass')
+    return gulp.src(path_.src.sass + 'master.sass')
         .pipe(sass(sassOptions)
             .on('error', sass.logError))
         .pipe(purify([
@@ -71,5 +71,5 @@ gulp.task('sass:prod', function (){
             rejected: true
         }))
         .pipe(autoprefixer(autoprefixerOptions))
-        .pipe(gulp.dest(path.css))
+        .pipe(gulp.dest(path_.css))
 })
