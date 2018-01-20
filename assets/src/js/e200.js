@@ -136,7 +136,8 @@ $(function(){
      * @see https://stackoverflow.com/questions/27938900/how-to-prevent-css-keyframe-animation-to-run-on-page-load
      */
     setTimeout(function(){
-        $('.preload').removeClass('preload');
+        $('.js-prevent-menu-animation')
+            .removeClass('js-prevent-menu-animation');
     }, 500);
 
     $('.techs-slider').slick({
