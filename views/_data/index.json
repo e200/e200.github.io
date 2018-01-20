@@ -1,0 +1,71 @@
+{
+    "brand-name": "e200",
+    "full-name":  "Eleandro Duzentos",
+    "words":      ["code", "tea", "cats", "music", "space", "purple"],
+    "socials":    {
+        "facebook": {
+            "icon": "facebook",
+            "address": "https://www.facebook.com/eleandro.duzentos"
+        },
+        "github": {
+            "icon": "github-alt",
+            "address": "https://github.com/e200"
+        },
+        "linkedin": {
+            "icon": "linkedin",
+            "address": "https://www.linkedin.com/in/e200-career/"
+        }
+    },
+    "techs": [
+        { "icon": "html5",       "text": "HTML 5" },
+        { "icon": "css3",        "text": "CSS 3" },
+        { "icon": "jquery",      "text": "jQuery" },
+        { "icon": "sass",        "text": "Sass" },
+        { "icon": "gulp",        "text": "Gulp" },
+        { "icon": "javascript",  "text": "Javascript" },
+        { "icon": "bootstrap",   "text": "Bootstrap" },
+        { "icon": "vuejs",       "text": "VueJS" },
+        { "icon": "php",         "text": "PHP" },
+        { "icon": "codeigniter", "text": "CodeIgniter" },
+        { "icon": "laravel",     "text": "Laravel" },
+        { "icon": "dot-net",     "text": ".NET" },
+        { "icon": "csharp",      "text": "C#" },
+        { "icon": "c",           "text": "C" },
+        { "icon": "git",         "text": "Git" },
+        { "icon": "linux",       "text": "Linux" },
+        { "icon": "ubuntu",      "text": "Ubuntu" },
+        { "icon": "mysql",       "text": "MySQL" }
+    ],
+    "projects": {
+        "makeaccessible": {
+                "name":        "Make/Accessible",
+                "address":     "https://github.com/e200/MakeAccessible",
+                "description": "Test your singleton classes and inaccessible instance members"
+            },
+        "anotherjs": {
+            "name":        "anotherJS",
+            "address":     "https://github.com/e200/anotherJS",
+            "description": "Smaller JS library for those Frontends who makes most things using pure CSS"
+            },
+        "sliderplex": {
+            "name":        "SliderPlex",
+            "address":     "https://github.com/e200/SliderPlex",
+            "description": "A simple and responsive jQuery content slider plugin"
+            },
+        "unity": {
+            "name":        "Unity framework",
+            "address":     "https://github.com/unity-framework",
+            "description": "PHP MVC based framework"
+            },
+        "genesdecypher": {
+            "name":        "GenesDecypher",
+            "address":     "https://github.com/e200/GenesDecypher",
+            "description": "A genetic decypher written in C, for a client at Universidade Metodista de Angola"
+            },
+        "reegex": {
+            "name":        "Reegex",
+            "address":     "https://github.com/e200/Reegex",
+            "description": "WPF based Regex tester"
+            }
+        }
+}
