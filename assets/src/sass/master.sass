@@ -1,0 +1,19 @@
+@import 'base/_glob'
+@import 'utils/_glob'
+
+body
+  font-size: $base-font-size
+  line-height: $base-line-height
+
+  @media #{$mq-medium}
+    font-size: $base-font-size*1.2
+    line-height: $base-line-height*1.2
+
+  @media #{$mq-large}
+    font-size: $base-font-size*1.3
+
+  @media #{$mq-xlarge}
+    font-size: $base-font-size*1.4
+
+  @media #{$mq-xxlarge}
+    font-size: $base-font-size*1.6
