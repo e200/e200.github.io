@@ -1,0 +1,20 @@
+.intro-words
+  /** Each word will be absolute positioned */
+  position: relative
+
+  /** Just for vertical-align: top work */
+  display: inline-block
+    
+  /** Pull it to the top */
+  vertical-align: top
+
+  & > span
+    /** It makes all spans overlap each other */
+    position: absolute
+
+    /** The code bellow transite each word with a fade animation */
+    opacity: 0
+    transition: opacity $transition_time
+
+    &.active
+      opacity: 1
