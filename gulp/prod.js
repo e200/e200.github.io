@@ -8,6 +8,7 @@ const
     pug          = require('gulp-pug')
     insert       = require('gulp-insert')
     purify       = require('gulp-purifycss')
+    minCssNames  = require('gulp-minify-css-names')
     path_        = require('./path_')
 
 gulp.task('js:prod', function() {
@@ -72,4 +73,15 @@ gulp.task('sass:prod', function (){
         }))
         .pipe(autoprefixer(autoprefixerOptions))
         .pipe(gulp.dest(path_.css))
+})
+
+// Install gulp-selectors instead
+gulp.task('mincssname', function(){
+    return gulp.src([
+            './index.html',
+            path_.src.js + '**.js',
+            path_.src.sass + '**.sass'
+        ])
+        .pipe(minCssNames())
+        .pipe(gulp.dest(path_.dist.css))
 })
