@@ -1,9 +1,4 @@
-doctype html
+extends shared/_layout
 
-html(lang="en")    
-    //-
-        .js-preload prevents menu animation
-        from happening when the page is loaded.
-    body.js-preload
-
-        include _partials/scripts
+block content
+    include pages/home/intro

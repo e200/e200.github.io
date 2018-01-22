@@ -1,0 +1,17 @@
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1em;
+  line-height: 1.5; }
+  @media (min-width: 64em) {
+    body {
+      font-size: 1.2em;
+      line-height: 1.8; } }
+  @media (min-width: 85.375em) {
+    body {
+      font-size: 1.3em; } }
+  @media (min-width: 120em) {
+    body {
+      font-size: 1.4em; } }
+  @media (min-width: 160em) {
+    body {
+      font-size: 1.6em; } }

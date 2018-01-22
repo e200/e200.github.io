@@ -1,12 +1,14 @@
-@import 'base/_glob'
-@import 'utils/_glob'
+@import 'base/_import'
+@import 'utils/_import'
+@import 'ext/secret'
 
 body
-  font-size: $base-font-size
+  font-family: $font-family-primary
+  font-size:   $base-font-size
   line-height: $base-line-height
 
   @media #{$mq-medium}
-    font-size: $base-font-size*1.2
+    font-size:   $base-font-size*1.2
     line-height: $base-line-height*1.2
 
   @media #{$mq-large}
@@ -17,3 +19,5 @@ body
 
   @media #{$mq-xxlarge}
     font-size: $base-font-size*1.6
+
+@import 'pages/home/_import'
