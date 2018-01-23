@@ -5,7 +5,7 @@ $(function(){
         btt = $('.btt'),
         presentation = $('.presentation');
 
-    $('.humburguer').on('click', function(e){
+    $('.hamburguer').on('click', function(e){
        e.preventDefault();
         
        $('.header').toggleClass('active');

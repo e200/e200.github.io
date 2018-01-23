@@ -4,6 +4,12 @@
 /** Colors */
 /** Transitions */
 /**!
+    NAV
+ ******************************* */
+/**!
+    HAMBURGUER
+ ******************************* */
+/**!
   * #SECTION: Represents a section in the page.
   */
 .section {
@@ -32,6 +38,37 @@
     font-size: 1em;
     padding-left: 1.25em;
     padding-right: 1.25em; }
+
+.hamburguer {
+  display: inline-block;
+  position: fixed;
+  top: 26px;
+  right: 26px;
+  padding: 8px;
+  z-index: 9999;
+  /** STYLES AND ANIMATIONS FOR HAMBURGUER LINES */ }
+  .hamburguer .line {
+    display: block;
+    background-color: #cccccc;
+    height: 2px;
+    width: 25px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    transition: 0.3s; }
+
+/** STYLES AND ANIMATIONS FOR HAMBURGUER LINES */
+.nav.active .hamburguer:hover .line {
+  background: #b3b3b3; }
+
+.nav.active .hamburguer .line-0 {
+  transform: translateY(6px) rotateZ(135deg); }
+
+.nav.active .hamburguer .line-2 {
+  transform: translateY(-6px) rotateZ(-135deg); }
+
+.nav.active .hamburguer .line-1 {
+  opacity: 0;
+  width: 0; }
 
 .no-padding {
   padding: 0 !important; }
