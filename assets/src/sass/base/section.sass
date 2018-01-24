@@ -5,6 +5,16 @@
 .section
   padding-top: 4rem
   padding-bottom: 4rem
+  color: $section-text-color
+
+
+
+
+  &:nth-child(odd)
+    background: $section-background
+
+  &:nth-child(even)
+    background: darken($section-background, 5%)
 
 
 
@@ -13,13 +23,13 @@
     * Center vertically and horizontally
     * any child inside .section
     */
-  &.flex
+  &__flex
     display: flex
     justify-content: center
     align-items: center
     
   /* Uses the .section parent full-width */
-  &.full
+  &__full
     width: 100%
     height: 100%
 
@@ -30,11 +40,18 @@
   /**!
     #STYLES FOR SECTION HEADER
    */
-  .title
-    font-size: 3em
+  &--title
+    font-size: 2.125em
     font-weight: normal
     font-family: 'Lobster Two', cursive
-  .description
+  &--description
     font-size: 1em
     padding-left: 1.25em
     padding-right: 1.25em
+
+  @media only screen and (min-width: 48em)
+    &--title
+      font-size: 3em
+
+    &--description
+      font-size: 1.2rem
