@@ -17,10 +17,10 @@ $(function(){
         scrollTo(0);
     });
 
-    $('#scroll-to-intro').on('click', function(e){
+    $('#jumper').on('click', function(e){
         e.preventDefault();
 
-        scrollTo('.intro');
+        scrollTo('#presentation');
     });
 
     $('#btn-ttm').on('click', function(){
