@@ -65,14 +65,13 @@ gulp.task('sass:prod', function (){
         .pipe(sass(sassOptions)
             .on('error', sass.logError))
         .pipe(purify([
-            src.js + '*.js',
+            path_.src + '*.js',
             './' + 'index.html'
         ], {
-            minify: true,
             rejected: true
         }))
         .pipe(autoprefixer(autoprefixerOptions))
-        .pipe(gulp.dest(path_.css))
+        .pipe(gulp.dest(path_.dist.css))
 })
 
 // Install gulp-selectors instead
