@@ -111,14 +111,14 @@ $(function(){
 
     // Sets a delay for start the transition.
     setTimeout(function(){
-        var class_name = 'active',
-            words = $('.intro-words'),
+        var class_name = 'intro--word__active',
+            words = $('.intro--words'),
             firstChild = words.find('span').first();
 
         // Transition cycle.
         setInterval(function(){            
             // Getting the current word.
-            currentWord = words.find('.active');
+            currentWord = words.find('.' + class_name);
 
             // Getting the next word to be displayed.
             nextWord = currentWord.next();
