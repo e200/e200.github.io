@@ -10,6 +10,9 @@
     HAMBURGUER
  ******************************* */
 /**!
+    #JUMP
+ ******************************* */
+/**!
   * #SECTION: Represents a section in the page.
   */
 .section {
@@ -70,14 +73,24 @@
   opacity: 0;
   width: 0; }
 
-.no-padding {
-  padding: 0 !important; }
+#jump {
+  position: absolute;
+  color: #7a62da;
+  padding: 35px;
+  margin-left: -35px;
+  margin-bottom: -35px;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: 2s infinite jump-animation ease-in-out; }
 
-.text-center {
-  text-align: center !important; }
-
-.centered {
-  margin: 0 auto; }
+@keyframes jump-animation {
+  0% {
+    transform: translateY(0); }
+  50% {
+    transform: translateY(15px); }
+  100% {
+    transform: translateY(0); } }
 
 .bg-img {
   background-position: center;
@@ -342,7 +355,8 @@ pre {
 
 a {
   background-color: transparent;
-  -webkit-text-decoration-skip: objects; }
+  -webkit-text-decoration-skip: objects;
+  outline: none; }
 
 abbr[title] {
   border-bottom: none;
@@ -503,20 +517,23 @@ body {
   font-size: 1em;
   line-height: 1.5; }
 
-.intro-text {
+.intro {
+  position: relative; }
+
+.intro--text {
   position: relative;
   display: inline;
   margin: 0 15%;
   font-family: "Lobster Two", cursive;
   color: #666; }
   @media only screen and (min-width: 23.4375em) {
-    .intro-text {
+    .intro--text {
       font-size: 2.375em; } }
   @media only screen and (min-width: 26.5625em) {
-    .intro-text {
+    .intro--text {
       font-size: 3.25em; } }
 
-.intro-balloon {
+.intro--balloon {
   position: absolute;
   top: -50px;
   left: -6px;
@@ -527,10 +544,10 @@ body {
   color: white;
   border-radius: 300px; }
   @media only screen and (min-width: 26.5625em) {
-    .intro-balloon {
+    .intro--balloon {
       top: -55px;
       left: 4px; } }
-  .intro-balloon::after {
+  .intro--balloon::after {
     content: '';
     position: absolute;
     bottom: -9px;
@@ -541,18 +558,19 @@ body {
     border-top-color: #694dd5;
     z-index: -1; }
 
-.intro-words {
+.intro--words {
   /** Each word will be absolute positioned */
   position: relative;
   /** Just for vertical-align: top work */
   display: inline-block;
   /** Pull it to the top */
   vertical-align: top; }
-  .intro-words > span {
+  .intro--words > span {
     /** It makes all spans overlap each other */
     position: absolute;
     /** The code bellow transite each word with a fade animation */
     opacity: 0;
     transition: opacity 0.3s; }
-    .intro-words > span.active {
-      opacity: 1; }
+
+.intro--word__active {
+  opacity: 1 !important; }
