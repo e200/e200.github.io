@@ -609,6 +609,7 @@ body {
   margin-top: 1.25rem;
   font-family: "Lobster Two", cursive;
   text-decoration: none;
+  line-height: normal;
   border: 1px solid #F9F772;
   border-radius: 5px;
   transition: 0.3s; }
