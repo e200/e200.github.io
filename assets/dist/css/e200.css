@@ -1,3 +1,6 @@
+/**!
+    TECHS
+ ************************************/
 /**
     NAV
  *******************************/
@@ -64,6 +67,7 @@
 .xs-2,
 .sm-2,
 .md-2,
+.techs--item,
 .lg-2,
 .xs-3,
 .sm-3,
@@ -79,6 +83,7 @@
 .md-5,
 .lg-5,
 .xs-6,
+.techs--item,
 .sm-6,
 .project-item,
 .md-6,
@@ -118,6 +123,7 @@
 .xs-4,
 .xs-5,
 .xs-6,
+.techs--item,
 .xs-7,
 .xs-8,
 .xs-9,
@@ -144,7 +150,7 @@
 .xs-7 {
   width: 58.33333%; }
 
-.xs-6 {
+.xs-6, .techs--item {
   width: 50%; }
 
 .xs-5 {
@@ -205,6 +211,7 @@
 @media (min-width: 992px) {
   .md-1,
   .md-2,
+  .techs--item,
   .md-3,
   .md-4,
   .project-item,
@@ -237,7 +244,7 @@
     width: 33.33333%; }
   .md-3 {
     width: 25%; }
-  .md-2 {
+  .md-2, .techs--item {
     width: 16.66667%; }
   .md-1 {
     width: 8.33333%; } }
@@ -534,7 +541,8 @@ body {
   .section:nth-child(even) {
     background: #202020; }
   .section--title {
-    font-family: "Lobster Two", cursive; }
+    font-family: "Lobster Two", cursive;
+    color: #ededed; }
 
 /**!
   # INTRO
@@ -584,6 +592,24 @@ body {
     color: #F9F772; }
 
 /**!
+  # PROJECTS
+ ************************************/
+.project-item--name {
+  color: #ededed;
+  transition: 0.3s; }
+  .project-item--name:hover {
+    color: #7a62da; }
+
+/**!
+  # PROJECTS
+ ************************************/
+.techs--arrow {
+  color: #545454;
+  transition: 0.3s; }
+  .techs--arrow:hover {
+    color: #ddd; }
+
+/**!
   # HAMBURGUER
  ************************************/
 .hamburguer--line {
@@ -629,18 +655,18 @@ body {
   * #SECTION: Represents a section in the page.
   */
 .section {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   /**!
     #STYLES FOR SECTION HEADER
    */ }
   .section--title {
+    margin: 0;
+    margin-bottom: 1rem;
     font-size: 2.125em;
     font-weight: normal; }
   .section--description {
-    font-size: 1em;
-    padding-left: 1.25em;
-    padding-right: 1.25em; }
+    font-size: 1em; }
   @media only screen and (min-width: 48em) {
     .section--title {
       font-size: 3em; }
@@ -727,12 +753,13 @@ body {
     .presentation--link {
       font-size: 1.2rem; } }
 
-@media only screen and (max-width: 991px) {
-  .projects {
-    height: auto; } }
+/**!
+  # PROJECTS
+ ************************************/
+.projects--title {
+  margin-bottom: 4rem; }
 
 .project-item--name {
-  color: #ededed;
   text-decoration: none;
   font-size: 2em;
   font-family: "Lobster Two", cursive; }
@@ -740,6 +767,45 @@ body {
 @media only screen and (min-width: 768px) {
   .project-item {
     min-height: 210px; } }
+
+@media only screen and (max-width: 991px) {
+  .project-item {
+    height: auto; } }
+
+/**!
+  # TECHS
+ ************************************/
+.techs {
+  position: relative; }
+  .techs--slider {
+    margin-bottom: 2rem; }
+  .techs--arrow {
+    position: absolute;
+    top: 60%;
+    padding: 35px;
+    margin-top: -35px;
+    display: none !important; }
+    .techs--arrow.prev {
+      left: 0; }
+    .techs--arrow.next {
+      right: 0; }
+    @media only screen and (min-width: 768px) {
+      .techs--arrow {
+        display: inline !important; } }
+  .techs--item {
+    outline: none; }
+    .techs--item--icon {
+      display: block;
+      padding-top: 2.5rem;
+      padding-bottom: 2.5rem;
+      text-rendering: optimizeLegibility;
+      font-size: 4em; }
+    .techs--item--name {
+      font-family: "Lobster Two", cursive; }
+
+.projects,
+.techs {
+  text-align: center; }
 
 /**!
   # SECTION
@@ -781,7 +847,8 @@ body {
   .section:nth-child(even) {
     background: #202020; }
   .section--title {
-    font-family: "Lobster Two", cursive; }
+    font-family: "Lobster Two", cursive;
+    color: #ededed; }
 
 /**!
   # INTRO
@@ -829,6 +896,24 @@ body {
     color: #2D2D2D; }
   .presentation--link.right {
     color: #F9F772; }
+
+/**!
+  # PROJECTS
+ ************************************/
+.project-item--name {
+  color: #ededed;
+  transition: 0.3s; }
+  .project-item--name:hover {
+    color: #7a62da; }
+
+/**!
+  # PROJECTS
+ ************************************/
+.techs--arrow {
+  color: #545454;
+  transition: 0.3s; }
+  .techs--arrow:hover {
+    color: #ddd; }
 
 /**!
   # HAMBURGUER
