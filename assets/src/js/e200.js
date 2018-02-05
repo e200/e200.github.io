@@ -140,7 +140,7 @@ $(function(){
             .removeClass('js-prevent-menu-animation');
     }, 500);
 
-    $('.techs-slider').slick({
+    $('.techs--slider').slick({
         autoplay: true,
         infinite: true,
         speed: 150,
@@ -149,8 +149,8 @@ $(function(){
         swipeToSlide: true,
         // https://github.com/kenwheeler/slick/issues/2002#issuecomment-325806939
         touchThreshold: 100,
-        prevArrow: $('.techs .arrow.prev'),
-        nextArrow: $('.techs .arrow.next'),
+        prevArrow: $('.techs--arrow.prev'),
+        nextArrow: $('.techs--arrow.next'),
         responsive: [
             {
               breakpoint: 1024,
