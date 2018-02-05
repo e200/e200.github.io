@@ -31,9 +31,9 @@
 
 
   &--text
-    position:    relative
-    display:     inline
-    margin:      0 15%
+    position: relative
+    display:  inline
+    margin:   0 15%
 
     @media only screen and (min-width: 23.4375em) // 375px
       font-size: 2.375em
@@ -104,21 +104,75 @@
 
 
 
-
+/**!
+  # PROJECTS
+ ************************************/
 
 .projects
-    @media only screen and (max-width: 991px)
-        height: auto
+
+  &--title
+    margin-bottom: 4rem
+
+    
 
 .project-item
   @extend .sm-6
   @extend .md-4
   
   &--name
-    color: $section-text-high-contrast
     text-decoration: none
     font-size:       2em
     font-family:     $font-family-secondary
 
   @media only screen and (min-width: 768px)
     min-height: 210px
+
+
+
+/**!
+  # TECHS
+ ************************************/
+
+.techs
+  position: relative // For .tech--arrow
+
+  &--slider
+    margin-bottom: 2rem
+
+  &--arrow
+    position:   absolute
+    top:        60%
+    padding:    35px
+    margin-top: -35px
+    display:    none !important
+
+    &.prev
+      left: 0
+
+    &.next
+      right: 0
+
+    @media only screen and (min-width: 768px)
+      display: inline !important
+
+
+    
+  &--item
+    outline:    none
+
+    @extend .xs-6
+    @extend .md-2
+
+    &--icon
+      display:        block
+      padding-top:    2.5rem
+      padding-bottom: 2.5rem
+      text-rendering: optimizeLegibility
+      font-size:      4em
+
+    &--name
+      font-family: $font-family-secondary
+
+.projects,
+.techs
+    text-align: center
