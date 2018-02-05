@@ -26,7 +26,7 @@ $(function(){
     $('#btn-ttm').on('click', function(){
         var me = $(this);
 
-        $('.git .smile')
+        $('.git--smile')
             .removeClass('fa-smile-o')
             .addClass('fa-meh-o');
 
@@ -37,7 +37,7 @@ $(function(){
                 </div>');
 
         setTimeout(function(){
-            $('.git .smile')
+            $('.git--smile')
                 .addClass('fa-smile-o')
                 .removeClass('fa-meh-o');
             me.html('Successfully!');
