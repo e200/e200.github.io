@@ -173,6 +173,48 @@
     &--name
       font-family: $font-family-secondary
 
+
+
+
+
+.git
+  &--form
+    width: 85%
+
+    &--item
+      display:       block
+      border:        0
+      border-radius: 3px
+      padding:       20px
+      margin:        15px 0
+      width:         100%
+
+    &--textarea
+      resize: none
+
+      @extend .git--form--input
+
+    @media only screen and #{$mq-small}
+      width: 50%
+
+      &--item
+        padding:   25px
+        font-size: 1.3em
+
+      &--textarea
+        min-height: 200px
+
+#git-submit-btn
+  text-transform: uppercase
+  font-weight:    bold
+  cursor:         pointer
+  outline:        none
+  
+
+
+
+
 .projects,
-.techs
+.techs,
+.git
     text-align: center

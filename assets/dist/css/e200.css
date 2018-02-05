@@ -609,6 +609,18 @@ body {
   .techs--arrow:hover {
     color: #ddd; }
 
+.git--form--input, .git--form--textarea {
+  color: #a8a8a8;
+  background: #151515;
+  transition: 0.3s; }
+
+#git-submit-btn {
+  background: #bc2626;
+  color: white;
+  transition: 0.3s; }
+  #git-submit-btn:hover {
+    background: #d12a2a; }
+
 /**!
   # HAMBURGUER
  ************************************/
@@ -768,10 +780,6 @@ body {
   .project-item {
     min-height: 210px; } }
 
-@media only screen and (max-width: 991px) {
-  .project-item {
-    height: auto; } }
-
 /**!
   # TECHS
  ************************************/
@@ -803,8 +811,35 @@ body {
     .techs--item--name {
       font-family: "Lobster Two", cursive; }
 
+.git--form {
+  width: 85%; }
+  .git--form--item {
+    display: block;
+    border: 0;
+    border-radius: 3px;
+    padding: 20px;
+    margin: 15px 0;
+    width: 100%; }
+  .git--form--textarea {
+    resize: none; }
+  @media only screen and (min-width: 48em) {
+    .git--form {
+      width: 50%; }
+      .git--form--item {
+        padding: 25px;
+        font-size: 1.3em; }
+      .git--form--textarea {
+        min-height: 200px; } }
+
+#git-submit-btn {
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none; }
+
 .projects,
-.techs {
+.techs,
+.git {
   text-align: center; }
 
 /**!
@@ -914,6 +949,18 @@ body {
   transition: 0.3s; }
   .techs--arrow:hover {
     color: #ddd; }
+
+.git--form--input, .git--form--textarea {
+  color: #a8a8a8;
+  background: #151515;
+  transition: 0.3s; }
+
+#git-submit-btn {
+  background: #bc2626;
+  color: white;
+  transition: 0.3s; }
+  #git-submit-btn:hover {
+    background: #d12a2a; }
 
 /**!
   # HAMBURGUER
