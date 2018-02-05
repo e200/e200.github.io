@@ -9,7 +9,7 @@
     <meta property="og:title" content="Eleandro Duzentos">
     <meta property="og:description" content="Eleandro Duzentos | Web Designer">
     <meta property="og:url" content="https://e200.github.io/">
-    <meta property="og:image" content="https://e200.github.io/assets/img/me_lg.jpg">
+    <meta property="og:image" content="https://e200.github.io/assets/img/e200_large.jpg">
     <meta property="og:site_name" content="Eleandro Duzentos | Web Designer">
     <meta property="og:locale:alternate" content="pt_PT">
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109303447-1"></script>
@@ -36,25 +36,49 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster+Two|Source+Sans+Pro:400,700">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/dist/css/master.css">
+    <link rel="stylesheet" href="assets/dist/css/e200.css">
   </head>
   <body class="js-prevent-menu-animation">
     <main>
       <nav class="nav"><a class="hamburguer" href="#" title="menu-toggler">
-          <div><span class="line line-0"></span><span class="line line-1"></span><span class="line line-2"></span>
+          <div><span class="humburguer--line hamburguer--line-0"></span><span class="humburguer--line hamburguer--line-1"></span><span class="humburguer--line hamburguer--line-2"></span>
           </div></a></nav>
-      <section class="intro section section__full section__flex" id="intro">
+      <section class="intro section is-full is-flex" id="intro">
         <h1 class="intro--text">
-          <div class="intro--balloon">Hi,</div>I'm e200,<br>a Web Designer &amp; dreamer<br>who loves <span class="intro--words"><span class="intro--word__active">code</span><span>tea</span><span>cats</span><span>music</span><span>space</span><span>purple</span></span>
+          <div class="intro--balloon">Hi,</div>I'm e200,<br>a Web Designer &amp; dreamer<br>who loves <span class="intro--words"><span class="intro--word is-active">code</span><span>tea</span><span>cats</span><span>music</span><span>space</span><span>purple</span></span>
         </h1><a href="#" id="jumper"><i class="fa fa-angle-double-down fa-2x"></i></a>
       </section>
-      <section class="presentation section section__full section__flex text-center" id="presentation">
-        <div class="container"><img class="presentation--picture" src="assets/dist/img/me.jpg">
+      <section class="presentation section is-full is-flex text-center" id="presentation">
+        <div class="container"><img class="presentation--picture" src="assets/dist/img/e200.jpg">
           <h1 class="section--title presentation--title">Yes, that's me! <span class="presentation--name">Eleandro Duzentos</span></h1>
-          <p class="section--description">A Developer and Web Designer based in Luanda, Angola<br>I design solutions for the web and help people building better UIs</p><a class="presentation--link presentation--link__left" href="#" target="_blank">More about me</a><a class="presentation--link presentation--link__right" href="#" target="_blank">Donwload CV</a>
+          <p class="section--description">A Developer and Web Designer based in Luanda, Angola<br>I design solutions for the web and help people building better UIs</p><a class="presentation--link left" href="#" target="_blank">More about me</a><a class="presentation--link right" href="#" target="_blank">Donwload CV</a>
         </div>
       </section>
-      <div class="projects section section__full section__flex" id="projects"></div>
+      <div class="projects section is-full is-flex" id="projects">
+        <div class="container">
+          <h1 class="section--title">My projects</h1>
+          <div class="row">
+            <div class="project-item"><a class="project-item--name" href="https://github.com/e200/MakeAccessible" target="_blank">Make/Accessible</a>
+              <p class="project-item--description">Test your singleton classes and inaccessible instance members</p>
+            </div>
+            <div class="project-item"><a class="project-item--name" href="https://github.com/e200/anotherJS" target="_blank">anotherJS</a>
+              <p class="project-item--description">Smaller JS library for those Frontends who makes most things using pure CSS</p>
+            </div>
+            <div class="project-item"><a class="project-item--name" href="https://github.com/e200/SliderPlex" target="_blank">SliderPlex</a>
+              <p class="project-item--description">A simple and responsive jQuery content slider plugin</p>
+            </div>
+            <div class="project-item"><a class="project-item--name" href="https://github.com/unity-framework" target="_blank">Unity framework</a>
+              <p class="project-item--description">PHP MVC based framework</p>
+            </div>
+            <div class="project-item"><a class="project-item--name" href="https://github.com/e200/GenesDecypher" target="_blank">GenesDecypher</a>
+              <p class="project-item--description">A genetic decypher written in C, for a client at Universidade Metodista de Angola</p>
+            </div>
+            <div class="project-item"><a class="project-item--name" href="https://github.com/e200/Reegex" target="_blank">Reegex</a>
+              <p class="project-item--description">WPF based Regex tester</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>

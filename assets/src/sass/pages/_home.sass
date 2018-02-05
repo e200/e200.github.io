@@ -1,0 +1,124 @@
+/**!
+  # INTRO
+ ************************************/
+
+.intro
+  position: relative
+  
+  &--balloon
+    position:   absolute
+    top:        -50px
+    left:       -6px
+    padding:    0 .375rem
+    font-size:  .6em
+    text-align: center
+    border-radius: 300px
+
+    @media only screen and (min-width: 26.5625em)
+      top:  -55px
+      left: 4px
+
+    &::after
+      content:          ''
+      position:         absolute
+      bottom:           -9px
+      left:             17px
+      border:           15px solid transparent
+      border-bottom:    0
+      border-left:      0
+      z-index:          -1
+      
+
+
+  &--text
+    position:    relative
+    display:     inline
+    margin:      0 15%
+
+    @media only screen and (min-width: 23.4375em) // 375px
+      font-size: 2.375em
+    @media only screen and (min-width: 26.5625em) // 425px
+      font-size: 3.25em
+
+
+
+  &--words
+    /** Each word will be absolute positioned */
+    position: relative
+
+    /** Just for vertical-align: top work */
+    display: inline-block
+      
+    /** Pull it to the top */
+    vertical-align: top
+
+    & > span
+      /** It makes all spans overlap each other */
+      position: absolute
+
+      /** The code bellow transite each word with a fade animation */
+      opacity: 0
+      transition: opacity $transition_time
+
+
+
+
+/**!
+  # PRESENTATION
+ ************************************/
+
+.presentation
+  text-align: center
+  
+  &--picture
+    max-width:     160px
+    width:         100%
+    border-radius: 300px
+    
+  &--title
+    margin-top:     .67em
+    margin-bottom:  0
+    text-rendering: optimizeLegibility
+
+  &--link
+    display:         inline-block
+    padding:         .625rem // 10px
+    margin-top:      1.25rem // 20px
+    text-decoration: none
+    line-height:     normal
+    border:          1px solid
+    border-radius:   5px
+    transition:      $transition-time
+    
+    &:hover
+      transform: translateY(-4px)
+
+
+      
+
+  @media only screen and #{$mq-small}
+    &--picture
+      max-width: 12.5em // 200px
+    &--link
+      font-size: 1.2rem
+
+
+
+
+
+.projects
+    @media only screen and (max-width: 991px)
+        height: auto
+
+.project-item
+  @extend .sm-6
+  @extend .md-4
+  
+  &--name
+    color: $section-text-high-contrast
+    text-decoration: none
+    font-size:       2em
+    font-family:     $font-family-secondary
+
+  @media only screen and (min-width: 768px)
+    min-height: 210px

@@ -1,15 +1,15 @@
-/** Font-Size
+// Font-Size
 $base-font-size: 1em
 
-/** Font-family
+// Font-family
 $font-family-primary:   'Source Sans Pro', sans-serif
 $font-family-secondary: 'Lobster Two', cursive
 
-/** Line-Height
+// Line-Height
 $base-line-height:   1.5
 $header-line-height: 1.25
 
-/** Colors
+// Colors
 $purple: #7a62da
 $yellow: #F9F772
 $red:    #bc2626
@@ -17,26 +17,26 @@ $green:  #9bc53d
 $blue:   #5bc0eb
 $grey:   #cccccc
 
-/** Transitions
-
+//Transitions
 $transition-time: .3s
 
 $body-background: #f6f6f6
 
 $section-background: #2D2D2D
-$section-text-color: #ededed
+$section-text-high-contrast: #ededed
+$section-text-low-contrast: darken($section-text-high-contrast, 30%)
 
 $intro-color:          #666
 $intro-picture-shadow: 0 0 20px #090909
 
-/**!
+/**
     NAV
- *******************************
+ *******************************/
 $nav-height: 90px
 
-/**!
+/**
     HAMBURGUER
- *******************************
+ *******************************/
 $hamburguer-padding: 8px
 $hamburguer-right:   26px
 $hamburguer-z-index: 9999
@@ -47,11 +47,25 @@ $hamburguer-line-margin-y:   4px
 $hamburguer-line-translate:  6px
 $hamburguer-line-rotate-deg: 135deg
 
-/**!
+/**
     #JUMP
- *******************************
-
+ *******************************/
 $jumper-padding:    35px
 $jumper-bottom:     15%
 $jumper-left:       50%
 $jumper-translateY: 15px
+
+// Breakpoints
+$bp-small:   48em     // 768px
+$bp-medium:  64em     // 1024px
+$bp-large:   85.375em // 1366px
+$bp-xlarge:  120em    // 1920px
+$bp-xxlarge: 160em    // 2560px
+
+// Media Queries
+$mq-small:   "(min-width: #{$bp-small})"
+$mq-medium:  "(min-width: #{$bp-medium})"
+$mq-large:   "(min-width: #{$bp-large})"
+$mq-xlarge:  "(min-width: #{$bp-xlarge})"
+$mq-xxlarge: "(min-width: #{$bp-xxlarge})"
+$mq-retina:  "(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)"

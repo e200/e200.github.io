@@ -24,7 +24,7 @@ gulp.task('pug', function(){
 })
 
 gulp.task('sass', function (){
-    return gulp.src(path_.src.sass + 'master.sass')
+    return gulp.src(path_.src.sass + 'e200.sass')
         .pipe(sass())
         .pipe(gulp.dest(path_.dist.css))
 })

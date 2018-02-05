@@ -61,7 +61,7 @@ gulp.task('sass:prod', function (){
         cascade: false
     }
 
-    return gulp.src(path_.src.sass + 'master.sass')
+    return gulp.src(path_.src.sass + 'e200.sass')
         .pipe(sass(sassOptions)
             .on('error', sass.logError))
         .pipe(purify([

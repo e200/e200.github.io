@@ -20,7 +20,7 @@ $(function(){
     $('#jumper').on('click', function(e){
         e.preventDefault();
 
-        scrollTo('#presentation');
+        scrollTo('#presentation', 800);
     });
 
     $('#btn-ttm').on('click', function(){
@@ -179,7 +179,5 @@ $(function(){
 
     $('#git-form').validate();
 
-    sr.reveal('section:not(.git) .title');
-    sr.reveal('.intro .pic');
-    sr.reveal('.projects .project');
+    sr.reveal('.presentation--picture');
 });

@@ -1,0 +1,98 @@
+/**!
+  # SECTION
+ ************************************/
+
+.section
+  color: $section-text-low-contrast
+
+  &:nth-child(odd)
+    background: $section-background
+
+  &:nth-child(even)
+    background: darken($section-background, 5%)
+      
+  /**!
+    #STYLES FOR SECTION HEADER
+   */
+  &--title
+    font-family: $font-family-secondary
+
+
+
+
+/**!
+  # INTRO
+ ************************************/
+
+.intro
+  background: transparent !important
+  
+  &--balloon
+    background: $purple
+    color:      white
+
+    &::after
+      border-top-color: darken($purple, 5%)
+
+  &--text
+    font-family: $font-family-secondary
+    color:       $intro-color
+
+
+
+
+/**!
+  # JUMPER
+ ************************************/
+
+#jumper
+  color:     $purple
+  animation: 2s infinite jump-animation ease-in-out
+
+@keyframes jump-animation
+  0%
+    transform: translateY(0)
+  50%
+    transform: translateY($jumper-translateY)
+  100%
+    transform: translateY(0)
+
+
+
+/**!
+  # PRESENTATION
+ ************************************/
+
+.presentation
+  &--picture
+    box-shadow: $intro-picture-shadow
+
+  &--name
+    color: $yellow
+
+  &--link
+    font-family:  $font-family-secondary
+    border-color: $yellow
+
+    &.left
+      background: $yellow
+      color:      $section-background
+
+    &.right
+      color: $yellow
+
+
+
+/**!
+  # HAMBURGUER
+ ************************************/
+
+.hamburguer
+
+  // STYLES AND ANIMATIONS FOR HAMBURGUER LINES
+  &--line
+    background-color: $grey
+
+  // TO BE APPLIED WHEN THE `.hamburguer` `.is-active:hover`
+  &--is-active-and-hover-theme
+    background: darken($grey, 10%)
