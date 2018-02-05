@@ -1,0 +1,10 @@
+#projects.projects.section
+    .container
+        h1.section--title My projects
+
+        .row
+            each project in projects
+                .project-item
+                    a(href=project.address target="_blank").project-item--name #{project.name}
+
+                    p.project-item--description #{project.description}

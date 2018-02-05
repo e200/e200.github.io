@@ -1,0 +1,6 @@
+span.intro--words
+    each word, i in words
+        if (i == 0)
+            span.intro--word.is-active #{word}
+        else
+            span #{word}

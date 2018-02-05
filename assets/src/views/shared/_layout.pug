@@ -1,0 +1,13 @@
+doctype html
+
+html(lang=page.lang)
+    include _head
+
+    //-
+        .js-prevent-menu-animation prevents menu animation
+        from happening when the page is loaded.
+    body.js-prevent-menu-animation
+        main
+            block content
+
+        include _scripts
