@@ -1,0 +1,14 @@
+section.techs.section
+    .container
+        h1.section--title Techs
+        
+        .techs--slider
+            each tech in techs
+                .techs--item
+                    i.techs--item--icon(class="devicon-" + tech.icon + "-plain" title=tech.text)
+                    span.techs--item--name #{tech.text}
+        
+        a(href="#").techs--arrow.prev
+            span.fa.fa-chevron-left
+        a(href="#").techs--arrow.next
+            span.fa.fa-chevron-right
