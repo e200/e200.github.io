@@ -2,8 +2,11 @@
   # INTRO
  ************************************/
 
-.intro
+.introduction
   position: relative
+
+  @extend .is-full
+  @extend .is-flex
   
   &--balloon
     position:   absolute
@@ -70,6 +73,9 @@
 .presentation
   text-align: center
   
+  @extend .is-full
+  @extend .is-flex
+  
   &--picture
     max-width:     160px
     width:         100%
@@ -109,7 +115,6 @@
  ************************************/
 
 .projects
-
   &--title
     margin-bottom: 4rem
 
@@ -158,7 +163,7 @@
 
     
   &--item
-    outline:    none
+    outline: none
 
     @extend .xs-6
     @extend .md-2
@@ -178,6 +183,9 @@
 
 
 .git
+  @extend .is-full
+  @extend .is-flex
+
   &--form
     width: 85%
 

@@ -112,7 +112,7 @@ $(function(){
     // Sets a delay for start the transition.
     setTimeout(function(){
         var class_name = 'intro--word__active',
-            words = $('.intro--words'),
+            words = $('.introduction--words'),
             firstChild = words.find('span').first();
 
         // Transition cycle.

@@ -547,14 +547,14 @@ body {
 /**!
   # INTRO
  ************************************/
-.intro {
+.introduction {
   background: transparent !important; }
-  .intro--balloon {
+  .introduction--balloon {
     background: #7a62da;
     color: white; }
-    .intro--balloon::after {
+    .introduction--balloon::after {
       border-top-color: #694dd5; }
-  .intro--text {
+  .introduction--text {
     font-family: "Lobster Two", cursive;
     color: #666; }
 
@@ -688,9 +688,9 @@ body {
 /**!
   # INTRO
  ************************************/
-.intro {
+.introduction {
   position: relative; }
-  .intro--balloon {
+  .introduction--balloon {
     position: absolute;
     top: -50px;
     left: -6px;
@@ -699,10 +699,10 @@ body {
     text-align: center;
     border-radius: 300px; }
     @media only screen and (min-width: 26.5625em) {
-      .intro--balloon {
+      .introduction--balloon {
         top: -55px;
         left: 4px; } }
-    .intro--balloon::after {
+    .introduction--balloon::after {
       content: '';
       position: absolute;
       bottom: -9px;
@@ -711,24 +711,24 @@ body {
       border-bottom: 0;
       border-left: 0;
       z-index: -1; }
-  .intro--text {
+  .introduction--text {
     position: relative;
     display: inline;
     margin: 0 15%; }
     @media only screen and (min-width: 23.4375em) {
-      .intro--text {
+      .introduction--text {
         font-size: 2.375em; } }
     @media only screen and (min-width: 26.5625em) {
-      .intro--text {
+      .introduction--text {
         font-size: 3.25em; } }
-  .intro--words {
+  .introduction--words {
     /** Each word will be absolute positioned */
     position: relative;
     /** Just for vertical-align: top work */
     display: inline-block;
     /** Pull it to the top */
     vertical-align: top; }
-    .intro--words > span {
+    .introduction--words > span {
       /** It makes all spans overlap each other */
       position: absolute;
       /** The code bellow transite each word with a fade animation */
@@ -845,19 +845,19 @@ body {
 /**!
   # SECTION
  ************************************/
-.section.is-flex {
+.section.is-flex, .section.introduction, .section.presentation, .section.git {
   display: flex;
   justify-content: center;
   align-items: center; }
 
-.section.is-full {
+.section.is-full, .section.introduction, .section.presentation, .section.git {
   width: 100%;
   height: 100%; }
 
 /**!
   # INTRO
  ************************************/
-.intro--word.is-active {
+.introduction--word.is-active {
   opacity: 1 !important; }
 
 /**!
@@ -888,14 +888,14 @@ body {
 /**!
   # INTRO
  ************************************/
-.intro {
+.introduction {
   background: transparent !important; }
-  .intro--balloon {
+  .introduction--balloon {
     background: #7a62da;
     color: white; }
-    .intro--balloon::after {
+    .introduction--balloon::after {
       border-top-color: #694dd5; }
-  .intro--text {
+  .introduction--text {
     font-family: "Lobster Two", cursive;
     color: #666; }
 
