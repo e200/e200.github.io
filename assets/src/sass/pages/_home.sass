@@ -70,21 +70,63 @@
   # PRESENTATION
  ************************************/
 
-.presentation
-  text-align: center
-  
-  @extend .is-full
+.presentation  
   @extend .is-flex
+  @extend .is-full
   
   &--picture
-    max-width:     160px
+    display:       block
     width:         100%
+    max-width:     160px
+    margin:        0 auto
     border-radius: 300px
     
   &--title
     margin-top:     .67em
     margin-bottom:  0
     text-rendering: optimizeLegibility
+    line-height:    normal
+
+  &--name
+    display:         inline-block
+    position:        relative // For .&--smilte-tooltip
+    text-decoration: none
+
+    &:hover
+      color: darken($yellow, 5%)
+
+    &--tooltip
+      position:      absolute
+      bottom:        50px
+      left:          50%
+      background:    #fff
+      color:         #2D2D2D
+      padding:       10px
+      font-size:     20px
+      border-radius: 25px
+      box-shadow:    0 0 20px rgba(#000, .1)
+      transform:     translateY(20px)
+      opacity: 0
+      transition:    $transition-time
+
+      &::after
+        content:          ''
+        position:         absolute
+        bottom:           -20px
+        left:             50px
+        border:           10px solid transparent
+        border-top-color: transparent
+        border-top-color: darken(#fff, 5%)
+
+      &.is-visible
+        opacity: 1
+        transform: translateY(0)
+
+      @media only screen and #{$mq-small}
+        bottom: 70px
+        
+        &::after
+          left: 74px
 
   &--link
     display:         inline-block
@@ -108,6 +150,30 @@
     &--link
       font-size: 1.2rem
 
+  
+
+  @media only screen and (min-width: 25.875em) // 414px
+    &--breaker
+      display: none
+
+      
+
+  /**!
+
+    I know it looks strange,
+    but is the solution i found
+    for screens with small height
+    since some sections on te page
+    uses the full height and some
+    devices don't provide space enough
+    to fit the content :D
+
+    ************************************/
+  @media only screen and (max-device-height: 31.25em) // 500px
+    height: auto !important
+
+
+
 
 
 /**!
@@ -129,8 +195,10 @@
     font-size:       2em
     font-family:     $font-family-secondary
 
-  @media only screen and (min-width: 768px)
+  @media only screen and #{$mq-small}
     min-height: 210px
+
+
 
 
 
@@ -157,7 +225,7 @@
     &.next
       right: 0
 
-    @media only screen and (min-width: 768px)
+    @media only screen and #{$mq-small}
       display: inline !important
 
 
@@ -221,7 +289,7 @@
 
 
 
-
+.presentation,
 .projects,
 .techs,
 .git

@@ -739,15 +739,63 @@ body {
   # PRESENTATION
  ************************************/
 .presentation {
-  text-align: center; }
+  /**!
+
+    I know it looks strange,
+    but is the solution i found
+    for screens with small height
+    since some sections on te page
+    uses the full height and some
+    devices don't provide space enough
+    to fit the content :D
+
+    ************************************/ }
   .presentation--picture {
-    max-width: 160px;
+    display: block;
     width: 100%;
+    max-width: 160px;
+    margin: 0 auto;
     border-radius: 300px; }
   .presentation--title {
     margin-top: .67em;
     margin-bottom: 0;
-    text-rendering: optimizeLegibility; }
+    text-rendering: optimizeLegibility;
+    line-height: normal; }
+  .presentation--name {
+    display: inline-block;
+    position: relative;
+    text-decoration: none; }
+    .presentation--name:hover {
+      color: #f8f65a; }
+    .presentation--name--tooltip {
+      opacity: 0;
+      position: absolute;
+      bottom: 50px;
+      left: 50%;
+      background: #fff;
+      color: #2D2D2D;
+      padding: 10px;
+      font-size: 20px;
+      border-radius: 25px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      transform: translateY(20px);
+      transition: 0.3s; }
+      .presentation--name--tooltip::after {
+        content: '';
+        position: absolute;
+        bottom: -20px;
+        left: 50px;
+        border: 10px solid transparent;
+        border-top-color: transparent;
+        border-top-color: #f2f2f2; }
+      .presentation--name--tooltip.is-visible {
+        opacity: 1;
+        transform: translateY(0); }
+      @media only screen and (min-width: 48em) {
+        .presentation--name--tooltip {
+          bottom: 70px; }
+          .presentation--name--tooltip::after {
+            left: 74px; } }
   .presentation--link {
     display: inline-block;
     padding: .625rem;
@@ -764,6 +812,12 @@ body {
       max-width: 12.5em; }
     .presentation--link {
       font-size: 1.2rem; } }
+  @media only screen and (min-width: 25.875em) {
+    .presentation--breaker {
+      display: none; } }
+  @media only screen and (max-device-height: 31.25em) {
+    .presentation {
+      height: auto !important; } }
 
 /**!
   # PROJECTS
@@ -776,7 +830,7 @@ body {
   font-size: 2em;
   font-family: "Lobster Two", cursive; }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48em) {
   .project-item {
     min-height: 210px; } }
 
@@ -797,7 +851,7 @@ body {
       left: 0; }
     .techs--arrow.next {
       right: 0; }
-    @media only screen and (min-width: 768px) {
+    @media only screen and (min-width: 48em) {
       .techs--arrow {
         display: inline !important; } }
   .techs--item {
@@ -837,6 +891,7 @@ body {
   cursor: pointer;
   outline: none; }
 
+.presentation,
 .projects,
 .techs,
 .git {
@@ -857,7 +912,7 @@ body {
 /**!
   # INTRO
  ************************************/
-.introduction--word.is-active {
+.introduction--words .is-active {
   opacity: 1 !important; }
 
 /**!

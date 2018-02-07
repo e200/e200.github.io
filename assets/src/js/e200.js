@@ -23,6 +23,13 @@ $(function(){
         scrollTo('#presentation', 800);
     });
 
+    $('.presentation--name')
+        .on('click', function(e){
+            e.preventDefault();
+
+            $('.presentation--name--tooltip').toggleClass('is-visible');
+        })
+
     $('#btn-ttm').on('click', function(){
         var me = $(this);
 
@@ -111,7 +118,7 @@ $(function(){
 
     // Sets a delay for start the transition.
     setTimeout(function(){
-        var class_name = 'intro--word__active',
+        var class_name = 'is-active',
             words = $('.introduction--words'),
             firstChild = words.find('span').first();
 
