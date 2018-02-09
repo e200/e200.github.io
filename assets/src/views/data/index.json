@@ -21,8 +21,11 @@
         },
         "linkedin": {
             "icon": "linkedin",
-            "address": "https://www.linkedin.com/in/e200-career/"
+            "address": "https://www.linkedin.com/in/e200-career"
         }
+    },
+    "presentation": {
+        "cvUrl": "https://e200.github.io/Curriculum/Curriculum%2C%20Oportunidade%20de%20Carreira%20-%20Eleandro%20Duzentos.pdf"
     },
     "techs": [
         { "icon": "html5",       "text": "HTML 5" },
