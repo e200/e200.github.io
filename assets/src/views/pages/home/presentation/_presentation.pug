@@ -4,17 +4,22 @@ section#presentation.presentation.section
         
         h1.section--title.presentation--title
             |Yes, that's me! 
+
             br.presentation--breaker
+
             a(href="#").presentation--name
-                span #{full_name}
-                .presentation--name--tooltip My last name means "200" in Portuguese! 😊
+                |#{full_name}
+
+                .presentation--name--tooltip My last name means "200" in portuguese! 😊
 
             
         
         p.section--description
             |A Developer and Web Designer based in Luanda, Angola
+
             br
+            
             |I design solutions for the web and help people building better UIs
 
-        a(href="#" target="_blank").presentation--link.left More about me
-        a(href="#" target="_blank").presentation--link.right Donwload CV
+        a(href="about.html" target="_blank").presentation--link.left More about me
+        a(href=presentation.cvUrl target="_blank").presentation--link.right Donwload CV
