@@ -2,8 +2,9 @@ window.sr = ScrollReveal({viewFactor: 0.3});
 
 $(function(){
     var
-        btt = $('.btt'),
-        presentation = $('.presentation');
+        btt                 = $('.btt'),
+        presentation        = $('.presentation'),
+        presentationTooltip = $('.presentation--name--tooltip');;
 
     $('.hamburguer').on('click', function(e){
        e.preventDefault();
@@ -26,8 +27,14 @@ $(function(){
     $('.presentation--name')
         .on('click', function(e){
             e.preventDefault();
-
-            $('.presentation--name--tooltip').toggleClass('is-visible');
+            
+            if (presentationTooltip.css('visibility') == 'hidden') {
+                presentationTooltip.addClass('is-visible');
+            } else {
+                presentationTooltip.removeClass('is-visible');
+            }            
+        }).on('mouseout', function(){
+            presentationTooltip.removeClass('is-visible');
         })
 
     $('#btn-ttm').on('click', function(){
