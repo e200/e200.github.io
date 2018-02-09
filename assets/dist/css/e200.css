@@ -765,20 +765,19 @@ body {
     display: inline-block;
     position: relative;
     text-decoration: none; }
-    .presentation--name:hover {
-      color: #f8f65a; }
     .presentation--name--tooltip {
-      opacity: 0;
+      visibility: hidden;
       position: absolute;
       bottom: 50px;
       left: 50%;
-      background: #fff;
-      color: #2D2D2D;
+      background: #424242;
+      color: #fff;
       padding: 10px;
       font-size: 20px;
       border-radius: 25px;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
       transform: translateY(20px);
+      opacity: 0;
       transition: 0.3s; }
       .presentation--name--tooltip::after {
         content: '';
@@ -786,9 +785,9 @@ body {
         bottom: -20px;
         left: 50px;
         border: 10px solid transparent;
-        border-top-color: transparent;
-        border-top-color: #f2f2f2; }
+        border-top-color: #424242; }
       .presentation--name--tooltip.is-visible {
+        visibility: visible;
         opacity: 1;
         transform: translateY(0); }
       @media only screen and (min-width: 48em) {
@@ -825,14 +824,17 @@ body {
 .projects--title {
   margin-bottom: 4rem; }
 
-.project-item--name {
-  text-decoration: none;
-  font-size: 2em;
-  font-family: "Lobster Two", cursive; }
-
-@media only screen and (min-width: 48em) {
-  .project-item {
-    min-height: 210px; } }
+.project-item {
+  margin-top: 50px;
+  margin-bottom: 50px; }
+  .project-item--name {
+    text-decoration: none;
+    font-size: 2em;
+    font-family: "Lobster Two", cursive; }
+  @media only screen and (min-width: 48em) {
+    .project-item {
+      margin: 0;
+      min-height: 210px; } }
 
 /**!
   # TECHS
