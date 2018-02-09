@@ -92,21 +92,19 @@
     position:        relative // For .&--smilte-tooltip
     text-decoration: none
 
-    &:hover
-      color: darken($yellow, 5%)
-
     &--tooltip
+      visibility: hidden
       position:      absolute
       bottom:        50px
       left:          50%
-      background:    #fff
-      color:         #2D2D2D
+      background:    #424242
+      color:         #fff
       padding:       10px
       font-size:     20px
       border-radius: 25px
       box-shadow:    0 0 20px rgba(#000, .1)
       transform:     translateY(20px)
-      opacity: 0
+      opacity:       0
       transition:    $transition-time
 
       &::after
@@ -115,12 +113,12 @@
         bottom:           -20px
         left:             50px
         border:           10px solid transparent
-        border-top-color: transparent
-        border-top-color: darken(#fff, 5%)
+        border-top-color: #424242
 
       &.is-visible
-        opacity: 1
-        transform: translateY(0)
+        visibility: visible
+        opacity:    1
+        transform:  translateY(0)
 
       @media only screen and #{$mq-small}
         bottom: 70px
@@ -187,6 +185,9 @@
     
 
 .project-item
+  margin-top:    50px
+  margin-bottom: 50px
+  
   @extend .sm-6
   @extend .md-4
   
@@ -196,6 +197,7 @@
     font-family:     $font-family-secondary
 
   @media only screen and #{$mq-small}
+    margin:     0
     min-height: 210px
 
 
