@@ -1,6 +1,19 @@
+
+$section-background:         #2D2D2D
+$section-text-high-contrast: #ededed
+$section-text-low-contrast:  darken($section-text-high-contrast, 30%)
+
+$introduction-background: #f6f6f6
+
 $presentation-tooltip-text-color:       #fff
 $presentation-tooltip-background-color: #424242
 $presentation-tooltip-box-shadow-color: 0 0 20px rgba(#000, .1)
+
+$techs-arrow-color:       #545454
+$techs-arrow-color-hover: #ddd
+
+$intro-color:          #666
+$intro-picture-shadow: 0 0 20px #090909
 
 $footer-text-color: #c3c3c3
 
@@ -32,7 +45,7 @@ $footer-text-color: #c3c3c3
  ************************************/
 
 .introduction
-  background: transparent !important
+  background: $introduction-background !important
   
   &--balloon
     background: $purple
@@ -154,9 +167,9 @@ $footer-text-color: #c3c3c3
 
 
 .footer
-  position: fixed
-  bottom: 0
-  width: 100%
+  position:   sticky
+  bottom:     0
+  width:      100%
   background: #181818
 
   &--contact-email
@@ -164,15 +177,15 @@ $footer-text-color: #c3c3c3
     text-decoration: none
 
   &--social--link
-    color: $footer-text-color
-    border: 2px solid $footer-text-color
+    color:      $footer-text-color
+    border:     2px solid $footer-text-color
     transition: $transition-time
 
   &--link
     transition: $transition-time
 
     &:hover
-      color: $purple
+      color:        $purple
       border-color: $purple
 
 
