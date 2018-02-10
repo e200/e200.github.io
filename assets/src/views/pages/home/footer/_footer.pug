@@ -1,6 +1,9 @@
 footer.footer
-    ul.social.list-unstyled
-        each social, index in socials
-            li
-                a(href=social.address title=index target="_blank")
-                    span.fa(class="fa-" + social.icon)
+    .container
+        a.footer--contact-email.footer--link(href="mailto://eleandro@inbox.ru") eleandro@inbox.ru
+
+        ul.footer--socials
+            each social, index in socials
+                li
+                    a.footer--social--link.footer--link(href=social.address title=index target="_blank")
+                        span.fa(class="fa-" + social.icon)

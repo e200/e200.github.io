@@ -39,7 +39,7 @@
     <link rel="stylesheet" href="assets/dist/css/e200.css">
   </head>
   <body class="js-prevent-menu-animation">
-    <main>
+    <main id="main">
       <nav class="nav"><a class="hamburguer" href="#" title="menu-toggler">
           <div><span class="humburguer--line hamburguer--line-0"></span><span class="humburguer--line hamburguer--line-1"></span><span class="humburguer--line hamburguer--line-2"></span>
           </div></a></nav>
@@ -83,6 +83,7 @@
       <section class="techs section" id="techs">
         <div class="container">
           <h1 class="section--title">Techs</h1>
+          <p class="section--description">Technologies I work with</p>
           <div class="techs--slider">
             <div class="techs--item"><i class="techs--item--icon devicon-html5-plain" title="HTML 5"></i><span class="techs--item--name">HTML 5</span></div>
             <div class="techs--item"><i class="techs--item--icon devicon-css3-plain" title="CSS 3"></i><span class="techs--item--name">CSS 3</span></div>
@@ -115,14 +116,16 @@
           <button class="git--form--item" id="git-submit-btn" type="submit" form="#git--form">Talk to me</button>
         </form>
       </section>
-      <footer class="footer">
-        <ul class="social list-unstyled">
-          <li><a href="https://www.facebook.com/eleandro.duzentos" title="facebook" target="_blank"><span class="fa fa-facebook"></span></a></li>
-          <li><a href="https://github.com/e200" title="github" target="_blank"><span class="fa fa-github-alt"></span></a></li>
-          <li><a href="https://www.linkedin.com/in/e200-career" title="linkedin" target="_blank"><span class="fa fa-linkedin"></span></a></li>
-        </ul>
-      </footer>
     </main>
+    <footer class="footer">
+      <div class="container"><a class="footer--contact-email footer--link" href="mailto://eleandro@inbox.ru">eleandro@inbox.ru</a>
+        <ul class="footer--socials">
+          <li><a class="footer--social--link footer--link" href="https://www.facebook.com/eleandro.duzentos" title="facebook" target="_blank"><span class="fa fa-facebook"></span></a></li>
+          <li><a class="footer--social--link footer--link" href="https://github.com/e200" title="github" target="_blank"><span class="fa fa-github-alt"></span></a></li>
+          <li><a class="footer--social--link footer--link" href="https://www.linkedin.com/in/e200-career" title="linkedin" target="_blank"><span class="fa fa-linkedin"></span></a></li>
+        </ul>
+      </div>
+    </footer>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>

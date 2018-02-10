@@ -1,26 +1,4 @@
 /**!
-  # SECTION
- ************************************/
-
-.section
-
-  // Center vertically and horizontally
-  // any child inside .section
-  &.is-flex
-    display:         flex
-    justify-content: center
-    align-items:     center
-    
-  // Uses the .section parent full-width
-  &.is-full
-    width:  100%
-    height: 100%
-
-    
-
-
-
-/**!
   # INTRO
  ************************************/
 
@@ -37,6 +15,13 @@
   # PRESENTATION
  ************************************/
 .presentation
+  &--name
+    &--tooltip
+      &.is-visible
+        visibility: visible
+        opacity:    1
+        transform:  translateY(0)
+        
   &--link
     &.left
       margin-right: 3px

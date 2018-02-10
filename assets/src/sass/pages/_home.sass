@@ -1,12 +1,18 @@
 /**!
+  # MAIN
+ ************************************/
+#main
+  z-index: 5
+
+/**!
   # INTRO
  ************************************/
 
 .introduction
   position: relative
 
-  @extend .is-full
-  @extend .is-flex
+  @extend .full
+  @extend .flex
   
   &--balloon
     position:   absolute
@@ -71,8 +77,8 @@
  ************************************/
 
 .presentation  
-  @extend .is-flex
-  @extend .is-full
+  @extend .flex
+  @extend .full
   
   &--picture
     display:       block
@@ -93,32 +99,18 @@
     text-decoration: none
 
     &--tooltip
-      visibility: hidden
+      visibility:    hidden
       position:      absolute
       bottom:        50px
       left:          50%
-      background:    #424242
-      color:         #fff
       padding:       10px
       font-size:     20px
-      border-radius: 25px
-      box-shadow:    0 0 20px rgba(#000, .1)
-      transform:     translateY(20px)
-      opacity:       0
-      transition:    $transition-time
 
       &::after
         content:          ''
         position:         absolute
         bottom:           -20px
         left:             50px
-        border:           10px solid transparent
-        border-top-color: #424242
-
-      &.is-visible
-        visibility: visible
-        opacity:    1
-        transform:  translateY(0)
 
       @media only screen and #{$mq-small}
         bottom: 70px
@@ -248,13 +240,17 @@
     &--name
       font-family: $font-family-secondary
 
+  .section--description
+    text-transform: uppercase
+    letter-spacing: 1px
+
 
 
 
 
 .git
-  @extend .is-full
-  @extend .is-flex
+  @extend .full
+  @extend .flex
 
   &--form
     width: 85%
@@ -291,8 +287,42 @@
 
 
 
+
+.footer
+  padding-top:    5em
+  padding-bottom: 5em
+  z-index:        -1
+
+  &--contact-email
+    padding:   15px
+    font-size: 18px
+
+
+
+  &--socials
+    margin-top: 35px
+
+    @extend .list-unstyled
+    @extend .list-inline
+
+  &--social--link
+    display:       inline-block
+    border-radius: 300px
+    width:         54px
+    height:        54px
+    margin:        5px
+    line-height:   54px
+
+    .fa
+      font-size: 1.5em
+
+
+
+
+
 .presentation,
 .projects,
 .techs,
-.git
+.git,
+.footer
     text-align: center
