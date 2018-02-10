@@ -695,7 +695,6 @@ body {
   * #SECTION: Represents a section in the page.
   */
 .section {
-  position: relative;
   padding-top: 2rem;
   padding-bottom: 2rem;
   /**!
