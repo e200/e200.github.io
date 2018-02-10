@@ -2,7 +2,7 @@ window.sr = ScrollReveal({viewFactor: 0.3});
 
 $(function(){
     var
-        btt                 = $('.btt'),
+        backToTopButton     = $('#back-to-top-bottom'),
         presentation        = $('.presentation'),
         presentationTooltip = $('.presentation--name--tooltip');;
 
@@ -12,7 +12,7 @@ $(function(){
        $('.header').toggleClass('active');
     });
 
-    $('.btt').on('click', function(e){
+    $('#back-to-top-button').on('click', function(e){
         e.preventDefault();
 
         scrollTo(0);
@@ -37,7 +37,8 @@ $(function(){
             presentationTooltip.removeClass('is-visible');
         })
 
-    $('#btn-ttm').on('click', function(){
+
+    $('#talt-to-me-button').on('click', function(){
         var me = $(this);
 
         $('.git--smile')
@@ -66,26 +67,27 @@ $(function(){
     });
 
     var
-        oldScrollPos = 0,
-        newScrollPos,
-        interval;
+        backToTopButtonOldScrollPos = 0,
+        backToTopButtonNewScrollPos,
+        backToTopButtonInterval;
 
-    function canShowBtt(){
-        return (newScrollPos < oldScrollPos) && (presentation.height() < newScrollPos);
+    function canShowBackToTopButton(){
+        return (backToTopButtonNewScrollPos < backToTopButtonOldScrollPos) &&
+               (presentation.height() < backToTopButtonNewScrollPos);
     }
 
-    function bttRestartInterval(){
-        if (interval) {
-            clearInterval(interval);
+    function backToTopButtonRestartInterval(){
+        if (backToTopButtonInterval) {
+            clearInterval(backToTopButtonInterval);
         }
 
-        interval = setTimeout(function(){
-            btt.fadeOut(300);
+        backToTopButtonInterval = setTimeout(function(){
+            backToTopButton.fadeOut(300);
         }, 3000);
     }
 
-    function bttStopInterval(){
-        clearInterval(interval);
+    function backToTopButtonStopInterval(){
+        clearInterval(backToTopButtonInterval);
     }
 
     $(window).on('scroll', function(){
@@ -155,36 +157,37 @@ $(function(){
     }, 500);
 
     $('.techs--slider').slick({
-        autoplay: true,
-        infinite: true,
-        speed: 150,
-        slidesToShow: 7,
+        autoplay:       true,
+        infinite:       true,
+        speed:          150,
+        slidesToShow:   7,
         slidesToScroll: 1,
-        swipeToSlide: true,
+        swipeToSlide:   true,
+        pauseOnHover:   false,
         // https://github.com/kenwheeler/slick/issues/2002#issuecomment-325806939
         touchThreshold: 100,
-        prevArrow: $('.techs--arrow.prev'),
-        nextArrow: $('.techs--arrow.next'),
+        prevArrow:      $('.techs--arrow.prev'),
+        nextArrow:      $('.techs--arrow.next'),
         responsive: [
             {
               breakpoint: 1024,
               settings: {
-                slidesToShow: 7,
+                slidesToShow:   7,
                 slidesToScroll: 1,
-                infinite: true
+                infinite:       true
               }
             },
             {
               breakpoint: 992,
               settings: {
-                slidesToShow: 5,
+                slidesToShow:   5,
                 slidesToScroll: 1
               }
             },
             {
               breakpoint: 768,
-              settings: {
-                slidesToShow: 3,
+              settings:         {
+                slidesToShow:   3,
                 slidesToScroll: 1
               }
             }
