@@ -636,13 +636,8 @@ body {
     background: #d12a2a; }
 
 .footer {
-  position: fixed;
-  bottom: 0;
   width: 100%;
   background: #181818; }
-  .footer--contact-email {
-    color: #c3c3c3;
-    text-decoration: none; }
   .footer--social--link {
     color: #c3c3c3;
     border: 2px solid #c3c3c3;
@@ -723,12 +718,6 @@ body {
       font-size: 3em; }
     .section--description {
       font-size: 1.2rem; } }
-
-/**!
-  # MAIN
- ************************************/
-#main {
-  z-index: 5; }
 
 /**!
   # INTRO
@@ -929,14 +918,11 @@ body {
   outline: none; }
 
 .footer {
-  padding-top: 5em;
-  padding-bottom: 5em;
+  position: sticky;
+  bottom: 0;
+  padding-top: 3em;
+  padding-bottom: 3em;
   z-index: -1; }
-  .footer--contact-email {
-    padding: 15px;
-    font-size: 18px; }
-  .footer--socials {
-    margin-top: 35px; }
   .footer--social--link {
     display: inline-block;
     border-radius: 300px;
@@ -1079,13 +1065,8 @@ body {
     background: #d12a2a; }
 
 .footer {
-  position: fixed;
-  bottom: 0;
   width: 100%;
   background: #181818; }
-  .footer--contact-email {
-    color: #c3c3c3;
-    text-decoration: none; }
   .footer--social--link {
     color: #c3c3c3;
     border: 2px solid #c3c3c3;
