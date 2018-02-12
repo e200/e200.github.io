@@ -247,7 +247,6 @@
 
 
 .get-in-touch
-  @extend .full
   @extend .flex
 
   &__form
@@ -263,18 +262,16 @@
 
     &__textarea
       resize: none
+      min-height: 200px
 
       @extend .get-in-touch__form__input
 
     @media only screen and #{$mq-small}
-      width: 50%
+      width:  50%
 
       &__item
         padding:   25px
         font-size: 1.3em
-
-      &__textarea
-        min-height: 200px
 
 #get-in-touch__submit-button
   text-transform: uppercase
