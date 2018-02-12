@@ -9,6 +9,7 @@ const
     insert       = require('gulp-insert')
     purify       = require('gulp-purifycss')
     minCssNames  = require('gulp-minify-css-names')
+    combineMq    = require('gulp-combine-mq')
     path_        = require('./path_')
 
 gulp.task('js:prod', function() {
@@ -64,10 +65,14 @@ gulp.task('sass:prod', function (){
     return gulp.src(path_.src.sass + 'e200.sass')
         .pipe(sass(sassOptions)
             .on('error', sass.logError))
+        .pipe(combineMq({
+            beautify: false
+        }))
         .pipe(purify([
             path_.src + '*.js',
             './' + 'index.html'
         ], {
+            minify: true,
             rejected: true
         }))
         .pipe(autoprefixer(autoprefixerOptions))
