@@ -141,7 +141,7 @@ $(function(){
             
             nextWord.length ? nextWord.toggleClass(class_name) : firstChild.toggleClass(class_name);
         }, 4000);
-    }, 2500);
+    }, 1500);
 
     /**
      * Prevents the header sliders from being
