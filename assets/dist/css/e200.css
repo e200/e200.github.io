@@ -526,7 +526,6 @@ main {
   height: 100%; }
 
 body {
-  background: #f6f6f6;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 1em;
   line-height: 1.5; }
@@ -551,12 +550,12 @@ body {
   # INTRO
  ************************************/
 .introduction {
-  background: transparent !important; }
+  background: #f6f6f6 !important; }
   .introduction--balloon {
     background: #7a62da;
     color: white; }
     .introduction--balloon::after {
-      border-top-color: #694dd5; }
+      border-top-color: #7a62da; }
   .introduction--text {
     font-family: "Lobster Two", cursive;
     color: #666; }
@@ -743,8 +742,7 @@ body {
       left: 17px;
       border: 15px solid transparent;
       border-bottom: 0;
-      border-left: 0;
-      z-index: -1; }
+      border-left: 0; }
   .introduction--text {
     position: relative;
     display: inline;
@@ -980,12 +978,12 @@ body {
   # INTRO
  ************************************/
 .introduction {
-  background: transparent !important; }
+  background: #f6f6f6 !important; }
   .introduction--balloon {
     background: #7a62da;
     color: white; }
     .introduction--balloon::after {
-      border-top-color: #694dd5; }
+      border-top-color: #7a62da; }
   .introduction--text {
     font-family: "Lobster Two", cursive;
     color: #666; }
