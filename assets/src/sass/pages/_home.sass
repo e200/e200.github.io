@@ -8,7 +8,7 @@
   @extend .full
   @extend .flex
   
-  &--balloon
+  &__balloon
     position:   absolute
     top:        -50px
     left:       -6px
@@ -32,7 +32,7 @@
       
 
 
-  &--text
+  &__text
     position: relative
     display:  inline
     margin:   0 15%
@@ -44,7 +44,7 @@
 
 
 
-  &--words
+  &__words
     /** Each word will be absolute positioned */
     position: relative
 
@@ -73,25 +73,25 @@
   @extend .flex
   @extend .full
   
-  &--picture
+  &__picture
     display:       block
     width:         100%
     max-width:     160px
     margin:        0 auto
     border-radius: 300px
     
-  &--title
+  &__title
     margin-top:     .67em
     margin-bottom:  0
     text-rendering: optimizeLegibility
     line-height:    normal
 
-  &--name
+  &__name
     display:         inline-block
-    position:        relative // For .&--smilte-tooltip
+    position:        relative // For .&__smilte-tooltip
     text-decoration: none
 
-    &--tooltip
+    &__tooltip
       visibility:    hidden
       position:      absolute
       bottom:        50px
@@ -111,7 +111,7 @@
         &::after
           left: 74px
 
-  &--link
+  &__link
     display:         inline-block
     padding:         .625rem // 10px
     margin-top:      1.25rem // 20px
@@ -128,15 +128,15 @@
       
 
   @media only screen and #{$mq-small}
-    &--picture
+    &__picture
       max-width: 12.5em // 200px
-    &--link
+    &__link
       font-size: 1.2rem
 
   
 
   @media only screen and (min-width: 25.875em) // 414px
-    &--breaker
+    &__breaker
       display: none
 
       
@@ -164,27 +164,32 @@
  ************************************/
 
 .projects
-  &--title
-    margin-bottom: 4rem
-
-    
-
-.project-item
-  margin-top:    50px
-  margin-bottom: 50px
-  
-  @extend .sm-6
-  @extend .md-4
-  
-  &--name
-    text-decoration: none
-    font-size:       2em
-    font-family:     $font-family-secondary
 
   @media only screen and #{$mq-small}
-    margin:     0
-    min-height: 210px
+    &__title
+      margin-bottom: 4rem
 
+    
+.project
+
+  &__item
+    margin-top:    50px
+    margin-bottom: 50px
+    
+    @extend .sm-6
+    @extend .md-4
+    
+    &__name
+      text-decoration: none
+      font-size:       1.375rem
+      font-family:     $font-family-secondary
+
+    @media only screen and #{$mq-small}
+      margin:     0
+      min-height: 210px
+
+      &__name
+        font-size: 2em
 
 
 
@@ -194,12 +199,12 @@
  ************************************/
 
 .techs
-  position: relative // For .tech--arrow
+  position: relative // For .tech__arrow
 
-  &--slider
+  &__slider
     margin-bottom: 2rem
 
-  &--arrow
+  &__arrow
     position:   absolute
     top:        60%
     padding:    35px
@@ -217,23 +222,23 @@
 
 
     
-  &--item
+  &__item
     outline: none
 
     @extend .xs-6
     @extend .md-2
 
-    &--icon
+    &__icon
       display:        block
       padding-top:    2.5rem
       padding-bottom: 2.5rem
       text-rendering: optimizeLegibility
       font-size:      4em
 
-    &--name
+    &__name
       font-family: $font-family-secondary
 
-  .section--description
+  .section__description
     text-transform: uppercase
     letter-spacing: 1px
 
@@ -241,14 +246,14 @@
 
 
 
-.git
+.get-in-touch
   @extend .full
   @extend .flex
 
-  &--form
+  &__form
     width: 85%
 
-    &--item
+    &__item
       display:       block
       border:        0
       border-radius: 3px
@@ -256,22 +261,22 @@
       margin:        15px 0
       width:         100%
 
-    &--textarea
+    &__textarea
       resize: none
 
-      @extend .git--form--input
+      @extend .get-in-touch__form__input
 
     @media only screen and #{$mq-small}
       width: 50%
 
-      &--item
+      &__item
         padding:   25px
         font-size: 1.3em
 
-      &--textarea
+      &__textarea
         min-height: 200px
 
-#git-submit-btn
+#get-in-touch__submit-button
   text-transform: uppercase
   font-weight:    bold
   cursor:         pointer
@@ -288,12 +293,12 @@
   padding-bottom: 3em
   z-index:        -1
 
-  &--socials
+  &__socials
 
     @extend .list-unstyled
     @extend .list-inline
 
-  &--social--link
+  &__social__link
     display:       inline-block
     border-radius: 300px
     width:         54px
@@ -311,6 +316,6 @@
 .presentation,
 .projects,
 .techs,
-.git,
+.get-in-touch,
 .footer
     text-align: center

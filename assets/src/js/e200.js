@@ -4,7 +4,7 @@ $(function(){
     var
         btt                 = $('.btt'),
         presentation        = $('.presentation'),
-        presentationTooltip = $('.presentation--name--tooltip');;
+        presentationTooltip = $('.presentation__name__tooltip');;
 
     $('.hamburguer').on('click', function(e){
        e.preventDefault();
@@ -24,7 +24,7 @@ $(function(){
         scrollTo('#presentation', 800);
     });
 
-    $('.presentation--name')
+    $('.presentation__name')
         .on('click', function(e){
             e.preventDefault();
             
@@ -40,7 +40,7 @@ $(function(){
     $('#btn-ttm').on('click', function(){
         var me = $(this);
 
-        $('.git--smile')
+        $('.get-in-touch__smile')
             .removeClass('fa-smile-o')
             .addClass('fa-meh-o');
 
@@ -51,7 +51,7 @@ $(function(){
                 </div>');
 
         setTimeout(function(){
-            $('.git--smile')
+            $('.get-in-touch__smile')
                 .addClass('fa-smile-o')
                 .removeClass('fa-meh-o');
             me.html('Successfully!');
@@ -59,7 +59,7 @@ $(function(){
             //.fa-frown-o
 
 
-            //$('.git .form-item').css({opacity: .3});
+            //$('.get-in-touch .form-item').css({opacity: .3});
         }, 5000);
 
         //$.post('https://ancient-escarpment-86494.herokuapp.com/', )
@@ -126,7 +126,7 @@ $(function(){
     // Sets a delay for start the transition.
     setTimeout(function(){
         var class_name = 'is-active',
-            words = $('.introduction--words'),
+            words = $('.introduction__words'),
             firstChild = words.find('span').first();
 
         // Transition cycle.
@@ -154,7 +154,7 @@ $(function(){
             .removeClass('js-prevent-menu-animation');
     }, 500);
 
-    $('.techs--slider').slick({
+    $('.techs__slider').slick({
         autoplay: true,
         infinite: true,
         speed: 150,
@@ -163,8 +163,8 @@ $(function(){
         swipeToSlide: true,
         // https://github.com/kenwheeler/slick/issues/2002#issuecomment-325806939
         touchThreshold: 100,
-        prevArrow: $('.techs--arrow.prev'),
-        nextArrow: $('.techs--arrow.next'),
+        prevArrow: $('.techs__arrow.prev'),
+        nextArrow: $('.techs__arrow.next'),
         responsive: [
             {
               breakpoint: 1024,
@@ -193,5 +193,7 @@ $(function(){
 
     $('#git-form').validate();
 
-    sr.reveal('.presentation--picture');
+    sr.reveal('.presentation__picture');
+    sr.reveal('.projects__title');
+    sr.reveal('.project__item');
 });

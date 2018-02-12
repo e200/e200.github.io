@@ -23,7 +23,7 @@ $footer-background-color: #181818
   /**!
     #STYLES FOR SECTION HEADER
    */
-  &--title
+  &__title
     font-family: $font-family-secondary
     color:       $section-text-high-contrast
 
@@ -37,14 +37,14 @@ $footer-background-color: #181818
 .introduction
   background: $intro-background !important
   
-  &--balloon
+  &__balloon
     background: $purple
     color:      white
 
     &::after
       border-top-color: $purple
 
-  &--text
+  &__text
     font-family: $font-family-secondary
     color:       $intro-color
 
@@ -74,13 +74,13 @@ $footer-background-color: #181818
  ************************************/
 
 .presentation
-  &--picture
+  &__picture
     box-shadow: $intro-picture-shadow
 
-  &--name
+  &__name
     color: $yellow
 
-    &--tooltip
+    &__tooltip
       background:    $presentation-tooltip-background-color
       color:         $presentation-tooltip-text-color
       box-shadow:    $presentation-tooltip-box-shadow-color
@@ -93,7 +93,7 @@ $footer-background-color: #181818
         border:           10px solid transparent
         border-top-color: $presentation-tooltip-background-color
 
-  &--link
+  &__link
     font-family:  $font-family-secondary
     border-color: $yellow
 
@@ -112,13 +112,14 @@ $footer-background-color: #181818
   # PROJECTS
  ************************************/
 
-.project-item
-  &--name
-    color:      $section-text-high-contrast
-    transition: $transition-time
+.project
+  &__item
+    &__name
+      color:      $section-text-high-contrast
+      transition: $transition-time
 
-    &:hover
-      color: $purple
+      &:hover
+        color: $purple
 
 
 
@@ -128,7 +129,7 @@ $footer-background-color: #181818
   # PROJECTS
  ************************************/
 .techs
-  &--arrow
+  &__arrow
     color:      $techs-arrow-color
     transition: $transition-time
 
@@ -138,17 +139,17 @@ $footer-background-color: #181818
 
 
 
-.git
-  &--form
-    &--input
+.get-in-touch
+  &__form
+    &__input
       color:      #a8a8a8
       background: #151515
       transition: $transition-time
 
-#git-submit-btn
-  background:     $red
-  color:          white
-  transition:     $transition-time
+#get-in-touch__submit-button
+  background: $red
+  color:      white
+  transition: $transition-time
 
   &:hover
     background: lighten($red, 5%)
@@ -160,12 +161,12 @@ $footer-background-color: #181818
   width:      100%
   background:  $footer-background-color
 
-  &--social--link
+  &__social__link
     color:      $footer-text-color
     border:     2px solid $footer-text-color
     transition: $transition-time
 
-  &--link
+  &__link
     transition: $transition-time
 
     &:hover
@@ -183,9 +184,9 @@ $footer-background-color: #181818
 .hamburguer
 
   // STYLES AND ANIMATIONS FOR HAMBURGUER LINES
-  &--line
+  &__line
     background-color: $grey
 
   // TO BE APPLIED WHEN THE `.hamburguer` `.is-active:hover`
-  &--is-active-and-hover-theme
+  &__is-active-and-hover-theme
     background: darken($grey, 10%)

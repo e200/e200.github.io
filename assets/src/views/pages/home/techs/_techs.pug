@@ -1,16 +1,16 @@
 section#techs.techs.section
     .container
-        h1.section--title Techs
+        h1.section__title Techs
 
-        p.section--description Technologies I work with
+        p.section__description Technologies I work with
         
-        .techs--slider
+        .techs__slider
             each tech in techs
-                .techs--item
-                    i.techs--item--icon(class="devicon-" + tech.icon + "-plain" title=tech.text)
-                    span.techs--item--name #{tech.text}
+                .techs__item
+                    i.techs__item__icon(class="devicon-" + tech.icon + "-plain" title=tech.text)
+                    span.techs__item__name #{tech.text}
         
-        a(href="#").techs--arrow.prev
+        a(href="#").techs__arrow.prev
             span.fa.fa-chevron-left
-        a(href="#").techs--arrow.next
+        a(href="#").techs__arrow.next
             span.fa.fa-chevron-right

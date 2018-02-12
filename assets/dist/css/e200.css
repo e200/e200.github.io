@@ -67,7 +67,7 @@
 .xs-2,
 .sm-2,
 .md-2,
-.techs--item,
+.techs__item,
 .lg-2,
 .xs-3,
 .sm-3,
@@ -76,16 +76,16 @@
 .xs-4,
 .sm-4,
 .md-4,
-.project-item,
+.project__item,
 .lg-4,
 .xs-5,
 .sm-5,
 .md-5,
 .lg-5,
 .xs-6,
-.techs--item,
+.techs__item,
 .sm-6,
-.project-item,
+.project__item,
 .md-6,
 .lg-6,
 .xs-7,
@@ -123,7 +123,7 @@
 .xs-4,
 .xs-5,
 .xs-6,
-.techs--item,
+.techs__item,
 .xs-7,
 .xs-8,
 .xs-9,
@@ -150,7 +150,7 @@
 .xs-7 {
   width: 58.33333%; }
 
-.xs-6, .techs--item {
+.xs-6, .techs__item {
   width: 50%; }
 
 .xs-5 {
@@ -175,7 +175,7 @@
   .sm-4,
   .sm-5,
   .sm-6,
-  .project-item,
+  .project__item,
   .sm-7,
   .sm-8,
   .sm-9,
@@ -195,7 +195,7 @@
     width: 66.66667%; }
   .sm-7 {
     width: 58.33333%; }
-  .sm-6, .project-item {
+  .sm-6, .project__item {
     width: 50%; }
   .sm-5 {
     width: 41.66667%; }
@@ -211,10 +211,10 @@
 @media (min-width: 992px) {
   .md-1,
   .md-2,
-  .techs--item,
+  .techs__item,
   .md-3,
   .md-4,
-  .project-item,
+  .project__item,
   .md-5,
   .md-6,
   .md-7,
@@ -240,11 +240,11 @@
     width: 50%; }
   .md-5 {
     width: 41.66667%; }
-  .md-4, .project-item {
+  .md-4, .project__item {
     width: 33.33333%; }
   .md-3 {
     width: 25%; }
-  .md-2, .techs--item {
+  .md-2, .techs__item {
     width: 16.66667%; }
   .md-1 {
     width: 8.33333%; } }
@@ -510,14 +510,14 @@ template {
   height: 100%;
   width: 100%; }
 
-.list-unstyled, .footer--socials {
+.list-unstyled, .footer__socials {
   margin: 0;
   padding: 0; }
 
-.list-unstyled > li, .footer--socials > li {
+.list-unstyled > li, .footer__socials > li {
   list-style: none; }
 
-.list-inline > li, .footer--socials > li {
+.list-inline > li, .footer__socials > li {
   display: inline-block; }
 
 html,
@@ -542,7 +542,7 @@ body {
     background: #2D2D2D; }
   .section:nth-child(even) {
     background: #202020; }
-  .section--title {
+  .section__title {
     font-family: "Lobster Two", cursive;
     color: #ededed; }
 
@@ -551,12 +551,12 @@ body {
  ************************************/
 .introduction {
   background: #f6f6f6 !important; }
-  .introduction--balloon {
+  .introduction__balloon {
     background: #7a62da;
     color: white; }
-    .introduction--balloon::after {
+    .introduction__balloon::after {
       border-top-color: #7a62da; }
-  .introduction--text {
+  .introduction__text {
     font-family: "Lobster Two", cursive;
     color: #666; }
 
@@ -578,12 +578,12 @@ body {
 /**!
   # PRESENTATION
  ************************************/
-.presentation--picture {
+.presentation__picture {
   box-shadow: 0 0 20px #090909; }
 
-.presentation--name {
+.presentation__name {
   color: #F9F772; }
-  .presentation--name--tooltip {
+  .presentation__name__tooltip {
     background: #424242;
     color: #fff;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -591,69 +591,69 @@ body {
     opacity: 0;
     border-radius: 25px;
     transition: 0.3s; }
-    .presentation--name--tooltip::after {
+    .presentation__name__tooltip::after {
       border: 10px solid transparent;
       border-top-color: #424242; }
 
-.presentation--link {
+.presentation__link {
   font-family: "Lobster Two", cursive;
   border-color: #F9F772; }
-  .presentation--link.left {
+  .presentation__link.left {
     background: #F9F772;
     color: #2D2D2D; }
-  .presentation--link.right {
+  .presentation__link.right {
     color: #F9F772; }
 
 /**!
   # PROJECTS
  ************************************/
-.project-item--name {
+.project__item__name {
   color: #ededed;
   transition: 0.3s; }
-  .project-item--name:hover {
+  .project__item__name:hover {
     color: #7a62da; }
 
 /**!
   # PROJECTS
  ************************************/
-.techs--arrow {
+.techs__arrow {
   color: #545454;
   transition: 0.3s; }
-  .techs--arrow:hover {
+  .techs__arrow:hover {
     color: #ddd; }
 
-.git--form--input, .git--form--textarea {
+.get-in-touch__form__input, .get-in-touch__form__textarea {
   color: #a8a8a8;
   background: #151515;
   transition: 0.3s; }
 
-#git-submit-btn {
+#get-in-touch__submit-button {
   background: #bc2626;
   color: white;
   transition: 0.3s; }
-  #git-submit-btn:hover {
+  #get-in-touch__submit-button:hover {
     background: #d12a2a; }
 
 .footer {
   width: 100%;
   background: #181818; }
-  .footer--social--link {
+  .footer__social__link {
     color: #c3c3c3;
     border: 2px solid #c3c3c3;
     transition: 0.3s; }
-  .footer--link {
+  .footer__link {
     transition: 0.3s; }
-    .footer--link:hover {
+    .footer__link:hover {
       color: #7a62da;
       border-color: #7a62da; }
 
 /**!
   # HAMBURGUER
  ************************************/
-.hamburguer--line {
+.hamburguer__line {
   background-color: #cccccc; }
 
-.hamburguer--is-active-and-hover-theme, .hamburguer.is-active:hover .hamburguer--line {
+.hamburguer__is-active-and-hover-theme, .hamburguer.is-active:hover .hamburguer__line {
   background: #b3b3b3; }
 
 .hamburguer {
@@ -664,18 +664,18 @@ body {
   padding: 8px;
   z-index: 9999;
   /** STYLES AND ANIMATIONS FOR HAMBURGUER LINES */ }
-  .hamburguer--line {
+  .hamburguer__line {
     display: block;
     height: 2px;
     width: 25px;
     margin-top: 4px;
     margin-bottom: 4px;
     transition: 0.3s; }
-  .hamburguer.is-active--line-0 {
+  .hamburguer.is-active__line-0 {
     transform: translateY(6px) rotateZ(135deg); }
-  .hamburguer.is-active--line-2 {
+  .hamburguer.is-active__line-2 {
     transform: translateY(-6px) rotateZ(-135deg); }
-  .hamburguer.is-active--line-1 {
+  .hamburguer.is-active__line-1 {
     opacity: 0;
     width: 0; }
 
@@ -698,24 +698,24 @@ body {
   /**!
     #STYLES FOR SECTION HEADER
    */ }
-  .section--title {
+  .section__title {
     margin: 0;
     margin-bottom: 1rem;
     font-size: 2.125em;
     font-weight: normal; }
-  .section--description {
+  .section__description {
     font-size: 1em; }
-  .section.flex, .section.introduction, .section.presentation, .section.git {
+  .section.flex, .section.introduction, .section.presentation, .section.get-in-touch {
     display: flex;
     justify-content: center;
     align-items: center; }
-  .section.full, .section.introduction, .section.presentation, .section.git {
+  .section.full, .section.introduction, .section.presentation, .section.get-in-touch {
     width: 100%;
     height: 100%; }
   @media only screen and (min-width: 48em) {
-    .section--title {
+    .section__title {
       font-size: 3em; }
-    .section--description {
+    .section__description {
       font-size: 1.2rem; } }
 
 /**!
@@ -723,7 +723,7 @@ body {
  ************************************/
 .introduction {
   position: relative; }
-  .introduction--balloon {
+  .introduction__balloon {
     position: absolute;
     top: -50px;
     left: -6px;
@@ -732,10 +732,10 @@ body {
     text-align: center;
     border-radius: 300px; }
     @media only screen and (min-width: 26.5625em) {
-      .introduction--balloon {
+      .introduction__balloon {
         top: -55px;
         left: 4px; } }
-    .introduction--balloon::after {
+    .introduction__balloon::after {
       content: '';
       position: absolute;
       bottom: -9px;
@@ -743,24 +743,24 @@ body {
       border: 15px solid transparent;
       border-bottom: 0;
       border-left: 0; }
-  .introduction--text {
+  .introduction__text {
     position: relative;
     display: inline;
     margin: 0 15%; }
     @media only screen and (min-width: 23.4375em) {
-      .introduction--text {
+      .introduction__text {
         font-size: 2.375em; } }
     @media only screen and (min-width: 26.5625em) {
-      .introduction--text {
+      .introduction__text {
         font-size: 3.25em; } }
-  .introduction--words {
+  .introduction__words {
     /** Each word will be absolute positioned */
     position: relative;
     /** Just for vertical-align: top work */
     display: inline-block;
     /** Pull it to the top */
     vertical-align: top; }
-    .introduction--words > span {
+    .introduction__words > span {
       /** It makes all spans overlap each other */
       position: absolute;
       /** The code bellow transite each word with a fade animation */
@@ -782,39 +782,39 @@ body {
     to fit the content :D
 
     ************************************/ }
-  .presentation--picture {
+  .presentation__picture {
     display: block;
     width: 100%;
     max-width: 160px;
     margin: 0 auto;
     border-radius: 300px; }
-  .presentation--title {
+  .presentation__title {
     margin-top: .67em;
     margin-bottom: 0;
     text-rendering: optimizeLegibility;
     line-height: normal; }
-  .presentation--name {
+  .presentation__name {
     display: inline-block;
     position: relative;
     text-decoration: none; }
-    .presentation--name--tooltip {
+    .presentation__name__tooltip {
       visibility: hidden;
       position: absolute;
       bottom: 50px;
       left: 50%;
       padding: 10px;
       font-size: 20px; }
-      .presentation--name--tooltip::after {
+      .presentation__name__tooltip::after {
         content: '';
         position: absolute;
         bottom: -20px;
         left: 50px; }
       @media only screen and (min-width: 48em) {
-        .presentation--name--tooltip {
+        .presentation__name__tooltip {
           bottom: 70px; }
-          .presentation--name--tooltip::after {
+          .presentation__name__tooltip::after {
             left: 74px; } }
-  .presentation--link {
+  .presentation__link {
     display: inline-block;
     padding: .625rem;
     margin-top: 1.25rem;
@@ -823,15 +823,15 @@ body {
     border: 1px solid;
     border-radius: 5px;
     transition: 0.3s; }
-    .presentation--link:hover {
+    .presentation__link:hover {
       transform: translateY(-4px); }
   @media only screen and (min-width: 48em) {
-    .presentation--picture {
+    .presentation__picture {
       max-width: 12.5em; }
-    .presentation--link {
+    .presentation__link {
       font-size: 1.2rem; } }
   @media only screen and (min-width: 25.875em) {
-    .presentation--breaker {
+    .presentation__breaker {
       display: none; } }
   @media only screen and (max-device-height: 31.25em) {
     .presentation {
@@ -840,76 +840,79 @@ body {
 /**!
   # PROJECTS
  ************************************/
-.projects--title {
-  margin-bottom: 4rem; }
+@media only screen and (min-width: 48em) {
+  .projects__title {
+    margin-bottom: 4rem; } }
 
-.project-item {
+.project__item {
   margin-top: 50px;
   margin-bottom: 50px; }
-  .project-item--name {
+  .project__item__name {
     text-decoration: none;
-    font-size: 2em;
+    font-size: 1.375rem;
     font-family: "Lobster Two", cursive; }
   @media only screen and (min-width: 48em) {
-    .project-item {
+    .project__item {
       margin: 0;
-      min-height: 210px; } }
+      min-height: 210px; }
+      .project__item__name {
+        font-size: 2em; } }
 
 /**!
   # TECHS
  ************************************/
 .techs {
   position: relative; }
-  .techs--slider {
+  .techs__slider {
     margin-bottom: 2rem; }
-  .techs--arrow {
+  .techs__arrow {
     position: absolute;
     top: 60%;
     padding: 35px;
     margin-top: -35px;
     display: none !important; }
-    .techs--arrow.prev {
+    .techs__arrow.prev {
       left: 0; }
-    .techs--arrow.next {
+    .techs__arrow.next {
       right: 0; }
     @media only screen and (min-width: 48em) {
-      .techs--arrow {
+      .techs__arrow {
         display: inline !important; } }
-  .techs--item {
+  .techs__item {
     outline: none; }
-    .techs--item--icon {
+    .techs__item__icon {
       display: block;
       padding-top: 2.5rem;
       padding-bottom: 2.5rem;
       text-rendering: optimizeLegibility;
       font-size: 4em; }
-    .techs--item--name {
+    .techs__item__name {
       font-family: "Lobster Two", cursive; }
-  .techs .section--description {
+  .techs .section__description {
     text-transform: uppercase;
     letter-spacing: 1px; }
 
-.git--form {
+.get-in-touch__form {
   width: 85%; }
-  .git--form--item {
+  .get-in-touch__form__item {
     display: block;
     border: 0;
     border-radius: 3px;
     padding: 20px;
     margin: 15px 0;
     width: 100%; }
-  .git--form--textarea {
+  .get-in-touch__form__textarea {
     resize: none; }
   @media only screen and (min-width: 48em) {
-    .git--form {
+    .get-in-touch__form {
       width: 50%; }
-      .git--form--item {
+      .get-in-touch__form__item {
         padding: 25px;
         font-size: 1.3em; }
-      .git--form--textarea {
+      .get-in-touch__form__textarea {
         min-height: 200px; } }
 
-#git-submit-btn {
+#get-in-touch__submit-button {
   text-transform: uppercase;
   font-weight: bold;
   cursor: pointer;
@@ -921,41 +924,41 @@ body {
   padding-top: 3em;
   padding-bottom: 3em;
   z-index: -1; }
-  .footer--social--link {
+  .footer__social__link {
     display: inline-block;
     border-radius: 300px;
     width: 54px;
     height: 54px;
     margin: 5px;
     line-height: 54px; }
-    .footer--social--link .fa {
+    .footer__social__link .fa {
       font-size: 1.5em; }
 
 .presentation,
 .projects,
 .techs,
-.git,
+.get-in-touch,
 .footer {
   text-align: center; }
 
 /**!
   # INTRO
  ************************************/
-.introduction--words .is-active {
+.introduction__words .is-active {
   opacity: 1 !important; }
 
 /**!
   # PRESENTATION
  ************************************/
-.presentation--name--tooltip.is-visible {
+.presentation__name__tooltip.is-visible {
   visibility: visible;
   opacity: 1;
   transform: translateY(0); }
 
-.presentation--link.left {
+.presentation__link.left {
   margin-right: 3px; }
 
-.presentation--link.right {
+.presentation__link.right {
   margin-left: 3px; }
 
 /**!
@@ -970,7 +973,7 @@ body {
     background: #2D2D2D; }
   .section:nth-child(even) {
     background: #202020; }
-  .section--title {
+  .section__title {
     font-family: "Lobster Two", cursive;
     color: #ededed; }
 
@@ -979,12 +982,12 @@ body {
  ************************************/
 .introduction {
   background: #f6f6f6 !important; }
-  .introduction--balloon {
+  .introduction__balloon {
     background: #7a62da;
     color: white; }
-    .introduction--balloon::after {
+    .introduction__balloon::after {
       border-top-color: #7a62da; }
-  .introduction--text {
+  .introduction__text {
     font-family: "Lobster Two", cursive;
     color: #666; }
 
@@ -1006,12 +1009,12 @@ body {
 /**!
   # PRESENTATION
  ************************************/
-.presentation--picture {
+.presentation__picture {
   box-shadow: 0 0 20px #090909; }
 
-.presentation--name {
+.presentation__name {
   color: #F9F772; }
-  .presentation--name--tooltip {
+  .presentation__name__tooltip {
     background: #424242;
     color: #fff;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -1019,67 +1022,67 @@ body {
     opacity: 0;
     border-radius: 25px;
     transition: 0.3s; }
-    .presentation--name--tooltip::after {
+    .presentation__name__tooltip::after {
       border: 10px solid transparent;
       border-top-color: #424242; }
 
-.presentation--link {
+.presentation__link {
   font-family: "Lobster Two", cursive;
   border-color: #F9F772; }
-  .presentation--link.left {
+  .presentation__link.left {
     background: #F9F772;
     color: #2D2D2D; }
-  .presentation--link.right {
+  .presentation__link.right {
     color: #F9F772; }
 
 /**!
   # PROJECTS
  ************************************/
-.project-item--name {
+.project__item__name {
   color: #ededed;
   transition: 0.3s; }
-  .project-item--name:hover {
+  .project__item__name:hover {
     color: #7a62da; }
 
 /**!
   # PROJECTS
  ************************************/
-.techs--arrow {
+.techs__arrow {
   color: #545454;
   transition: 0.3s; }
-  .techs--arrow:hover {
+  .techs__arrow:hover {
     color: #ddd; }
 
-.git--form--input, .git--form--textarea {
+.get-in-touch__form__input, .get-in-touch__form__textarea {
   color: #a8a8a8;
   background: #151515;
   transition: 0.3s; }
 
-#git-submit-btn {
+#get-in-touch__submit-button {
   background: #bc2626;
   color: white;
   transition: 0.3s; }
-  #git-submit-btn:hover {
+  #get-in-touch__submit-button:hover {
     background: #d12a2a; }
 
 .footer {
   width: 100%;
   background: #181818; }
-  .footer--social--link {
+  .footer__social__link {
     color: #c3c3c3;
     border: 2px solid #c3c3c3;
     transition: 0.3s; }
-  .footer--link {
+  .footer__link {
     transition: 0.3s; }
-    .footer--link:hover {
+    .footer__link:hover {
       color: #7a62da;
       border-color: #7a62da; }
 
 /**!
   # HAMBURGUER
  ************************************/
-.hamburguer--line {
+.hamburguer__line {
   background-color: #cccccc; }
 
-.hamburguer--is-active-and-hover-theme, .hamburguer.is-active:hover .hamburguer--line {
+.hamburguer__is-active-and-hover-theme, .hamburguer.is-active:hover .hamburguer__line {
   background: #b3b3b3; }

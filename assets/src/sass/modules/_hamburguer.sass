@@ -9,7 +9,7 @@
   z-index:  $hamburguer-z-index
 
   // STYLES FOR HAMBURGUER LINES
-  &--line
+  &__line
     display:       block
     height:        $hamburguer-line-height
     width:         $hamburguer-line-width
@@ -21,16 +21,16 @@
   &.is-active
     // When `.humburguer` `.is-active`
     // we provide a background to each `.line`
-    &:hover .hamburguer--line
-      @extend .hamburguer--is-active-and-hover-theme
+    &:hover .hamburguer__line
+      @extend .hamburguer__is-active-and-hover-theme
 
     // `.line-[0,2] rotate animation
-    &--line-0
+    &__line-0
       transform: translateY($hamburguer-line-translate)  rotateZ($hamburguer-line-rotate-deg)
-    &--line-2
+    &__line-2
       transform: translateY(-$hamburguer-line-translate) rotateZ(-$hamburguer-line-rotate-deg)
 
     // `.line-1` hide animation
-    &--line-1
+    &__line-1
       opacity: 0
       width:   0
