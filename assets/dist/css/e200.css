@@ -636,10 +636,10 @@ body {
 
 .footer {
   width: 100%;
-  background: #1d1d1d; }
+  background: #151515; }
   .footer__social__link {
-    background: #151515;
     color: #fff;
+    border: 2px solid #fff;
     transition: 0.3s; }
   .footer__link {
     transition: 0.3s; }
@@ -920,8 +920,8 @@ body {
 .footer {
   position: sticky;
   bottom: 0;
-  padding-top: 3em;
-  padding-bottom: 3em;
+  padding-top: 5em;
+  padding-bottom: 5em;
   z-index: -1; }
   .footer__social__link {
     display: inline-block;
@@ -1066,10 +1066,10 @@ body {
 
 .footer {
   width: 100%;
-  background: #1d1d1d; }
+  background: #151515; }
   .footer__social__link {
-    background: #151515;
     color: #fff;
+    border: 2px solid #fff;
     transition: 0.3s; }
   .footer__link {
     transition: 0.3s; }
