@@ -1,3 +1,5 @@
+$intro-background: #f6f6f6
+
 $presentation-tooltip-text-color:       #fff
 $presentation-tooltip-background-color: #424242
 $presentation-tooltip-box-shadow-color: 0 0 20px rgba(#000, .1)
@@ -33,14 +35,14 @@ $footer-background-color: #181818
  ************************************/
 
 .introduction
-  background: transparent !important
+  background: $intro-background !important
   
   &--balloon
     background: $purple
     color:      white
 
     &::after
-      border-top-color: darken($purple, 5%)
+      border-top-color: $purple
 
   &--text
     font-family: $font-family-secondary
