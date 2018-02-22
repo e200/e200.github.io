@@ -32,8 +32,10 @@ gulp.task('sass', function (){
 })
 
 gulp.task('js', function (){
-    return gulp.src(path_.src.js + '**.js')
+    return gulp.src(path_.src.js + '/**/*.js')
         .pipe(concat('e200.js'))
         .pipe(gjc({$: true, window: true}))
         .pipe(gulp.dest(path_.dist.js))
 })
+
+gulp.task('dev', ['pug', 'sass', 'js']);
