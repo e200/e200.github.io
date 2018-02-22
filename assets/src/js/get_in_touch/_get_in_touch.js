@@ -1,13 +1,12 @@
 var submitButton = $('#get-in-touch__form__submit-button'),
-    smileIcon    = $('.get-in-touch__smile');
-
-const spinnerHTML = '<div class="spinner">\
+    smileIcon    = $('.get-in-touch__smile'),
+    spinnerHTML = '<div class="spinner">\
                         <div class="bounce1"></div>\
                         <div class="bounce2"></div>\
                         <div class="bounce3"></div>\
                     </div>';
 
-function smile(status = true) {
+function smile(status) {
 
     if (status === false) {
         

@@ -88,7 +88,7 @@ gulp.task('sass:prod', function (){
 })
 
 gulp.task('js:prod', function (){
-    return gulp.src(path_.src.js + '/**/*.js')
+    return gulp.src(path_.src.js + '**/*.js')
         .pipe(concat('e200.js'))
         .pipe(gjc({$: true, window: true}))
         .pipe(uglify())
