@@ -50,7 +50,9 @@ $(window).on('scroll', function() {
 
     if (canShowBackToTopButton()) {
 
-        backToTopButton.fadeIn(300);
+        backToTopButton
+            .fadeIn(300)
+            .css({display: 'flex'});
 
         backToTopButtonRestartInterval();
 
