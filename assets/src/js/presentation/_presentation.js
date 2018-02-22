@@ -16,4 +16,4 @@ $('.presentation__name').on('click', function(e) {
 
     presentationTooltip.removeClass('is-visible');
 
-})
+});
