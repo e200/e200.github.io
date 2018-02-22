@@ -530,6 +530,31 @@ body {
   font-size: 1em;
   line-height: 1.5; }
 
+.spinner {
+  margin: 0 auto;
+  width: 70px;
+  text-align: center; }
+
+.spinner > div {
+  width: 18px;
+  height: 18px;
+  background-color: #e0e0e0;
+  border-radius: 100%;
+  display: inline-block;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both; }
+
+.spinner .bounce1 {
+  animation-delay: -0.32s; }
+
+.spinner .bounce2 {
+  animation-delay: -0.16s; }
+
+@keyframes sk-bouncedelay {
+  0%, 80%, 100% {
+    transform: scale(0); }
+  40% {
+    transform: scale(1); } }
+
 /**!
   # SECTION
  ************************************/
@@ -626,13 +651,25 @@ body {
   color: #a8a8a8;
   background: #151515;
   transition: 0.3s; }
+  .get-in-touch__form__input.error, .error.get-in-touch__form__textarea {
+    box-shadow: 0 0 4px #ff5353; }
+  .get-in-touch__form__input[disabled], [disabled].get-in-touch__form__textarea {
+    opacity: .5; }
 
-#get-in-touch__submit-button {
+.get-in-touch__form label.error {
+  display: flex;
+  color: #ff5353; }
+
+#get-in-touch__form__submit-button {
   background: #bc2626;
   color: white;
   transition: 0.3s; }
-  #get-in-touch__submit-button:hover {
+  #get-in-touch__form__submit-button:hover {
     background: #d12a2a; }
+  #get-in-touch__form__submit-button.success {
+    background: #7a62da; }
+    #get-in-touch__form__submit-button.success[disabled] {
+      cursor: not-allowed; }
 
 .footer {
   width: 100%;
@@ -681,17 +718,17 @@ body {
 
 #back-to-top-button {
   position: fixed;
-  bottom: 10px;
-  right: 10px;
+  bottom: 25px;
+  right: 25px;
   padding: 15px;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   text-decoration: none;
   background: rgba(122, 98, 218, 0.7);
   color: white;
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
   text-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
   border-radius: 50%;
@@ -946,7 +983,7 @@ body {
         padding: 25px;
         font-size: 1.3em; } }
 
-#get-in-touch__submit-button {
+#get-in-touch__form__submit-button {
   text-transform: uppercase;
   font-weight: bold;
   cursor: pointer;
@@ -1091,13 +1128,25 @@ body {
   color: #a8a8a8;
   background: #151515;
   transition: 0.3s; }
+  .get-in-touch__form__input.error, .error.get-in-touch__form__textarea {
+    box-shadow: 0 0 4px #ff5353; }
+  .get-in-touch__form__input[disabled], [disabled].get-in-touch__form__textarea {
+    opacity: .5; }
 
-#get-in-touch__submit-button {
+.get-in-touch__form label.error {
+  display: flex;
+  color: #ff5353; }
+
+#get-in-touch__form__submit-button {
   background: #bc2626;
   color: white;
   transition: 0.3s; }
-  #get-in-touch__submit-button:hover {
+  #get-in-touch__form__submit-button:hover {
     background: #d12a2a; }
+  #get-in-touch__form__submit-button.success {
+    background: #7a62da; }
+    #get-in-touch__form__submit-button.success[disabled] {
+      cursor: not-allowed; }
 
 .footer {
   width: 100%;
