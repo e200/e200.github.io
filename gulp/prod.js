@@ -6,6 +6,7 @@ const
     sass         = require('gulp-sass')
     autoprefixer = require('gulp-autoprefixer')
     pug          = require('gulp-pug')
+    data         = require('gulp-data')
     insert       = require('gulp-insert')
     purify       = require('gulp-purifycss')
     minCssNames  = require('gulp-minify-css-names')
@@ -39,6 +40,13 @@ gulp.task('pug:prod', function(){
 
     return gulp.src(path_.src.views + 'index.pug')
         .pipe(plumber())
+        .pipe(data(function(file){
+            let filename = path.basename(file.path).slice(0, -4)
+
+            return JSON.parse(
+                fs.readFileSync(path_.src.views + 'data/' + filename + '.json')
+            );
+        }))
         .pipe(pug())
         .pipe(insert.prepend(header))
         .pipe(gulp.dest('./'))
@@ -73,19 +81,22 @@ gulp.task('sass:prod', function (){
             './' + 'index.html'
         ], {
             minify: true,
-            rejected: true
+            //rejected: true
         }))
         .pipe(autoprefixer(autoprefixerOptions))
         .pipe(gulp.dest(path_.dist.css))
 })
 
-// Install gulp-selectors instead
-gulp.task('mincssname', function(){
-    return gulp.src([
-            './index.html',
-            path_.src.js + '**.js',
-            path_.src.sass + '**.sass'
-        ])
-        .pipe(minCssNames())
-        .pipe(gulp.dest(path_.dist.css))
+gulp.task('js:prod', function (){
+    return gulp.src(path_.src.js + '/**/*.js')
+        .pipe(concat('e200.js'))
+        .pipe(gjc({$: true, window: true}))
+        .pipe(uglify())
+        .pipe(gulp.dest(path_.dist.js))
 })
+
+gulp.task('prod', ['pug:prod', 'sass:prod', 'js:prod'], function() {
+
+    console.log('Finished production tasks.');
+
+});
