@@ -674,15 +674,19 @@ body {
 .footer {
   width: 100%;
   background: #151515; }
+  .footer__link {
+    transition: 0.3s; }
   .footer__social__link {
     color: #fff;
     border: 2px solid #fff;
     transition: 0.3s; }
-  .footer__link {
-    transition: 0.3s; }
-    .footer__link:hover {
+    .footer__social__link:hover {
       color: #7a62da;
       border-color: #7a62da; }
+  .footer__email {
+    color: #fff; }
+    .footer__email:hover {
+      color: #7a62da; }
 
 /**!
   # HAMBURGUER
@@ -708,11 +712,11 @@ body {
     margin-top: 4px;
     margin-bottom: 4px;
     transition: 0.3s; }
-  .hamburguer.is-active__line-0 {
+  .hamburguer.is-active .hamburguer__line-0 {
     transform: translateY(6px) rotateZ(135deg); }
-  .hamburguer.is-active__line-2 {
+  .hamburguer.is-active .hamburguer__line-2 {
     transform: translateY(-6px) rotateZ(-135deg); }
-  .hamburguer.is-active__line-1 {
+  .hamburguer.is-active .hamburguer__line-1 {
     opacity: 0;
     width: 0; }
 
@@ -992,8 +996,8 @@ body {
 .footer {
   position: sticky;
   bottom: 0;
-  padding-top: 5em;
-  padding-bottom: 5em;
+  padding-top: 4em;
+  padding-bottom: 4em;
   z-index: -1; }
   .footer__social__link {
     display: inline-block;
@@ -1004,6 +1008,10 @@ body {
     line-height: 54px; }
     .footer__social__link .fa {
       font-size: 1.5em; }
+  .footer__email {
+    display: block;
+    text-decoration: none;
+    margin-top: 25px; }
 
 .presentation,
 .projects,
@@ -1151,15 +1159,19 @@ body {
 .footer {
   width: 100%;
   background: #151515; }
+  .footer__link {
+    transition: 0.3s; }
   .footer__social__link {
     color: #fff;
     border: 2px solid #fff;
     transition: 0.3s; }
-  .footer__link {
-    transition: 0.3s; }
-    .footer__link:hover {
+    .footer__social__link:hover {
       color: #7a62da;
       border-color: #7a62da; }
+  .footer__email {
+    color: #fff; }
+    .footer__email:hover {
+      color: #7a62da; }
 
 /**!
   # HAMBURGUER

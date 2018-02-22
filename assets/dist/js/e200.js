@@ -63,10 +63,10 @@ $(window).on('scroll', function() {
         
     }
 });
-$('.hamburguer').on('click', function(e){
+$('#hamburguer').on('click', function(e) {
   e.preventDefault();
    
-  $('.header').toggleClass('active');
+  $(this).toggleClass('is-active');
 });
 $('#jumper').on('click', function(e){
   e.preventDefault();
