@@ -179,18 +179,23 @@ $footer-background-color: #151515
   width:      100%
   background:  $footer-background-color
 
+  &__link
+    transition: $transition-time
+
   &__social__link
     color:      $footer-text-color
     border:     2px solid $footer-text-color
-    transition: $transition-time
-
-  &__link
     transition: $transition-time
 
     &:hover
       color:        $purple
       border-color: $purple
 
+  &__email
+    color: $footer-text-color
+
+    &:hover
+      color: $purple
 
 
 
