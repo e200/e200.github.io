@@ -149,7 +149,17 @@ $footer-background-color: #151515
       background: $get_in_touch-input-background-color
       transition: $transition-time
 
-#get-in-touch__submit-button
+      &.error
+        box-shadow: 0 0 4px #ff5353
+
+      &[disabled]
+        opacity: .5
+
+    label.error
+      display: flex
+      color:      #ff5353
+
+#get-in-touch__form__submit-button
   background: $red
   color:      white
   transition: $transition-time
@@ -157,6 +167,11 @@ $footer-background-color: #151515
   &:hover
     background: lighten($red, 5%)
 
+  &.success
+    background: $purple
+
+    &[disabled]
+      cursor: not-allowed
 
 
 
