@@ -1,4 +1,3 @@
-;(function ($, window) {
 var
   backToTopButton = $('#back-to-top-button'),
   oldScrollPos = 0,
@@ -61,50 +60,3 @@ $(window).on('scroll', function() {
         
     }
 });
-$('.hamburguer').on('click', function(e){
-  e.preventDefault();
-   
-  $('.header').toggleClass('active');
-});
-$('#jumper').on('click', function(e){
-  e.preventDefault();
-
-  scrollTo('#presentation', 800);
-});
-function scrollTo(pos, duration) {
-
-  if (!duration) {
-      duration = 600;
-  }
-
-  if (typeof(pos) === 'string') {
-      pos = $(pos).offset().top
-  }
-  
-  $('html, body').animate({
-      scrollTop: pos
-  }, duration);
-  
-}
-window.sr = ScrollReveal({viewFactor: 0.3});
-
-var presentation        = $('.presentation'),
-    presentationTooltip = $('.presentation__name__tooltip');
-
-/**
- * Prevents the header sliders from being
- * animated when the page loads.
- * 
- * @see https://stackoverflow.com/questions/27938900/how-to-prevent-css-keyframe-animation-to-run-on-page-load
- */
-setTimeout(function(){
-    $('.js-prevent-menu-animation')
-        .removeClass('js-prevent-menu-animation');
-}, 500);    
-
-$('#git-form').validate();
-
-sr.reveal('.presentation__picture');
-sr.reveal('.projects__title');
-sr.reveal('.project__item');
-})(jQuery, window);
