@@ -1,5 +1,3 @@
-# e200.github.io
+# e200.github.io (v2)
 
-Welcome! I hope you enjoy my code.
-
-If you like my portfolio, please, give it a start! :slightly_smiling_face:
+Welcome! I hope you enjoy my code. :slightly_smiling_face:
