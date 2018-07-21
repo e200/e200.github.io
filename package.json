@@ -4,8 +4,8 @@
   "version": "2.0.0",
   "main": "index.html",
   "scripts": {
-    "dev": "webpack --mode development --progress --inline --watch --hide-modules --config build/webpack.dev.conf.js",
-    "build": "webpack --mode production --config build/webpack.prod.conf.js",
+    "dev": "webpack --mode development --progress --inline --watch --hide-modules --config build/webpack.dev.conf.js --env.NODE_ENV=development",
+    "build": "webpack --mode production --config build/webpack.prod.conf.js --env.NODE_ENV=production",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint src/js/**/*.js"
   },
@@ -29,6 +29,7 @@
     "babel-preset-env": "^1.7.0",
     "browser-sync": "^2.24.5",
     "browser-sync-webpack-plugin": "^2.2.2",
+    "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^1.0.0",
     "eslint": "^5.1.0",
     "file-loader": "^1.1.11",

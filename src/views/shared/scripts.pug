@@ -1,2 +1,4 @@
-script(src="/dist/js/vendor.js")
-script(src="/dist/js/e200.js")
+if (env === 'production')
+  script(src="/dist/manifest.js")
+  script(src="/dist/vendor.js")
+script(src="/dist/main.js")
