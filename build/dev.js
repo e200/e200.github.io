@@ -1,6 +1,7 @@
 const
   gulp   = require('gulp')
   babel  = require('gulp-babel')
+  rollup = require('gulp-rollup')
   rename = require('gulp-rename')
   sass   = require('gulp-sass')
   pug    = require('gulp-pug')
@@ -30,7 +31,9 @@ gulp.task('sass', () => {
 
 gulp.task('js:vendor', () => {
   return gulp.src('./src/js/vendor.js')
-    .pipe(babel())
+    .pipe(rollup({
+      input: './src/js/vendor.js'
+    }))
     .pipe(gulp.dest('./dist/js'))
 })
 
