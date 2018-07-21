@@ -28,6 +28,7 @@
     "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
     "browser-sync": "^2.24.5",
+    "browser-sync-webpack-plugin": "^2.2.2",
     "css-loader": "^1.0.0",
     "eslint": "^5.1.0",
     "file-loader": "^1.1.11",
