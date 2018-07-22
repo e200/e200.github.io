@@ -1,8 +1,6 @@
 const merge       = require('webpack-merge')
 const webpackBase = require('./webpack.base.conf')
 
-const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
-
 const { root } = require('./utils')
 
 module.exports = (env) => {
@@ -56,17 +54,6 @@ module.exports = (env) => {
           ]
         }
       ]
-    },
-    plugins: [
-      new BrowserSyncPlugin({
-        open: false,
-        host: 'localhost',
-        port: 3000,
-        server: {
-          baseDir: ['./']
-        },
-        ui: false
-      })
-    ]
+    }
   })
 }

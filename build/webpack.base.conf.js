@@ -10,7 +10,6 @@ module.exports = {
   output: {
     filename: '[name].[contenthash:5].js',
     chunkFilename: '[name].[contenthash:5].js',
-    path: root('dist')
   },
   resolve: {
     alias: {
@@ -21,8 +20,15 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(['dist'], {
       root:    root(),
-      verbose: true,
-      dry:     true
+      verbose: true
     })
-  ]
+  ],
+  devServer: {
+    contentBase: root(),
+    publicPath: '/dist/',
+    compress: true,
+    watchContentBase: true,
+    hot: true,
+    inline: true
+  }
 }
