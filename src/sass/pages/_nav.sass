@@ -1,16 +1,40 @@
 .nav
-  padding: 15px 15px 0 15px
+  padding-top: 15px
   border-top:  2px solid $primary
 
+  .container-fluid
+    display:     flex
+    align-items: center
+    max-width:   1200px
+
+  @media (min-width: 768px)
+    border-top-width: 4px
+
   &__header
-    display: inline-block
+    display:     inline-block
     line-height: 1.5rem
-    font-size: 1.25rem
+
+    @media (min-width: 360px)
+      font-size: 1.25rem
 
   &__brand
-    color: $text-color
+    color:           $text-color
     text-decoration: none
 
     &__subtitle
       display: block
-      color: $text-mute-color
+      color:   $text-mute-color
+
+  &__brand,
+  &__brand__subtitle
+    font-weight: 500
+
+  &__wrapper
+    display:         inline-flex
+    justify-content: flex-end
+    flex:            1
+
+  &__link
+    text-decoration: none
+    color:           lighten($primary, 30%)
+    font-weight:     500
