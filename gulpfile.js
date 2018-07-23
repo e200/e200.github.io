@@ -3,7 +3,9 @@ const gulp        = require('gulp'),
 
 gulp.task('serve', () => {
   browserSync.init({
-    server: './'
+    server: './',
+    open: false,
+    notify: false
   })
 
   gulp.watch(['./dist/*.*', './*.html'])
