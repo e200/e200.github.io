@@ -5,7 +5,7 @@ const { root } = require('./utils')
 
 module.exports = (env) => {
   const getViewData = (viewName) => {
-    const viewDataSource  = root(`src/views/data/${viewName}.json`)
+    const viewDataSource  = root(`src/data/${viewName}.json`)
     const rawJsonViewData = require('fs').readFileSync(viewDataSource)
     const viewData        = JSON.parse(rawJsonViewData)
 
