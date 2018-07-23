@@ -1,0 +1,32 @@
+.intro
+  position:        absolute
+  top:             0
+  display:         flex
+  align-items:     center
+  justify-content: center
+  height:          100%
+
+.hero
+  &__title
+    font-size:     1.5rem
+    font-weight:   bold
+    margin-bottom: 1rem
+
+  &__subtitle
+    color:       #666666
+    font-weight: 500
+
+#scrollDown
+  position:    absolute
+  bottom:      10%
+  background:  none
+  font-size:   2rem
+  padding:     15px
+  margin-left: -15px
+  border:      none
+
+@keyframes scrollAnimation
+  0%
+    transform: translateY(0%)
+  -100%
+    transform: translateY(-100%)

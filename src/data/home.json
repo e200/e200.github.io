@@ -1,0 +1,63 @@
+{
+  "brand_name": "e200",
+  "full_name":  "Eleandro Duzentos",
+  "subtitle": "Web Developer",
+  "hero": {
+    "title": "Hey! I'm a web developer from Angola, Luanda.<br>I can help you build your next product.",
+    "subtitle": "I design, build and sometimes manage full-stack web applications.<br>Have a project you'd like to discuss?<br>Let's chat, <a href=\"mailto://eleandro@inbox.ru\">eleandro@inbox.ru</a>"
+  },
+  "page":  {
+    "title":       "Eleandro Duzentos",
+    "description": "Eleandro Duzentos | Web Designer",
+    "keywords":    "eleandro duzentos, e200, web designer, frontend, github, luanda, angola, ui/ux, php, c#",
+    "lang":        "pt",
+    "lang_alt":    "pt_PT",
+    "url":         "https://e200.github.io/"
+  },
+  "socials":  {
+    "facebook": {
+      "icon": "facebook",
+      "address": "https://www.facebook.com/eleandro.duzentos"
+    },
+    "github": {
+      "icon": "github-alt",
+      "address": "https://github.com/e200"
+    },
+    "linkedin": {
+      "icon": "linkedin",
+      "address": "https://www.linkedin.com/in/e200-career"
+    }
+  },
+  "projects": {
+    "makeaccessible": {
+        "name":    "Make/Accessible",
+        "address":   "https://github.com/e200/MakeAccessible",
+        "description": "Test your singleton classes and inaccessible instance members"
+      },
+    "anotherjs": {
+      "name":    "anotherJS",
+      "address":   "https://github.com/e200/anotherJS",
+      "description": "Smaller JS library for those Frontends who makes most things using pure CSS"
+      },
+    "sliderplex": {
+      "name":    "SliderPlex",
+      "address":   "https://github.com/e200/SliderPlex",
+      "description": "A simple and responsive jQuery content slider plugin"
+      },
+    "unity": {
+      "name":    "Unity framework",
+      "address":   "https://github.com/unity-framework",
+      "description": "PHP MVC based framework"
+      },
+    "genesdecypher": {
+      "name":    "GenesDecypher",
+      "address":   "https://github.com/e200/GenesDecypher",
+      "description": "A genetic decypher written in C, for a client at Universidade Metodista de Angola"
+      },
+    "reegex": {
+      "name":    "Reegex",
+      "address":   "https://github.com/e200/Reegex",
+      "description": "WPF based Regex tester"
+      }
+    }
+}
