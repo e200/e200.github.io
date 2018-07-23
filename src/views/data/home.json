@@ -1,6 +1,10 @@
 {
   "brand_name": "e200",
   "full_name":  "Eleandro Duzentos",
+  "subtitle": "Software developer",
+  "intro": {
+    "title": "Hey! I'm a web developer from Angola, Luanda.<br>I can help you build your next product."
+  },
   "page":  {
     "title":       "Eleandro Duzentos",
     "description": "Eleandro Duzentos | Web Designer",

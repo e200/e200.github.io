@@ -1,7 +1,16 @@
 .nav
-  padding-top: 35px
-  border-top:  4px solid $primary
+  padding: 15px 15px 0 15px
+  border-top:  2px solid $primary
 
-  @extend .container
+  &__header
+    display: inline-block
+    line-height: 1.5rem
+    font-size: 1.25rem
 
   &__brand
+    color: $text-color
+    text-decoration: none
+
+    &__subtitle
+      display: block
+      color: $text-mute-color

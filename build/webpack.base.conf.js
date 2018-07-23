@@ -1,4 +1,4 @@
-const path = require('path')
+const path     = require('path')
 const { root } = require('./utils')
 
 const CleanWebpackPlugin = require('clean-webpack-plugin')
@@ -22,13 +22,5 @@ module.exports = {
       root:    root(),
       verbose: true
     })
-  ],
-  devServer: {
-    contentBase: root(),
-    publicPath: '/dist/',
-    compress: true,
-    watchContentBase: true,
-    hot: true,
-    inline: true
-  }
+  ]
 }
