@@ -1,0 +1,41 @@
+.what-i-can-do
+  padding-top: 2rem
+  background: #f6f6f6
+
+  .row
+    justify-content: space-between
+
+.card
+  display:        flex
+  flex-direction: column
+  max-width:      320px
+  height:         370px
+  margin-bottom:  35px
+
+  @extend .col-md-4
+
+  &__head
+    display:         flex
+    align-items:     center
+    justify-content: center
+    height:          180px
+    background:      #5D5D5D
+    color:           $white
+    border-radius:   5px 5px 0 0
+
+  &__body
+    display:       flex
+    flex:          1
+    padding:       15px
+    color:         #5D5D5D
+    background:    $white
+    box-shadow:    0 0 4px rgba($black, .2)
+    border-radius: 0 0 5px 5px
+
+  &__header
+    &__title
+      text-transform: uppercase
+      margin-bottom: .5rem
+
+    &__description
+     color: #888888

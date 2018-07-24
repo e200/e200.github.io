@@ -1,6 +1,4 @@
 .intro
-  position:        absolute
-  top:             0
   display:         flex
   align-items:     center
   justify-content: center
@@ -13,20 +11,32 @@
     margin-bottom: 1rem
 
   &__subtitle
-    color:       #666666
+    color:       #666
     font-weight: 500
 
 #scrollDown
   position:    absolute
-  bottom:      10%
+  bottom:      5%
+  cursor:      pointer
+  margin-left: -15px
+  padding:     15px
   background:  none
   font-size:   2rem
-  padding:     15px
-  margin-left: -15px
+  color:       $text-mute-color
+  animation:   scrollAnimation 3s 8s ease-in-out infinite
+  transition:  $transition-time
   border:      none
+  outline:     none
+
+  &:hover
+    color: $primary
+    animation: none
 
 @keyframes scrollAnimation
   0%
     transform: translateY(0%)
-  -100%
-    transform: translateY(-100%)
+  50%
+    transform: translateY(-20%)
+    color: $primary
+  100%
+    transform: translateY(0%)

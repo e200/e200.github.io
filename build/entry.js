@@ -1,8 +1,8 @@
 // Styles
-require('@/sass/main.sass')
+require('@/sass/app.sass')
 
 // Scripts
-require('@/js/main.js')
+require('@/js/app.js')
 
 // Views
 require('@/views/index.pug')

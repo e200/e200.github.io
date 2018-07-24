@@ -1,0 +1,16 @@
+section.what-i-can-do
+  .container
+    header
+      h2 What I can do
+
+      a(href="#") See all
+
+    .row
+      for item in what_i_can_do.items
+        .card
+          header.card__head
+            i.fa.fa-4x(class='fa-' + item.icon)
+          .card__body
+            .card__header
+              h2.card__header__title=item.title
+              p.card__header__description=item.description

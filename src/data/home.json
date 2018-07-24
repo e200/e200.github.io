@@ -6,6 +6,25 @@
     "title": "Hey! I'm a web developer from Angola, Luanda.<br>I can help you build your next product.",
     "subtitle": "I design, build and sometimes manage full-stack web applications.<br>Have a project you'd like to discuss?<br>Let's chat, <a href=\"mailto://eleandro@inbox.ru\">eleandro@inbox.ru</a>"
   },
+  "what_i_can_do": {
+    "items": [
+      {
+        "icon": "globe",
+        "title": "Web Design",
+        "description": "Information architecture, wireframes, user interface design and more"
+      },
+      {
+        "icon": "sitemap",
+        "title": "Software architecture",
+        "description": "Define a solution that meets all the technical and business requirements, while optimizing attributes"
+      },
+      {
+        "icon": "chain",
+        "title": "Maintenance & support",
+        "description": "Help scaling, supporting or optimizing your software as it grows."
+      }
+    ]
+  },
   "page":  {
     "title":       "Eleandro Duzentos",
     "description": "Eleandro Duzentos | Web Designer",

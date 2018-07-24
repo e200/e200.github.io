@@ -1,4 +1,8 @@
 .nav
+  position:    absolute
+  top:         0
+  left:        0
+  right:       0
   padding-top: 15px
   border-top:  2px solid $primary
 
@@ -38,3 +42,8 @@
     text-decoration: none
     color:           lighten($primary, 30%)
     font-weight:     500
+    font-size:       .8rem
+    transition:      $transition-time
+
+    &:hover
+      color: $primary
