@@ -6,13 +6,10 @@
   padding-top: 15px
   border-top:  2px solid $primary
 
-  .container-fluid
+  .container
     display:     flex
     align-items: center
-    max-width:   1200px
-
-  @media (min-width: 768px)
-    border-top-width: 4px
+    justify-content: space-between
 
   &__header
     display:     inline-block
@@ -21,9 +18,10 @@
     @media (min-width: 360px)
       font-size: 1.25rem
 
-  &__brand
-    color:           $text-color
-    text-decoration: none
+  &__header
+    &__title
+      color:           $text-color
+      text-decoration: none
 
     &__subtitle
       display: block

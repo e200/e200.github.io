@@ -1,25 +1,19 @@
-.what-i-can-do
-  padding-top: 2rem
-  background: #f6f6f6
-
-  .row
-    justify-content: space-between
-
 .card
   display:        flex
   flex-direction: column
   max-width:      320px
   height:         370px
   margin-bottom:  35px
-
-  @extend .col-md-4
+  border-radius:  5px
+  overflow: hidden
+  box-shadow:     0 0 4px rgba($black, .2)
 
   &__head
     display:         flex
     align-items:     center
     justify-content: center
     height:          180px
-    background:      #5D5D5D
+    background:      $primary
     color:           $white
     border-radius:   5px 5px 0 0
 
@@ -29,7 +23,6 @@
     padding:       15px
     color:         #5D5D5D
     background:    $white
-    box-shadow:    0 0 4px rgba($black, .2)
     border-radius: 0 0 5px 5px
 
   &__header
@@ -39,3 +32,23 @@
 
     &__description
      color: #888888
+
+  &.body-overlay
+    position: relative
+    max-width: none
+    height: 290px
+
+    .card__head,
+    .card__body
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      border-radius: 5px
+
+    .card__head
+      height: auto
+
+    .card__body
+      opacity: 0

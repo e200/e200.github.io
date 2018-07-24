@@ -1,0 +1,18 @@
+section.projects
+  .container
+    header.header.header--flex
+      h2.header__title Projects
+
+      a.header__link.is-mute(href="#") See all
+
+    .row
+      each item, index in projects.items
+        if (index < 4)
+          .projects__item
+            .card.body-overlay
+              header.card__head
+                h2.card__head__title=item.name
+              .card__body
+                .card__header
+                  h2.card__header__title=item.name
+                  p.card__header__description=item.description
