@@ -1,17 +1,15 @@
-section.what-i-can-do
+section.what-i-can-do.alternate
   .container
-    header.header.header--flex
+    header.header
       h2.header__title What I can do
-
-      a.header__link.is-mute(href="#") See all
 
     .row
       each item in what_i_can_do.items
         .what-i-can-do__item
           .card
             header.card__head
-              i.fa.fa-4x(class='fa-' + item.icon)
+              i.fa.fa-5x(class='fa-' + item.icon)
             .card__body
-              .card__header
+              header.card__header
                 h2.card__header__title=item.title
                 p.card__header__description=item.description

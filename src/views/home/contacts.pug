@@ -1,0 +1,19 @@
+section.contacts
+  .container
+    .row
+      .col-md-6.mb-5
+        header.header
+          h2.header__title Socials
+
+        ul.socials__list
+          each social in socials
+            li.socials__list__item
+              a.socials__list__item__link(href=social.address target="_blank" rel="noopen noreffer")
+                i.fa.fa-2x(class='fa-' + social.icon)
+                |#{social.name}
+
+      .col-md-6
+        header.header
+          h2.header__title Contact
+
+        a.contacts__email(href="mailto://eleandro@inbox.ru") eleandro@inbox.ru
