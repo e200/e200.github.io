@@ -1,0 +1,33 @@
+.contacts
+  background: lighten($primary, 60%)
+
+  @extend .section
+
+  .header
+    &__title
+      color: #4d4d4d
+
+.socials__list
+  @include list-unstyled
+
+  &__item
+    &__link
+      display:         flex
+      align-items:     center
+      padding:         15px 0
+      color:           #4d4d4d
+      text-decoration: none
+      transition:      $transition-time
+
+      &:hover
+        color: $primary
+
+      .fa
+        @extend .mr-4
+
+.contacts__email
+  text-decoration: none
+  color: $primary
+
+  &:hover
+    text-decoration: underline
