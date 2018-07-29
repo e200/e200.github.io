@@ -2,13 +2,8 @@
   @extend .section
 
   &__item
-    .card__head__title
-      font-size: 1.5rem
-
-    .card__body
-      transition: $transition-time
-
+    display: flex
     @extend .col-md-6
 
-    &:hover .card__body
-      opacity: 1
+  .card__head__title
+    font-size: 1.5rem
