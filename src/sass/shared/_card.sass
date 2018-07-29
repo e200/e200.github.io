@@ -1,54 +1,79 @@
 .card
   display:        flex
   flex-direction: column
-  max-width:      320px
-  height:         370px
+  overflow:       hidden
   margin-bottom:  35px
+  background:     lighten($primary, 5%)
+  width:          100%
   border-radius:  5px
-  overflow: hidden
-  box-shadow:     0 0 4px rgba($black, .2)
+  box-shadow:     0 8px 35px 0px rgba($black, .2)
 
   &__head
     display:         flex
     align-items:     center
     justify-content: center
     height:          180px
-    background:      $primary
     color:           $white
-    border-radius:   5px 5px 0 0
+    transition:      $transition-time
 
   &__body
     display:       flex
     flex:          1
     padding:       15px
-    color:         #5D5D5D
-    background:    $white
+    color:         #5d5767
+    border-top:    1px solid $primary
     border-radius: 0 0 5px 5px
 
   &__header
+    &__link
+      text-decoration: none
+      color: $white
+
     &__title
       text-transform: uppercase
-      margin-bottom: .5rem
+      margin-bottom:  .5rem
+      font-size:      1.25rem
 
     &__description
-     color: #888888
+      color:       $white
+      line-height: 2
 
-  &.body-overlay
-    position: relative
-    max-width: none
-    height: 290px
+    @media (max-width: 991px)
+      &__description
+        font-size: .9rem
 
-    .card__head,
-    .card__body
-      position: absolute
-      top: 0
-      bottom: 0
-      left: 0
-      right: 0
-      border-radius: 5px
+  &.horizontal
+    flex-direction: row
 
-    .card__head
-      height: auto
+    .card
+      &__head
+        width:  170px
+        height: inherit
 
-    .card__body
-      opacity: 0
+        &__title
+          font-size: 3rem
+
+      &__header
+        display: flex
+        flex-direction: column
+        flex: 2
+
+      &__body
+        position:       relative
+        display:        flex
+        flex-direction: column
+        border-top:     0
+
+      &__footer
+        border-top: 1px solid $primary
+
+        &__link
+          color: $white
+
+        &:before
+          content:    ''
+          width:      100%
+          height:     100%
+          position:   absolute
+          left:       0
+          top:        -49px

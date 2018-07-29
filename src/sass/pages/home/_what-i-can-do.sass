@@ -1,10 +1,42 @@
 .what-i-can-do
-  background: #f6f6f6
-
   @extend .section
 
+  .card
+    text-align: center
+
+    &__body
+      padding: 30px
+
   &__item
+    display: flex
+
     @extend .col-md-4
 
-  .row
-    justify-content: space-between
+    .card
+      transition: $transition-time
+
+      &__header
+        font-size: .8rem
+
+        &__title
+          color: $white
+          margin-bottom: 1.5rem
+
+        &__description
+          margin-bottom: 0
+
+    @media (min-width: 768px)
+      .card
+        &__head
+          height: 100px
+
+        &__header
+          font-size: .8rem
+
+    @media (min-width: 768px)
+      .card
+        &__head
+          height: 130px
+
+        &__header
+          font-size: 1rem

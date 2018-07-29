@@ -6,3 +6,15 @@
 
   &__see-all
     color: $text-mute-color
+
+  &.alternate
+    color: #fff
+
+    &:nth-child(odd)
+      background: $primary
+
+    &:nth-child(even)
+      background: darken($primary, 3%)
+
+    .header__title
+      color: $white
