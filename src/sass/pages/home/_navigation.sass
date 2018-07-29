@@ -1,4 +1,4 @@
-.nav
+.navigation
   position:    absolute
   top:         0
   left:        0
@@ -7,39 +7,32 @@
   border-top:  2px solid $primary
 
   .container
-    display:     flex
-    align-items: center
+    display:         flex
+    align-items:     center
     justify-content: space-between
 
-  &__header
+  &__brand
     display:     inline-block
-    line-height: 1.5rem
+    line-height: 1rem
 
     @media (min-width: 360px)
       font-size: 1.25rem
 
-  &__header
-    &__title
-      color:           $text-color
+    &__name
+      color:           #747474
       text-decoration: none
 
-    &__subtitle
-      display: block
-      color:   $text-mute-color
+      &:hover
+        color: $primary
 
-  &__brand,
-  &__brand__subtitle
-    font-weight: 500
-
-  &__wrapper
-    display:         inline-flex
-    justify-content: flex-end
-    flex:            1
+    &__area
+      display:     block
+      color:       $text-mute-color
+      line-height: 2
 
   &__link
     text-decoration: none
     color:           lighten($primary, 30%)
-    font-weight:     500
     font-size:       .8rem
     transition:      $transition-time
 
