@@ -4,18 +4,23 @@
   justify-content: center
   height:          100%
 
-.hero
   &__title
     font-size:     1.5rem
-    font-weight:   bold
+    font-weight:   700
     margin-bottom: 1rem
 
   &__subtitle
     color:       #666
     font-weight: 500
+    font-size:   1rem
 
-    a
-      color: $primary
+    // On hover the email
+    a:hover
+      text-decoration: underline
+
+  &__title,
+  &__subtitle
+    line-height:   1.5
 
 #scrollDown
   position:    absolute
