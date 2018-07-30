@@ -29,5 +29,5 @@ head
     each i in ["57", "72", "76", "114", "120", "144", "152", "180"]
       link(rel="apple-touch-icon", href="assets/dist/img/icons/apple-touch-icon-" + i + "x" + i + ".png")
 
-  if (env === 'production')
-    link(rel="stylesheet", href="/dist/css/e200.css")
+  if (assets)
+    link(rel="stylesheet", href='/dist/' + assets['main.css'])
