@@ -4,32 +4,37 @@
   justify-content: center
   height:          100%
 
+  // Applies this line-height only in small screens
+  @media (max-width: 767px)
+    line-height: 1.5
+
+  @media (min-width: 768px)
+    font-size: 22px
+
   &__title
-    font-size:     1.5rem
+    font-size:     1.5em
     font-weight:   700
     margin-bottom: 1rem
 
   &__subtitle
     color:       #666
     font-weight: 500
-    font-size:   1rem
+    font-size:   1em
 
     // On hover the email
-    a:hover
-      text-decoration: underline
+    a
+      color: lighten($primary, 20%)
 
-  &__title,
-  &__subtitle
-    line-height:   1.5
+      &:hover
+        text-decoration: underline
 
-#scrollDown
+#goToWhatICanDo
   position:    absolute
   bottom:      5%
-  cursor:      pointer
+  display:     block
   margin-left: -15px
   padding:     15px
-  background:  none
-  font-size:   2rem
+  font-size:   2em
   color:       $text-mute-color
   animation:   scrollAnimation 3s 8s ease-in-out infinite
   transition:  $transition-time
@@ -38,7 +43,6 @@
 
   &:hover
     color: $primary
-    animation: none
 
 @keyframes scrollAnimation
   0%
