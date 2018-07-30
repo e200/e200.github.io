@@ -1,42 +1,37 @@
 .what-i-can-do
   @extend .section
 
+  &__item
+    display: flex
+
+    @extend .col-md-4
+
   .card
     text-align: center
 
     &__body
       padding: 30px
 
-  &__item
-    display: flex
+    &__header
+      font-size: .8rem
 
-    @extend .col-md-4
+      &__title
+        color: $white
+        margin-bottom: 1.5rem
 
-    .card
-      transition: $transition-time
+      &__description
+        margin-bottom: 0
+
+    @media (min-width: 768px)
+      &__head
+        height: 100px
 
       &__header
         font-size: .8rem
 
-        &__title
-          color: $white
-          margin-bottom: 1.5rem
-
-        &__description
-          margin-bottom: 0
-
     @media (min-width: 768px)
-      .card
-        &__head
-          height: 100px
+      &__head
+        height: 130px
 
-        &__header
-          font-size: .8rem
-
-    @media (min-width: 768px)
-      .card
-        &__head
-          height: 130px
-
-        &__header
-          font-size: 1rem
+      &__header
+        font-size: 1rem
