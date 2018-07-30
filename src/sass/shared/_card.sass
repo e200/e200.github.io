@@ -27,32 +27,33 @@
   &__header
     &__link
       text-decoration: none
-      color: $white
+      color:           $white
 
     &__title
       text-transform: uppercase
       margin-bottom:  .5rem
-      font-size:      1.25rem
+      font-size:      1.25em
 
     &__description
       color:       $white
       line-height: 2
 
+  &__header__link,
+  &__footer__link
+    color:   $white
+    display: inline-block
+
+    &:hover
+      color: $primary_light
+
     @media (max-width: 991px)
       &__description
-        font-size: .9rem
+        font-size: .9em
 
   &.horizontal
     flex-direction: row
 
     .card
-      &__head
-        width:  170px
-        height: inherit
-
-        &__title
-          font-size: 3rem
-
       &__header
         display: flex
         flex-direction: column
@@ -66,14 +67,3 @@
 
       &__footer
         border-top: 1px solid $primary
-
-        &__link
-          color: $white
-
-        &:before
-          content:    ''
-          width:      100%
-          height:     100%
-          position:   absolute
-          left:       0
-          top:        -49px
