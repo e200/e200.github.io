@@ -3,7 +3,7 @@ section.projects.alternate
     header.header.header--flex
       h2.header__title Projects
 
-      a.header__link.is-mute(href="https://github.com/e200" target="_blank" rel="noopen noreffer") See all
+      a.header__link.is-mute(href="https://github.com/e200" target="_blank" rel="noopen noreffer" title="See all projects") See all
 
     .row
       each item, index in projects.items
@@ -12,8 +12,8 @@ section.projects.alternate
             .card.horizontal
               .card__body
                 header.card__header
-                  a.card__header__link(href=item.address target="_blank" rel="noopen noreffer")
+                  a.card__header__link(href=item.address target="_blank" rel="noopen noreffer" title=item.name)
                     h2.card__header__title=item.name
                   p.card__header__description=item.description
                 footer.card__footer
-                  a.card__footer__link(href=item.address target="_blank" rel="noopen noreffer") More details
+                  a.card__footer__link(href=item.address target="_blank" rel="noopen noreffer" title=item.name) More details

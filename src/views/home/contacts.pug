@@ -1,7 +1,7 @@
 section.contacts
   .container
     .row
-      .col-md-6.mb-5
+      .col-md-6.mb-4
         header.header
           h2.header__title Socials
 
@@ -16,4 +16,4 @@ section.contacts
         header.header
           h2.header__title Contact
 
-        a.contacts__email(href="mailto://eleandro@inbox.ru") eleandro@inbox.ru
+        a.contacts__email(href='mailto://' + author.email title=author.email)=author.email
