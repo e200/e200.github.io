@@ -1,39 +1,80 @@
 {
-  "brand": {
-    "name": "e200",
-    "full_name": "Eleandro Duzentos",
-    "job_title": "Web Developer"
+  "page":  {
+    "title":       "Eleandro Duzentos",
+    "description": "Eleandro Duzentos | Web Designer",
+    "keywords":    "eleandro duzentos, e200, web designer, frontend, github, luanda, angola, ui/ux, php, c#",
+    "lang":        "en",
+    "lang_alt":    "en-US",
+    "url":         "https://e200.github.io"
   },
-  "intro": {
-    "title": "Hey! I'm a web developer from Angola, Luanda.<br>I can help you build your next product",
-    "subtitle": "<p>I design, build and sometimes manage full-stack web applications.</p><p>Have a project you'd like to discuss?</p><p>Let's chat, <a href=\"mailto://eleandro@inbox.ru\">eleandro@inbox.ru</a></p>"
+  "author": {
+    "name": "Eleandro Duzentos",
+    "brand_name": "e200",
+    "job_title": "Web Developer",
+    "email": "eleandro@inbox.ru"
   },
   "what_i_can_do": {
     "items": [
       {
         "icon": "globe",
         "title": "Web Design",
-        "description": "Information architecture, wireframes, user interface design and more..."
+        "description": "Information architecture, wireframes, user interface design and more"
       },
       {
         "icon": "sitemap",
         "title": "Software Design",
-        "description": "Define a solution that meets all the technical and business requirements."
+        "description": "Define a solution that meets all the technical and business requirements"
       },
       {
         "icon": "chain",
         "title": "Maintenance & support",
-        "description": "Help scaling, supporting or optimizing your software as it grows."
+        "description": "Help scaling, supporting or optimizing your software as it grows"
       }
     ]
   },
-  "page":  {
-    "title":       "Eleandro Duzentos",
-    "description": "Eleandro Duzentos | Web Designer",
-    "keywords":    "eleandro duzentos, e200, web designer, frontend, github, luanda, angola, ui/ux, php, c#",
-    "lang":        "pt",
-    "lang_alt":    "pt_PT",
-    "url":         "https://e200.github.io/"
+  "projects": {
+    "items": [
+      {
+        "name":    "Vuelidate Error Helper",
+        "address":   "https://github.com/e200/vuelidate-error-helper",
+        "description": "Vuelidate error messages helper plugin"
+      },
+      {
+        "name":    "Scroll-Incr",
+        "address":   "https://github.com/e200/vuelidate-error-helper",
+        "description": "jQuery plugin for number increment animation when an element"
+      },
+      {
+        "name":    "Make/Accessible",
+        "address":   "https://github.com/e200/MakeAccessible",
+        "description": "Test your singleton classes and inaccessible instance members"
+      },
+      {
+        "name":    "another.JS",
+        "address":   "https://github.com/e200/anotherJS",
+        "description": "Smaller JS library for those Frontends who makes most things using pure CSS"
+      },
+      {
+        "name":    "SliderPlex",
+        "address":   "https://github.com/e200/SliderPlex",
+        "description": "A simple and responsive jQuery content slider plugin"
+      },
+      {
+        "name":    "Unity framework",
+        "address":   "https://github.com/unity-framework",
+        "description": "PHP MVC based framework"
+      },
+      {
+        "name":    "GenesDecypher",
+        "address":   "https://github.com/e200/GenesDecypher",
+        "description": "A genetic decypher written in C, for a client at Universidade Metodista de Angola"
+      },
+      {
+        "name":    "Reegex",
+        "address":   "https://github.com/e200/Reegex",
+        "description": "WPF based Regex tester"
+      }
+    ]
   },
   "socials": [
     {
@@ -51,57 +92,5 @@
       "name": "Linkedin",
       "address": "https://www.linkedin.com/in/iam-e200"
     }
-  ],
-  "projects": {
-    "items": [
-      {
-        "initials": "VEH",
-        "name":    "Vuelidate Error Helper",
-        "address":   "https://github.com/e200/vuelidate-error-helper",
-        "description": "Vuelidate error messages helper"
-      },
-      {
-        "initials": "SI",
-        "name":    "Scroll-Incr",
-        "address":   "https://github.com/e200/vuelidate-error-helper",
-        "description": "jQuery plugin for number increment animation when an element..."
-      },
-      {
-        "initials": "M/A",
-        "name":    "Make/Accessible",
-        "address":   "https://github.com/e200/MakeAccessible",
-        "description": "Test your singleton classes and inaccessible instance members"
-      },
-      {
-        "initials": "A.JS",
-        "name":    "another.JS",
-        "address":   "https://github.com/e200/anotherJS",
-        "description": "Smaller JS library for those Frontends who makes most things using pure CSS"
-      },
-      {
-        "initials": "SP",
-        "name":    "SliderPlex",
-        "address":   "https://github.com/e200/SliderPlex",
-        "description": "A simple and responsive jQuery content slider plugin"
-      },
-      {
-        "initials": "UF",
-        "name":    "Unity framework",
-        "address":   "https://github.com/unity-framework",
-        "description": "PHP MVC based framework"
-      },
-      {
-        "initials": "GD",
-        "name":    "GenesDecypher",
-        "address":   "https://github.com/e200/GenesDecypher",
-        "description": "A genetic decypher written in C, for a client at Universidade Metodista de Angola"
-      },
-      {
-        "initials": "RX",
-        "name":    "Reegex",
-        "address":   "https://github.com/e200/Reegex",
-        "description": "WPF based Regex tester"
-      }
-    ]
-  }
+  ]
 }
