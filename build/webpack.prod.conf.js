@@ -1,3 +1,4 @@
+const path = require('path')
 const glob = require('glob-all')
 
 const merge = require('webpack-merge')
@@ -76,7 +77,14 @@ module.exports = (env) => {
           root('src/views/**/*.pug'),
           root('src/js/**/*.js')
         ])
-      })
+      }),
+      function () {
+        this.plugin("done", function(stats) {
+          require("fs").writeFileSync(
+            root('build/stats.json'),
+            JSON.stringify(stats.toJson()));
+        });
+      }
     ]
   })
 }
