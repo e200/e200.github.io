@@ -1,5 +1,5 @@
 window.addEventListener('DOMContentLoaded', () => {
-  const scrollDownButton = document.getElementById('#goToWhatICanDo')
+  const scrollDownButton = document.getElementById('goToWhatICanDo')
 
   scrollDownButton.addEventListener('click', () => {
 
