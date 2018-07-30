@@ -3,10 +3,6 @@
 
   @extend .section
 
-  .header
-    &__title
-      color: #4d4d4d
-
 .socials__list
   @include list-unstyled
 
@@ -23,11 +19,12 @@
         color: $primary
 
       .fa
-        @extend .mr-4
+        margin-right: 1rem
 
 .contacts__email
   text-decoration: none
   color: $primary
+  display: block
 
   &:hover
     text-decoration: underline
