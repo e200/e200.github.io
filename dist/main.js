@@ -150,7 +150,7 @@ eval("\n/**\n * When source maps are enabled, `style-loader` uses a link element
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nwindow.addEventListener('DOMContentLoaded', function () {\n  var scrollDownButton = document.getElementById('scrollDown');\n\n  scrollDownButton.addEventListener('click', function () {});\n});\n\n//# sourceURL=webpack:///./src/js/app.js?");
+eval("\n\nwindow.addEventListener('DOMContentLoaded', function () {\n  var scrollDownButton = document.getElementById('#goToWhatICanDo');\n\n  scrollDownButton.addEventListener('click', function () {});\n});\n\n//# sourceURL=webpack:///./src/js/app.js?");
 
 /***/ }),
 

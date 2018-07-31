@@ -1,4 +1,3 @@
-const path = require('path')
 const glob = require('glob-all')
 
 const merge = require('webpack-merge')
@@ -20,11 +19,19 @@ module.exports = (env) => {
           use: [
             MiniCssExtractPlugin.loader,
             'css-loader',
-            'resolve-url-loader',
             {
-              loader: 'group-css-media-queries-loader',
-              options: { sourceMap: false }
+              loader: 'postcss-loader',
+              options: {
+                plugins: [
+                  require('autoprefixer')({ browsers: ['last 2 versions'] }),
+                  require('postcss-discard-comments')({ removeAll: true }),
+                  require('postcss-fixes')(),
+                  require('postcss-merge-rules')(),
+                  require('css-mqpacker')({ sort: true })
+                ]
+              }
             },
+            'resolve-url-loader',
             'sass-loader'
           ]
         }
@@ -65,13 +72,7 @@ module.exports = (env) => {
           }
         }
       }),
-      new OptimizeCssAssetsPlugin({
-        cssProcessorOptions: {
-          discardComments: {
-            removeAll: true
-          }
-        }
-      }),
+      new OptimizeCssAssetsPlugin(),
       new PurgecssPlugin({
         paths: glob.sync([
           root('src/views/**/*.pug'),
@@ -79,11 +80,35 @@ module.exports = (env) => {
         ])
       }),
       function () {
-        this.plugin("done", function(stats) {
-          require("fs").writeFileSync(
-            root('build/stats.json'),
-            JSON.stringify(stats.toJson()));
-        });
+        this.plugin('done', function(stats) {
+          const outputPath = root('src/views/manifest.pug')
+          const assets = []
+
+          for (let asset in stats.compilation.assets) {
+            if (
+              asset.startsWith('main.') &&
+              asset.endsWith('.css')
+            ) {
+              assets['main.css'] = asset
+            } else if (asset.startsWith('manifest')) {
+              assets['manifest.js'] = asset
+            } else if (asset.startsWith('vendor')) {
+              assets['vendor.js'] = asset
+            } else {
+              assets['main.js'] = asset
+            }
+          }
+
+          const assetsPugTemplate = `-
+  var assets = {
+    'main.css':    '${assets['main.css']}',
+    'manifest.js': '${assets['manifest.js']}',
+    'vendor.js':   '${assets['vendor.js']}',
+    'main.js':     '${assets['main.js']}'
+  }`
+
+          require('fs').writeFileSync(outputPath, assetsPugTemplate)
+        })
       }
     ]
   })

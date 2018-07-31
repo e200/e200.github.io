@@ -1,4 +1,6 @@
-if (env === 'production')
-  script(src="/dist/manifest.js")
-  script(src="/dist/vendor.js")
-script(src="/dist/main.js")
+if (assets)
+  script(src='/dist/' + assets['manifest.js'])
+  script(src='/dist/' + assets['vendor.js'])
+  script(src='/dist/' + assets['main.js'])
+else
+  script(src="/dist/main.js")
