@@ -2,15 +2,15 @@
   "page":  {
     "title":       "Eleandro Duzentos",
     "description": "Eleandro Duzentos | Web Designer",
-    "keywords":    "eleandro duzentos, e200, web designer, frontend, github, luanda, angola, ui/ux, php, c#",
+    "keywords":    "eleandro, duzentos, e200, web, designer, frontend, github, angola, luandam php, c#, node.js",
     "lang":        "en",
     "lang_alt":    "en-US",
     "url":         "https://e200.github.io"
   },
-  "author": {
+  "my": {
     "name": "Eleandro Duzentos",
     "brand_name": "e200",
-    "job_title": "Web Developer",
+    "job": "Web Developer",
     "email": "eleandro@inbox.ru"
   },
   "what_i_can_do": {
