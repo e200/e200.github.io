@@ -4,7 +4,7 @@
   left:        0
   right:       0
   padding-top: 15px
-  border-top:  2px solid #7652ad
+  border-top:  3px solid $primary
 
   .container
     display:         flex
@@ -12,18 +12,16 @@
     justify-content: space-between
 
   &__brand
-    display:     inline-block
-    line-height: 1rem
+    display:         inline-block
+    color:           $brand-mute-color
+    text-decoration: none
+    transition:      $transition-time
+
+    &:hover
+      color: $primary
 
     @media (min-width: 360px)
       font-size: 1.25rem
-
-    &__name
-      color:           #747474
-      text-decoration: none
-
-      &:hover
-        color: $primary
 
     &__area
       display:     block
@@ -32,7 +30,7 @@
 
   &__link
     text-decoration: none
-    color:           lighten($primary, 30%)
+    color:           lighten($primary, 25%)
     font-size:       .8em
     transition:      $transition-time
 

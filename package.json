@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "dev": "webpack --mode development --progress --watch --hide-modules --config build/webpack.dev.conf.js --env.NODE_ENV=development & gulp serve",
-    "build": "webpack --mode production --config build/webpack.prod.conf.js --env.NODE_ENV=production",
+    "build": "webpack --mode production --config build/webpack.prod.conf.js --env.NODE_ENV=production && gulp build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint src/js/**/*.js"
   },
@@ -20,7 +20,9 @@
   },
   "homepage": "https://e200.github.io",
   "dependencies": {
-    "g": "^2.0.1"
+    "g": "^2.0.1",
+    "gulp-data": "^1.3.1",
+    "gulp-pug": "^4.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^9.0.1",

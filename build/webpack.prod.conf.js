@@ -81,7 +81,7 @@ module.exports = (env) => {
       }),
       function () {
         this.plugin('done', function(stats) {
-          const outputPath = root('src/views/manifest.pug')
+          const outputPath = root('src/data/manifest.json')
           const assets = []
 
           for (let asset in stats.compilation.assets) {
@@ -99,14 +99,14 @@ module.exports = (env) => {
             }
           }
 
-          const assetsPugTemplate = `-
-  var assets = {
-    'main.css':    '${assets['main.css']}',
-    'manifest.js': '${assets['manifest.js']}',
-    'vendor.js':   '${assets['vendor.js']}',
-    'main.js':     '${assets['main.js']}'
-  }`
-
+          const assetsPugTemplate = `{
+  "assets": {
+    "main.css":    "${assets["main.css"]}",
+    "manifest.js": "${assets["manifest.js"]}",
+    "vendor.js":   "${assets["vendor.js"]}",
+    "main.js":     "${assets["main.js"]}"
+  }
+}`
           require('fs').writeFileSync(outputPath, assetsPugTemplate)
         })
       }
