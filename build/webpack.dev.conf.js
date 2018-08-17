@@ -1,13 +1,12 @@
-const merge       = require('webpack-merge')
-const webpackBase = require('./webpack.base.conf')
+const merge       = require('webpack-merge'),
+      webpackBase = require('./webpack.base.conf')
 
 const { root } = require('./utils')
 
 module.exports = (env) => {
   const getViewData = (viewName) => {
-    const viewDataSource  = root(`src/data/${viewName}.json`)
-    const rawJsonViewData = require('fs').readFileSync(viewDataSource)
-    const viewData        = JSON.parse(rawJsonViewData)
+    const rawJsonViewData = require('fs').readFileSync(root(`src/data/${viewName}.json`)),
+          viewData        = JSON.parse(rawJsonViewData)
 
     viewData.env = env.NODE_ENV
 
