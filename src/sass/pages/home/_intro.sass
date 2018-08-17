@@ -3,52 +3,82 @@
   align-items:     center
   justify-content: center
   height:          100%
+  text-align:      center
 
   // Applies this line-height only in small screens
   @media (max-width: 767px)
     line-height: 1.5
 
-  @media (min-width: 768px)
-    font-size: 22px
+  &__title,
+  &__subtitle
+    font-weight: 700
 
   &__title
-    font-size:     1.5em
-    font-weight:   700
+    font-size:     1.5rem
     margin-bottom: 1rem
 
+    @media (min-width: 768px)
+      font-size: 2rem
+
   &__subtitle
-    color:       #666
-    font-weight: 500
-    font-size:   1em
+    color:     #666
+    font-size: 1rem
 
-    // On hover the email
-    a
-      color: lighten($primary, 20%)
+    p
+      margin-bottom: 1rem
 
-      &:hover
-        text-decoration: underline
+      @media (min-width: 768px)
+        margin-bottom: .25rem
+
+  &__CTA
+    background:    $primary
+    border-radius: 30px
+    box-shadow:    0 3px 6px rgba($black, .4)
+    color:         $white
+    display:       inline-block
+    font-weight:   700
+    margin-top:    20px
+    min-width:     120px
+    padding:       10px 15px
+    transition:    .5s
+
+    @media (min-width: 360px)
+      margin-top: 40px
+
+    @media (min-width: 375px)
+      margin-top: 60px
+
+    @media (min-width: 768px)
+      padding: 5px 15px
+
+    &:hover
+      box-shadow: 2px 6px 10px rgba($black, .4)
 
 #goToWhatICanDo
-  position:    absolute
-  bottom:      5%
-  display:     block
-  margin-left: -15px
-  padding:     15px
-  font-size:   2em
-  color:       $text-mute-color
-  animation:   scrollAnimation 3s 8s ease-in-out infinite
-  transition:  $transition-time
-  border:      none
-  outline:     none
+  position:   absolute
+  bottom:     5%
+  left:       50%
+  display:    block
+  padding:    15px
+  font-size:  2em
+  color:      $text-mute-color
+  transition: $transition-time
+  transform:  translate3d(-50%, 0, 0)
+  border:     none
+  outline:    none
 
   &:hover
     color: $primary
 
-@keyframes scrollAnimation
-  0%
-    transform: translateY(0%)
-  50%
-    transform: translateY(-20%)
-    color: $primary
-  100%
-    transform: translateY(0%)
+  // JS
+  &.animate
+    animation: bounce 3s ease-in-out infinite
+
+@keyframes bounce
+  0%, 20%, 50%, 80%, 100%
+    color:     $primary
+    transform: translate3d(-50%, 0, 0)
+  40%
+    transform: translate3d(-50%, -20px, 0)
+  60%
+    transform: translate3d(-50%, -10px, 0)
