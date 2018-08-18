@@ -1,7 +1,7 @@
 const merge       = require('webpack-merge'),
       webpackBase = require('./webpack.base.conf')
 
-const { root } = require('./utils')
+const { root } = require('../utils')
 
 module.exports = (env) => {
   const getViewData = (viewName) => {
@@ -29,7 +29,7 @@ module.exports = (env) => {
           ]
         },
         {
-          test: /\.js$/i,
+          test: /\.js$/,
           exclude: /(node_modules|bower_components)/,
           use: ['babel-loader']
         },

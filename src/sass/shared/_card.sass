@@ -3,17 +3,20 @@
   flex-direction: column
   overflow:       hidden
   margin-bottom:  35px
-  background:     lighten($primary, 5%)
   width:          100%
-  border-radius:  5px
-  box-shadow:     0 8px 35px 0px rgba($black, .2)
+  border-radius:  20px
+  transition:     $transition-time
+
+  &:hover
+    background: $white
+    box-shadow: 10px 20px 40px 0px rgba($black, .1)
 
   &__head
     display:         flex
+    color:           #717171
     align-items:     center
     justify-content: center
     height:          180px
-    color:           $white
     transition:      $transition-time
 
   &__body
@@ -21,13 +24,11 @@
     flex:          1
     padding:       15px
     color:         #5d5767
-    border-top:    1px solid $primary
     border-radius: 0 0 5px 5px
 
   &__header
     &__link
       text-decoration: none
-      color:           $white
 
     &__title
       text-transform: uppercase
@@ -35,16 +36,14 @@
       font-size:      1.25em
 
     &__description
-      color:       $white
       line-height: 2
 
   &__header__link,
   &__footer__link
-    color:   $white
     display: inline-block
 
     &:hover
-      color: $primary_light
+      //color: $primary_light
 
     @media (max-width: 991px)
       &__description

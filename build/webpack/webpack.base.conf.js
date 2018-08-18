@@ -1,12 +1,10 @@
 const path     = require('path')
-const { root } = require('./utils')
+const { root } = require('../utils')
 
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 
-const entry = path.resolve(__dirname, 'entry.js')
-
 module.exports = {
-  entry: entry,
+  entry: path.resolve(__dirname, 'entry.js'),
   output: {
     filename: '[name].[contenthash:5].js',
     chunkFilename: '[name].[contenthash:5].js',

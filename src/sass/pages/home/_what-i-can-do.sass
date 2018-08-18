@@ -1,4 +1,5 @@
 .what-i-can-do
+  background: #f9f9f9
   @extend .section
 
   &__item
@@ -7,7 +8,27 @@
     @extend .col-md-4
 
   .card
+    position:   relative
     text-align: center
+    
+    &::after
+      position: absolute
+      top: -5px
+      left: 50%
+      transform: translateX(-50%)
+      content: ''
+      height: 10px
+      width: 100px
+      opacity: 0
+      background: $primary
+      border-radius: 10px
+      transition: $transition-time
+
+    &:hover
+      transform: translateY(-5px)
+
+      &::after
+        opacity: 1
 
     &__body
       padding: 30px
@@ -16,7 +37,6 @@
       font-size: .8rem
 
       &__title
-        color: $white
         margin-bottom: 1.5rem
 
       &__description
@@ -24,14 +44,7 @@
 
     @media (min-width: 768px)
       &__head
-        height: 100px
-
-      &__header
-        font-size: .8rem
-
-    @media (min-width: 768px)
-      &__head
-        height: 130px
+        height: 170px
 
       &__header
         font-size: 1rem
