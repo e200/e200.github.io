@@ -4,7 +4,7 @@
   "version": "2.0.0",
   "main": "index.html",
   "scripts": {
-    "dev": "webpack --mode development --progress --watch --hide-modules --config build/webpack/webpack.dev.conf.js --env.NODE_ENV=development & gulp watch",
+    "dev": "webpack --mode development --progress --watch --hide-modules --config build/webpack/webpack.dev.conf.js --env.NODE_ENV=development & gulp watch &",
     "build": "webpack --mode production --config build/webpack/webpack.prod.conf.js --env.NODE_ENV=production && gulp build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint src/js/**/*.js"
