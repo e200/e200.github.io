@@ -4,9 +4,9 @@
   overflow:       hidden
   margin-bottom:  35px
   width:          100%
-  background: #f7f7f7
+  background:     $white
   border-radius:  20px
-  box-shadow: 0 1px 10px 0px rgba($black, .1)
+  box-shadow:     0 2px 6px 0 rgba($black, .1)
   transition:     $transition-time
 
   &:hover
@@ -50,21 +50,3 @@
     @media (max-width: 991px)
       &__description
         font-size: .9em
-
-  &.horizontal
-    flex-direction: row
-
-    .card
-      &__header
-        display: flex
-        flex-direction: column
-        flex: 2
-
-      &__body
-        position:       relative
-        display:        flex
-        flex-direction: column
-        border-top:     0
-
-      &__footer
-        border-top: 1px solid $primary

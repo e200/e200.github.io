@@ -1,0 +1,33 @@
+.button
+  text-align:    center
+  display:       inline-block
+  font-weight:   700
+  margin-top:    20px
+  min-width:     120px
+  padding:       10px 15px
+  transition:    .5s
+
+  &.primary
+    border-radius: 30px
+    background:    $primary
+    color:         $white
+    box-shadow:    0 3px 6px rgba($black, .4)
+    
+    &:hover
+      box-shadow: 2px 6px 10px rgba($black, .4)
+
+  &.outline
+    background: #fff // Compatibility backwards with old browser
+    background: transparent
+    border:     2px solid $primary
+    color:      $primary
+    box-shadow: 0 3px 6px rgba($black, .2)
+
+  @media (min-width: 360px)
+    margin-top: 40px
+
+  @media (min-width: 375px)
+    margin-top: 60px
+
+  @media (min-width: 768px)
+    padding: 5px 15px
