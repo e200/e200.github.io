@@ -1,4 +1,4 @@
-section.projects.alternate
+section.projects
   .container
     header.header
       h2.header__title Projects
@@ -9,9 +9,9 @@ section.projects.alternate
           .projects__item
             a.projects__item__link(href=item.address target="_blank" rel="noopen noreffer" title=item.name)
               h2.projects__item__title=item.name
-            
+
             p.projects__item__description=item.description
 
-            a.card__footer__link(href=item.address target="_blank" rel="noopen noreffer" title=item.name) More details
+            a.projects__item__details-link(href=item.address target="_blank" rel="noopen noreffer" title=item.name) More details
 
-    a.button.primary.outline(href="https://github.com/e200" target="_blank" rel="noopen noreffer" title="See all projects") See all
+      a#CTA-projects.button.primary.outline(href="https://github.com/e200" target="_blank" rel="noopen noreffer" title="See all projects") See all

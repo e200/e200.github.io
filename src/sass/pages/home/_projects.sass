@@ -2,13 +2,34 @@
   @extend .section
 
   &__item
-    display: flex
+    display:        flex
+    flex-direction: column
+    margin-bottom:  4rem
     @extend .col-md-6
 
-  .card
-    &__head__title
-      font-size: 1.5rem
-    &__footer
-      &__link
-        display:    block
-        margin-top: .5rem
+    &__title
+      //
+
+    &__description
+      color:     $text-content-color
+      font-size: 1rem
+
+    &__link
+      color: #4f4f4f
+
+      &:hover
+        color: $primary
+
+    &__details-link
+      display:     flex
+      flex:        1
+      align-items: flex-end
+      font-size:   1rem
+      color:       #ccc
+
+      &:hover
+        color: $primary
+
+#CTA-projects
+  margin-left:  auto
+  margin-right: auto
