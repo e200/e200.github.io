@@ -1,11 +1,11 @@
 .button
-  text-align:    center
-  display:       inline-block
-  font-weight:   700
-  margin-top:    20px
-  min-width:     120px
-  padding:       10px 15px
-  transition:    .5s
+  text-align:  center
+  display:     inline-block
+  font-weight: 700
+  margin-top:  20px
+  min-width:   120px
+  padding:     10px 15px
+  transition:  .5s
 
   &.primary
     border-radius: 30px
@@ -33,17 +33,17 @@
       bottom:     0
       content:    ''
       background: $primary
-      transform: translateY(100%)
+      transform:  translateY(100%)
       transition: $transition-time
-      z-index: -1
+      z-index:    -1
 
     &:hover
       color: $white
 
-      &::before
-        transform: translateY(0)
-        background: $primary
-        box-shadow: none
+    &:hover::before
+      transform:  translateY(0)
+      background: $primary
+      box-shadow: none
 
   @media (min-width: 360px)
     margin-top: 40px
