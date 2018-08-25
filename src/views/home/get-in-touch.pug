@@ -11,14 +11,13 @@ section.get-in-touch.section
 
     //-a(href='mailto://' + my.email title=my.email)=my.email
 
-    .row
-      form#get-in-touch__form.get-in-touch__form
-        .form__item
-          input.form__input(placeholder="Your name" required="required" minlength="2" maxlength="70")
-        .form__item
-          input.form__input(placeholder="Your E-mail" required="required" minlength="2" maxlength="70" type="email")
-        .form__item
-          textarea.form__input.get-in-touch__form__message-textarea(placeholder="Your message" required="required" minlength="2")
+    form#get-in-touch__form.get-in-touch__form
+      .form__item
+        input.form__input(placeholder="Your name" required="required" minlength="2" maxlength="70")
+      .form__item
+        input.form__input(placeholder="Your E-mail" required="required" minlength="2" maxlength="70" type="email")
+      .form__item
+        textarea.form__input.get-in-touch__form__message-textarea(placeholder="Your message" required="required" minlength="2")
 
-        button.form__submit-button.button.primary.get-in-touch__form__submit-button(type="submit" form="get-in-touch__form")
-          |Send
+      button.form__submit-button.button.primary.get-in-touch__form__submit-button(type="submit" form="get-in-touch__form")
+        |Send
