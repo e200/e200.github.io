@@ -21,6 +21,7 @@
       
     </script>
     <title>Eleandro Duzentos</title>
+    <link rel="stylesheet" href="/dist/main.1bcb7.css">
   </head>
   <body>
     <main id="main">
@@ -86,89 +87,57 @@
             <h2 class="header__title">Projects</h2>
           </header>
           <div class="row">
-            <div class="projects__item"><a class="projects__item__link" href="https://github.com/e200/vuelidate-error-helper" target="_blank" rel="noopen noreffer" title="Vuelidate Error Helper">
+            <div class="projects__item"><a class="projects__item__link" href="https://github.com/e200/vuelidate-error-helper" target="_blank" title="Vuelidate Error Helper">
                 <h2 class="projects__item__title">Vuelidate Error Helper</h2></a>
-              <p class="projects__item__description">Vuelidate error messages helper plugin</p><a class="projects__item__details-link" href="https://github.com/e200/vuelidate-error-helper" target="_blank" rel="noopen noreffer" title="Vuelidate Error Helper">More details</a>
+              <p class="projects__item__description">Vuelidate error messages helper plugin</p><a class="projects__item__details-link" href="https://github.com/e200/vuelidate-error-helper" target="_blank" title="Vuelidate Error Helper">More details</a>
             </div>
-            <div class="projects__item"><a class="projects__item__link" href="https://github.com/e200/vuelidate-error-helper" target="_blank" rel="noopen noreffer" title="Scroll-Incr">
+            <div class="projects__item"><a class="projects__item__link" href="https://github.com/e200/vuelidate-error-helper" target="_blank" title="Scroll-Incr">
                 <h2 class="projects__item__title">Scroll-Incr</h2></a>
-              <p class="projects__item__description">jQuery plugin for number increment animation when an element</p><a class="projects__item__details-link" href="https://github.com/e200/vuelidate-error-helper" target="_blank" rel="noopen noreffer" title="Scroll-Incr">More details</a>
+              <p class="projects__item__description">jQuery plugin for number increment animation when an element</p><a class="projects__item__details-link" href="https://github.com/e200/vuelidate-error-helper" target="_blank" title="Scroll-Incr">More details</a>
             </div>
-            <div class="projects__item"><a class="projects__item__link" href="https://github.com/e200/MakeAccessible" target="_blank" rel="noopen noreffer" title="Make/Accessible">
+            <div class="projects__item"><a class="projects__item__link" href="https://github.com/e200/MakeAccessible" target="_blank" title="Make/Accessible">
                 <h2 class="projects__item__title">Make/Accessible</h2></a>
-              <p class="projects__item__description">Test your singleton classes and inaccessible instance members</p><a class="projects__item__details-link" href="https://github.com/e200/MakeAccessible" target="_blank" rel="noopen noreffer" title="Make/Accessible">More details</a>
+              <p class="projects__item__description">Test your singleton classes and inaccessible instance members</p><a class="projects__item__details-link" href="https://github.com/e200/MakeAccessible" target="_blank" title="Make/Accessible">More details</a>
             </div>
-            <div class="projects__item"><a class="projects__item__link" href="https://github.com/e200/anotherJS" target="_blank" rel="noopen noreffer" title="another.JS">
+            <div class="projects__item"><a class="projects__item__link" href="https://github.com/e200/anotherJS" target="_blank" title="another.JS">
                 <h2 class="projects__item__title">another.JS</h2></a>
-              <p class="projects__item__description">Smaller JS library for those Frontends who makes most things using pure CSS</p><a class="projects__item__details-link" href="https://github.com/e200/anotherJS" target="_blank" rel="noopen noreffer" title="another.JS">More details</a>
-            </div><a class="button primary outline" id="CTA-projects" href="https://github.com/e200" target="_blank" rel="noopen noreffer" title="See all projects">See all</a>
+              <p class="projects__item__description">Smaller JS library for those Frontends who makes most things using pure CSS</p><a class="projects__item__details-link" href="https://github.com/e200/anotherJS" target="_blank" title="another.JS">More details</a>
+            </div><a class="button primary outline" id="CTA-projects" href="https://github.com/e200" target="_blank" title="See all projects">See all</a>
           </div>
         </div>
       </section>
       <section class="get-in-touch section">
         <div class="container">
           <header class="header">
-            <h2 class="header__title">Let's talk</h2>
-            <p class="header__text">So are you looking for a <b>SOLID</b>, communicative &amp; professional software developer with extensive full-stack web development skills for your next project?</p>
+            <h2 class="header__title">Get In Touch</h2>
+            <p class="header__text">Are you looking for a communicative &amp; professional software developer with extensive full-stack web development skills for your next project or just want to leave a message?</p>
           </header>
-          <form class="get-in-touch__form">
-            <div class="form__input-wrapper">
-              <input placeholder="Your name here!" required="required" minlength="2" maxlength="70">
+          <form class="get-in-touch__form" id="get-in-touch__form">
+            <div class="form__item">
+              <input class="form__input" placeholder="Your name" required="required" minlength="2" maxlength="70">
             </div>
-            <div class="form__input-wrapper">
-              <input placeholder="Email..." required="required" minlength="2" maxlength="70" type="email">
+            <div class="form__item">
+              <input class="form__input" placeholder="Your E-mail" required="required" minlength="2" maxlength="70" type="email">
             </div>
-            <div class="form__input-wrapper">
-              <input placeholder="Subject...">
+            <div class="form__item">
+              <textarea class="form__input get-in-touch__form__message-textarea" placeholder="Your message" required="required" minlength="2"></textarea>
             </div>
-            <div class="form__input-wrapper">
-              <textarea placeholder="Message..." required="required" minlength="2"></textarea>
-            </div>
+            <button class="form__submit-button button primary get-in-touch__form__submit-button" type="submit" form="get-in-touch__form">Send</button>
           </form>
         </div>
       </section>
-      <section class="contacts section">
+      <footer class="footer">
         <div class="container">
-          <div class="row">
-            <div class="col-md-6 mb-4">
-              <header class="header">
-                <h2 class="header__title">Socials</h2>
-              </header>
-              <ul class="socials__list">
-                <li class="socials__list__item"><a class="socials__list__item__link" href="https://twitter.com/iam_e200" target="_blank" rel="noopen noreffer"><i class="fa fa-2x fa-twitter"></i>Twitter</a></li>
-                <li class="socials__list__item"><a class="socials__list__item__link" href="https://github.com/e200" target="_blank" rel="noopen noreffer"><i class="fa fa-2x fa-github-alt"></i>Github</a></li>
-                <li class="socials__list__item"><a class="socials__list__item__link" href="https://www.linkedin.com/in/iam-e200" target="_blank" rel="noopen noreffer"><i class="fa fa-2x fa-linkedin"></i>Linkedin</a></li>
-              </ul>
-            </div>
-            <div class="col-md-6">
-              <header class="header">
-                <h2 class="header__title">Contact</h2>
-              </header><a class="contacts__email" href="mailto://eleandro@inbox.ru" title="eleandro@inbox.ru">eleandro@inbox.ru</a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="hire-me section">
-        <div class="container">
-          <header class="header">
-            <h2 class="header__title">Hire me</h2>
-          </header>
-          <p>So are you looking for a <b>SOLID</b>, communicative &amp; professional software developer with extensive full-stack web development skills for your next project?</p>
-          <p>If you have an application you are interested in developing with web technology, I’d love to work with you on it.</p>
-          <p>I’m a full-stack developer which means I can bring your project from <b>concept to completion</b>. I work primarily with <b>Laravel</b> and <b>Node.js</b> on the back-end and <b>Vue.js</b> on the front-end, but picking up new frameworks or languages isn't a problem.</p><a href="mailto://eleandro@inbox.ru" title="eleandro@inbox.ru">eleandro@inbox.ru</a>
-        </div>
-      </section>
-      <footer class="footer section">
-        <div class="container">
-          <div class="quote__wrapper">
-            <div class="quote">
-              <p>“Some people see things; and say, Why?</p>
-              <p>But I dream things that never were; and I say, Why not?”</p>
-            </div><a class="quote__author" href="https://en.wikipedia.org/wiki/George_Bernard_Shaw" title="George Bernard Shaw" target="__blank">George Bernard Shaw</a>
-          </div>
+          <ul class="socials">
+            <li class="socials__item"><a class="socials__item__link" href="https://twitter.com/iam_e200" title="Twitter" target="_blank" rel="noopen noreffer"><i class="fa fa-2x fa-twitter"></i></a></li>
+            <li class="socials__item"><a class="socials__item__link" href="https://github.com/e200" title="Github" target="_blank" rel="noopen noreffer"><i class="fa fa-2x fa-github-alt"></i></a></li>
+            <li class="socials__item"><a class="socials__item__link" href="https://www.linkedin.com/in/iam-e200" title="Linkedin" target="_blank" rel="noopen noreffer"><i class="fa fa-2x fa-linkedin"></i></a></li>
+          </ul>
         </div>
       </footer>
     </main>
-    <script src="/dist/main.js"></script>
+    <script src="/dist/manifest.js"></script>
+    <script src="/dist/vendor.99ecd.js"></script>
+    <script src="/dist/main.c44f4.js"></script>
   </body>
 </html>
