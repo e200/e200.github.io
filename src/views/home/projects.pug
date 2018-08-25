@@ -7,11 +7,11 @@ section.projects.section
       each item, index in projects.items
         if (index < 4)
           .projects__item
-            a.projects__item__link(href=item.address target="_blank" rel="noopen noreffer" title=item.name)
+            a.projects__item__link(href=item.address target="_blank" title=item.name)
               h2.projects__item__title=item.name
 
             p.projects__item__description=item.description
 
-            a.projects__item__details-link(href=item.address target="_blank" rel="noopen noreffer" title=item.name) More details
+            a.projects__item__details-link(href=item.address target="_blank" title=item.name) More details
 
-      a#CTA-projects.button.primary.outline(href="https://github.com/e200" target="_blank" rel="noopen noreffer" title="See all projects") See all
+      a#CTA-projects.button.primary.outline(href="https://github.com/e200" target="_blank" title="See all projects") See all
