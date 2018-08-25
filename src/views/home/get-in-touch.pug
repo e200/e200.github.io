@@ -1,9 +1,9 @@
 section.get-in-touch.section
   .container
     header.header
-      h2.header__title Let's talk
+      h2.header__title Get In Touch
 
-      p.header__text So are you looking for a <b>SOLID</b>, communicative &amp; professional software developer with extensive full-stack web development skills for your next project?
+      p.header__text Are you looking for a communicative &amp; professional software developer with extensive full-stack web development skills for your next project or just want to leave a message?
 
     //-p If you have an application you are interested in developing with web technology, I’d love to work with you on it.
 
@@ -11,12 +11,14 @@ section.get-in-touch.section
 
     //-a(href='mailto://' + my.email title=my.email)=my.email
 
-    form.get-in-touch__form
-      .form__input-wrapper
-        input(placeholder="Your name here!" required="required" minlength="2" maxlength="70")
-      .form__input-wrapper
-        input(placeholder="Email..." required="required" minlength="2" maxlength="70" type="email")
-      .form__input-wrapper
-        input(placeholder="Subject...")
-      .form__input-wrapper
-        textarea(placeholder="Message..." required="required" minlength="2")
+    .row
+      form#get-in-touch__form.get-in-touch__form
+        .form__item
+          input.form__input(placeholder="Your name" required="required" minlength="2" maxlength="70")
+        .form__item
+          input.form__input(placeholder="Your E-mail" required="required" minlength="2" maxlength="70" type="email")
+        .form__item
+          textarea.form__input.get-in-touch__form__message-textarea(placeholder="Your message" required="required" minlength="2")
+
+        button.form__submit-button.button.primary.get-in-touch__form__submit-button(type="submit" form="get-in-touch__form")
+          |Send

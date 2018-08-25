@@ -4,7 +4,7 @@
   .header
     margin:        0 auto
     margin-bottom: 4rem
-    max-width:     700px
+    max-width:     680px
     text-align:    center
 
     &__title
@@ -16,3 +16,29 @@
   &__form
     display: inline-block
     margin: 0 auto
+
+    .form__item
+      margin-bottom: 1rem
+
+    .form__input
+      border: 0
+      border-bottom: 2px solid #ccc
+      background: transparent
+      padding: 15px 0
+      min-width: 430px
+      font-size: 1rem
+      transition: $transition-time
+
+      &:focus
+        outline: none
+        border-color: $primary
+
+    &__message-textarea
+      min-height: 150px
+
+    &__submit-button
+      display: block
+      margin: 0 auto
+      font-size: 1rem
+      padding: 15px
+      margin-top: 60px
