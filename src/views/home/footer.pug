@@ -1,7 +1,7 @@
-footer.footer.section
+footer.footer
   .container
-    .quote__wrapper
-      .quote
-        p “Some people see things; and say, Why?
-        p But I dream things that never were; and I say, Why not?”
-      a.quote__author(href="https://en.wikipedia.org/wiki/George_Bernard_Shaw" title="George Bernard Shaw" target="__blank") George Bernard Shaw
+    ul.socials
+      each social in socials
+        li.socials__item
+          a.socials__item__link(href=social.address title=social.name target="_blank" rel="noopen noreffer")
+            i.fa.fa-2x(class='fa-' + social.icon)

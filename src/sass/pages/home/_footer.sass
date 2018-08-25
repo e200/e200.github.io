@@ -1,21 +1,18 @@
 .footer
-  background: darken($primary, 15%)
-  color: #fff
+  background: #4c4c4c
+  padding: 15px
+  
+  .socials
+    display: flex
+    justify-content: center
 
-  .quote
-    font-size: 1.25em
-    font-style: italic
+    &__item      
+      &__link
+        display: inline-block
+        padding: 15px 25px
+        font-size: 1rem
+        color: #fff
+        transition: $transition-time
 
-    &__wrapper
-      text-align: center
-
-    &__author
-      display: block
-      color: $white
-      margin-top: 2rem
-
-      &:hover
-        color: $white
-
-    p
-      margin-bottom: 0
+        &:hover
+          transform: scale(1.5)
