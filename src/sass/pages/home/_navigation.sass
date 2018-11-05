@@ -15,13 +15,14 @@
     display:         inline-block
     color:           $brand-mute-color
     text-decoration: none
+    font-weight:     600
     transition:      $transition-time
 
     &:hover
       color: $primary
 
     @media (min-width: 360px)
-      font-size: 1.25rem
+      font-size: 1.25em
 
     &__area
       display:     block
@@ -31,7 +32,6 @@
   &__link
     text-decoration: none
     color:           lighten($primary, 25%)
-    font-size:       .8em
     transition:      $transition-time
 
     &:hover
