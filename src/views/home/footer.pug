@@ -1,7 +1,8 @@
 footer.footer
   .container
+    p.copyright &copy; Eleandro Duzentos (e200)
     ul.socials
       each social in socials
         li.socials__item
-          a.socials__item__link(href=social.address title=social.name target="_blank" rel="noopen noreffer")
+          a.socials__item__link(href=social.address title=social.name target="_blank")
             i.fa.fa-2x(class='fa-' + social.icon)
