@@ -1,18 +1,28 @@
 .footer
-  background: #4c4c4c
-  padding: 15px
-  
+  padding:          10px
+  background-color: #f3f3f3
+
+  > .container
+    display:         flex
+    align-items:     center
+    justify-content: space-between
+
+  .copyright
+    margin-bottom: 0
+    color: #586069
+    font-size: 14px
+
   .socials
-    display: flex
+    display:         flex
     justify-content: center
 
     &__item      
       &__link
-        display: inline-block
-        padding: 15px 25px
-        font-size: 1rem
-        color: #fff
+        display:    inline-block
+        padding:    10px 20px
+        font-size:  1em
+        color: #828282
         transition: $transition-time
 
         &:hover
-          transform: scale(1.5)
+          color: #545454
