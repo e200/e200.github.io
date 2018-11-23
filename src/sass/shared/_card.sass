@@ -27,6 +27,9 @@
     color:         #5d5767
     border-radius: 0 0 5px 5px
 
+    @media (min-width: 992px)
+      padding: 30px !important
+
   &__header
     &__link
       text-decoration: none
@@ -34,7 +37,10 @@
     &__title
       text-transform: uppercase
       margin-bottom:  .5em
-      font-size:      1.25em
+      font-size:      1.5em
+
+      @media (min-width: 992px)
+        font-size: 1.25em
 
     &__description
       line-height: 2
@@ -45,7 +51,3 @@
 
     &:hover
       //color: $primary_light
-
-    @media (max-width: 991px)
-      &__description
-        font-size: .9em
