@@ -1,4 +1,4 @@
-const gulp        = require('gulp')
+const gulp        = require('gulp'),
       pug         = require('gulp-pug'),
       browserSync = require('browser-sync').create()
 
