@@ -11,17 +11,17 @@
     text-align: center
 
     &::after
-      position: absolute
-      top: -5px
-      left: 50%
-      transform: translateX(-50%)
-      content: ''
-      height: 10px
-      width: 100px
-      opacity: 0
-      background: $primary
+      position:      absolute
+      top:           -5px
+      left:          50%
+      transform:     translateX(-50%)
+      content:       ''
+      height:        10px
+      width:         100px
+      opacity:       0
+      background:    $primary
       border-radius: 10px
-      transition: $transition-time
+      transition:    $transition-time
 
     &:hover
       transform: translateY(-5px)
@@ -30,16 +30,17 @@
         opacity: 1
 
     &__body
-      padding: 30px
+      padding: 15px
 
     &__header
       font-size: .8em
 
       &__title
-        margin-bottom: 1.5em
+        margin-bottom: 1em
 
       &__description
         margin-bottom: 0
+        font-size:     1rem
 
     @media (min-width: 768px)
       &__head
