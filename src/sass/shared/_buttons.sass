@@ -5,9 +5,12 @@
   font-weight: 700
   margin-top:  20px
   min-width:   120px
-  padding:     10px 15px
+  padding:     5px
   border:      0
   transition:  .5s
+
+  @media (min-width: 360px)
+    padding: 10px 15px
 
   &.primary
     border-radius: 30px
@@ -52,6 +55,3 @@
 
   @media (min-width: 375px)
     margin-top: 60px
-
-  @media (min-width: 768px)
-    padding: 5px 15px
