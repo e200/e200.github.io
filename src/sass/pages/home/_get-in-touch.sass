@@ -15,31 +15,35 @@
 
   &__form
     max-width: 430px
-    margin: 0 auto
+    margin:    0 auto
 
     .form__item
       margin-bottom: 1em
 
     .form__input
-      border: 0
+      border:        0
       border-bottom: 2px solid #ccc
-      background: transparent
-      padding: 15px 0
-      width: 100%
-      font-size: 1em
-      transition: $transition-time
+      background:    transparent
+      padding:       15px 0
+      width:         100%
+      font-size:     1em
+      transition:    $transition-time
 
       &:focus
-        outline: none
-        border-color: $primary
+        outline:      none
+        border-color:  $primary
+
+      &::placeholder
+        color:   #b7b7b7
+        opacity: 1
 
     &__message-textarea
       min-height: 150px
 
     &__submit-button
-      display: block
-      margin: 0 auto
-      font-size: 1em
-      padding: 15px
-      margin-top: 60px
+      display:        block
+      margin:         0 auto
+      font-size:      1em
+      padding:        15px
+      margin-top:     60px
       text-transform: uppercase
