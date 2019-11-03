@@ -4,15 +4,15 @@ const fs   = require('fs'),
 /**
  * Gets the root project path
  * with the given relative path.
- * 
+ *
  * @param {string} relativePath
  */
 const root = (relativePath = '') => path.resolve(__dirname, '..', relativePath)
 
 /**
  * Gets json data from a text file.
- * 
- * @param {string} filename 
+ *
+ * @param {string} filename
  */
 const getJsonData = (filename) => {
   const fileContent = fs.readFileSync(filename)
