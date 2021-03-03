@@ -45,7 +45,7 @@
     "postcss-fixes": "^2.0.1",
     "postcss-loader": "^2.1.6",
     "postcss-merge-rules": "^4.0.1",
-    "pug": "^2.0.3",
+    "pug": "^3.0.1",
     "pug-html-loader": "^1.1.5",
     "purgecss-webpack-plugin": "^1.2.0",
     "reset-css": "^4.0.1",
