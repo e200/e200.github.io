@@ -1,0 +1,11 @@
+@import './vars';
+@import './animations';
+@import './fonts';
+@import './imports';
+
+body {
+  color:            $white;
+  background-color: $body-bg;
+  font-family:      $font-family;
+  line-height:      1.5;
+}
