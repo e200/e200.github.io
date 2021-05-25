@@ -1,9 +1,7 @@
-# e200.github.io portfolio (v2.1)
+# e200.dev (v3.0)
 
 Welcome! I hope you enjoy my code. :slightly_smiling_face:
 
-This isn't a Vue.js template based project.
+This a Nuxt.js project.
 
-Everything was setup from scratch including the project structure and the Webpack config.
-
-My initial idea was to build a simple static landing page, but I decide later to include the aweasome **Vue.js** and empower the project.
+My initial idea was to build a simple static landing page, but I decide later to use the aweasome **Nuxt.js** to empower the project.
