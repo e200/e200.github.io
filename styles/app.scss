@@ -2,10 +2,11 @@
 @import './animations';
 @import './fonts';
 @import './imports';
+@import './navigation';
 
 body {
-  color:            $white;
   background-color: $body-bg;
   font-family:      $font-family;
+  font-size:        $font-size-base;
   line-height:      1.5;
 }
