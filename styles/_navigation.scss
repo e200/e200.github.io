@@ -99,4 +99,27 @@
     }
   }
 
+  &-list {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: collapse;
+
+    &::before {
+      position: absolute;
+      content: '';
+      background-color: $primary;
+    }
+
+    &.is-active {
+      visibility: visible;
+    }
+  }
 }

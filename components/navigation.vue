@@ -10,6 +10,11 @@
       </div>
     </button>
 
+    <ul class="navigation-list" :class="classes">
+      <li class="navigation-list-item">Articles</li>
+      <li class="navigation-list-item">Works</li>
+      <li class="navigation-list-item">About</li>
+    </ul>
   </nav>
 </template>
 
@@ -25,6 +30,15 @@ export default {
       return {
         "is-active": this.isActive,
       };
+    },
+  },
+  methods: {
+    toggleActive(e) {
+      const { clientX, clientY } = e
+
+      console.log(clientX, clientY);
+
+      this.isActive = !this.isActive;
     },
   },
 };
