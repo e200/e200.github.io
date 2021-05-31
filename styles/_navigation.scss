@@ -1,9 +1,12 @@
 .navigation {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 15px;
   height: 60px;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: inherit;
+  }
 
   &-brand {
     position: relative;
@@ -36,23 +39,32 @@
   }
 
   &-button {
+    position: relative;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: $primary;
     margin: 0;
     width: 40px;
     height: 40px;
     outline: none;
     border: none;
-    border-radius: 100%;
-    z-index: 200;
+    background-color: transparent;
+    z-index: 199;
+
+    &-background {
+      position: absolute;
+      background-color: $primary;
+      width: 40px;
+      height: 40px;
+      border-radius: 100%;
+      transition: $animation-time ease-out;
+    }
 
     &-lines {
+      position: absolute;
       display: flex;
       flex-direction: column;
-      align-items: flex-end;
     }
 
     &-line {
@@ -101,7 +113,7 @@
 
   &-list {
     position: fixed;
-    top: 0;
+    top: 60px;
     left: 0;
     bottom: 0;
     right: 0;
@@ -110,13 +122,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 202;
     visibility: collapse;
-
-    &::before {
-      position: absolute;
-      content: '';
-      background-color: $primary;
-    }
+    margin-top: -60px;
 
     &.is-active {
       visibility: visible;
