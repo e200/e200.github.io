@@ -6,7 +6,19 @@
 
 body {
   background-color: $body-bg;
-  font-family:      $font-family;
-  font-size:        $font-size-base;
-  line-height:      1.5;
+  font-family: $font-family;
+  font-size: $font-size-base;
+  line-height: 1.5;
+}
+
+#background-canvas {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.container {
+  max-width: 768px;
 }
