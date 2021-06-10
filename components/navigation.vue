@@ -16,10 +16,6 @@
         :class="{ 'is-active': isActive }"
         @click="toggleActive"
       >
-        <div
-          class="navigation-button-background"
-          :style="backgroundStyles"
-        ></div>
         <div class="navigation-button-lines">
           <span class="navigation-button-line line-0"></span>
           <span class="navigation-button-line line-1"></span>
@@ -59,6 +55,8 @@ export default {
       if (this.isActive) {
         this.resolve(e);
       }
+
+      this.$emit("active", this.isActive);
     },
     resolve(e) {
       const { clientX, clientY } = e;
@@ -76,8 +74,6 @@ export default {
       const dy = Math.max(centerTopDistance, centerBottomDistance);
 
       this.hypotenuse = Math.sqrt(Math.pow(dx, 2) + Math.pow(dy, 2));
-
-      console.log(dx, dy, this.hypotenuse);
     },
   },
 };
